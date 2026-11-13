@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travel Buddy · System status</title>
+<style>
+:root { color-scheme: light; --mustard: #FFC2A6; --mustard-deep: #177C8A; --mustard-soft: #D9F3F6; --wash: #F1FAFC; --cream: #FFF8EE;
+  --navy: #22476A; --navy-2: #2E6A8E; --ink: #22384B; --ink-2: #4A6377; --muted: #6B8597; --line: #CFE9EF;
+  --good: #0ca30c; --good-bg: #E8F7E8; --bad: #d03b3b; --bad-bg: #FDECEC; --warn: #8A4B00; --warn-bg: #FFF4E5;
+  --shadow: 0 10px 30px rgba(84,62,0,.10), 0 2px 6px rgba(84,62,0,.06); }
+* { box-sizing: border-box; }
+body { margin: 0; background: linear-gradient(180deg, #CFEFFA 0%, #EAF8FD 45%, #FFF1E2 100%) fixed; color: var(--ink); font: 14.5px/1.5 "Nunito", "Segoe UI", system-ui, sans-serif; }
+.nav { display: flex; align-items: center; gap: 16px; padding: 10px clamp(14px, 3vw, 36px); background: linear-gradient(90deg, #CDEFFB, #FFE2D6); box-shadow: 0 2px 14px rgba(23,92,120,.12); }
+.brand { font-weight: 800; font-size: 20px; color: var(--navy); }
+.brand small { font-size: 12px; font-weight: 800; color: var(--ink-2); margin-left: 8px; text-transform: uppercase; letter-spacing: .5px; }
+.nav a.back { margin-left: auto; font-weight: 800; color: var(--navy); background: #fff; border-radius: 999px; padding: 7px 14px; text-decoration: none; }
+main { max-width: 1180px; margin: 0 auto; padding: 22px clamp(12px, 3vw, 32px) 40px; display: grid; gap: 18px; }
+.banner { display: flex; align-items: center; gap: 12px; border-radius: 16px; padding: 14px 18px; font-weight: 800; font-size: 16px; box-shadow: var(--shadow); }
+.banner.good { background: var(--good-bg); color: #0a5e0a; border: 1px solid #BFE6BF; }
+.banner.bad { background: var(--bad-bg); color: #8a1c1c; border: 1px solid #F1C0C0; }
+.banner .sub { margin-left: auto; font-size: 12.5px; font-weight: 700; color: var(--ink-2); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.tile { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; box-shadow: var(--shadow); }
+.tile .k { font-size: 12px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+.tile .v { font-size: 24px; font-weight: 800; color: var(--navy); font-variant-numeric: tabular-nums; }
+.tile .d { font-size: 12.5px; color: var(--ink-2); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+.card h2 { margin: 0; padding: 12px 16px; font-size: 15px; color: var(--navy); background: var(--wash); border-bottom: 1px solid var(--line); display: flex; gap: 8px; align-items: center; }
+.card h2 .badge { margin-left: auto; }
+.card .body { padding: 12px 16px 14px; display: grid; gap: 8px; }
+dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; }
+dt { color: var(--muted); font-weight: 700; font-size: 13px; } dd { margin: 0; overflow-wrap: anywhere; }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chips span { font-size: 12px; font-weight: 700; color: var(--ink-2); background: var(--wash); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
+.badge { white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; border-radius: 999px; padding: 2px 10px; }
+.badge.good { background: var(--good-bg); color: #0a5e0a; } .badge.bad { background: var(--bad-bg); color: #8a1c1c; } .badge.warn { background: var(--warn-bg); color: var(--warn); }
+.console { font-size: 12.5px; font-weight: 800; color: var(--mustard-deep); text-decoration: none; }
+.console:hover { text-decoration: underline; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #F6EBC6; vertical-align: top; }
+th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .4px; }
+.spark { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; align-items: end; }
+.spark .lbl { font-weight: 800; color: var(--navy); font-size: 13.5px; }
+.spark .num { font-weight: 800; color: var(--navy); font-variant-numeric: tabular-nums; text-align: right; }
+.spark .num small { display: block; font-weight: 600; color: var(--muted); font-size: 11.5px; }
+.spark svg { grid-column: 1 / -1; width: 100%; height: 38px; display: block; }
+.spark svg rect { fill: var(--navy-2); }
+.spark svg rect.zero { fill: #CFE9EF; }
+.spark svg rect:hover { fill: #F08A70; }
+.axis { grid-column: 1 / -1; display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); }
+.foot { font-size: 12px; color: var(--muted); text-align: center; }
+.err { color: #8a1c1c; font-weight: 700; }
+</style>
+</head>
+<body>
+<header class="nav"><div class="brand">Travel Buddy<small>System status</small></div><a class="back" href="./">← Back to chat</a></header>
+<main id="main"><div class="tile">Loading live status…</div></main>
+<script>
+const main = document.getElementById("main");
+const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+const safe = u => typeof u === "string" && /^https:\/\//.test(u) ? u : null;
+const n = (v, d = 0) => v == null ? "–" : Number(v).toLocaleString("en-US", {maximumFractionDigits: d});
+const secs = ms => ms == null ? "–" : (ms / 1000).toFixed(1) + " s";
+const ago = iso => { if (!iso) return "–"; const s = (Date.now() - new Date(iso)) / 1000;
+  return s < 90 ? "just now" : s < 5400 ? Math.round(s / 60) + " min ago" : s < 129600 ? Math.round(s / 3600) + " h ago" : Math.round(s / 86400) + " days ago"; };
+function badge(ok, text) { const b = el("span", "badge " + (ok === true ? "good" : ok === false ? "bad" : "warn"), (ok === true ? "✔ " : ok === false ? "✖ " : "● ") + text); return b; }
+function consoleLink(url, text = "Open in AWS console ↗") { const u = safe(url); if (!u) return null; const a = el("a", "console", text); a.href = u; a.target = "_blank"; a.rel = "noopener"; return a; }
+function card(title, status) { const c = el("section", "card"); const h = el("h2", null, title); if (status) h.appendChild(status); c.appendChild(h); const b = el("div", "body"); c.appendChild(b); return [c, b]; }
+function dl(rows) { const d = el("dl"); for (const [k, v] of rows) { d.appendChild(el("dt", null, k)); const dd = el("dd"); if (v instanceof Node) dd.appendChild(v); else dd.textContent = v ?? "–"; d.appendChild(dd); } return d; }
+function chips(items) { const c = el("div", "chips"); items.forEach(x => c.appendChild(el("span", null, x))); return c; }
+function sectionError(b, s) { b.appendChild(el("div", "err", "Unavailable: " + (s.error || "unknown error"))); }
+
+function spark(label, m, hours, fmt = v => n(v), sub = "last 24 h") {
+  const w = el("div", "spark"); w.appendChild(el("div", "lbl", label));
+  const num = el("div", "num", fmt(m?.total)); num.appendChild(el("small", null, sub)); w.appendChild(num);
+  const series = m?.series || []; const max = Math.max(1, ...series.map(v => v || 0));
+  const NS = "http://www.w3.org/2000/svg", svg = document.createElementNS(NS, "svg"); svg.setAttribute("viewBox", `0 0 ${series.length * 10} 38`);
+  svg.setAttribute("preserveAspectRatio", "none"); svg.setAttribute("role", "img"); svg.setAttribute("aria-label", `${label}, hourly, last 24 hours`);
+  series.forEach((v, i) => { const h = v ? Math.max(3, v / max * 36) : 2; const r = document.createElementNS(NS, "rect");
+    r.setAttribute("x", i * 10 + 1); r.setAttribute("y", 38 - h); r.setAttribute("width", 8); r.setAttribute("height", h); r.setAttribute("rx", 1.5);
+    if (!v) r.setAttribute("class", "zero");
+    const t = document.createElementNS(NS, "title"); t.textContent = `${new Date(hours[i]).toLocaleString([], {hour: "2-digit", minute: "2-digit", day: "numeric", month: "short"})}: ${v == null ? "no data" : fmt(v)}`;
+    r.appendChild(t); svg.appendChild(r); });
+  w.appendChild(svg); const ax = el("div", "axis"); ax.append(el("span", null, "24 h ago"), el("span", null, "now")); w.appendChild(ax);
+  return w;
+}
+
+function render(d) {
+  main.replaceChildren();
+  const alarms = d.alarms.ok ? d.alarms.alarms : [];
+  const firing = alarms.filter(a => a.state === "ALARM");
+  const healthy = d.gateway.ok && d.gateway.status === "READY" && d.lambda.ok && d.lambda.state === "Active" && d.guardrail.ok && firing.length === 0;
+  const bn = el("div", "banner " + (healthy ? "good" : "bad"), healthy ? "✔ All systems operational" : `✖ Attention needed${firing.length ? `: ${firing.length} alarm(s) firing` : ""}`);
+  bn.appendChild(el("span", "sub", `Live from AWS ${d.region} · updated ${new Date(d.generated_at).toLocaleTimeString()} · refreshes every minute`));
+  main.appendChild(bn);
+
+  const M = d.metrics.ok ? d.metrics.m : {}, H = d.metrics.ok ? d.metrics.hours : [];
+  const tiles = el("div", "tiles"); const tile = (k, v, s) => { const t = el("div", "tile"); t.append(el("div", "k", k), el("div", "v", v), el("div", "d", s)); tiles.appendChild(t); };
+  tile("Chat turns", n(M.turns?.total), "web, last 24 h");
+  tile("Gateway requests", n(M.gwreq?.total), `${n(M.gwserr?.total)} system errors`);
+  tile("Guardrail blocks", n(M.gint?.total), `of ${n(M.geval?.total)} checks`);
+  tile("Live data searches", n(M.serp?.total), `${n(M.serperr?.total)} errors`);
+  tile("SerpApi left", n(d.metrics.serpapi_searches_left), "searches this month");
+  tile("Alarms", `${alarms.length - firing.length}/${alarms.length} OK`, firing.length ? "see below" : "none firing");
+  main.appendChild(tiles);
+
+  const grid = el("div", "grid"); main.appendChild(grid);
+
+  // Gateway
+  { const g = d.gateway; const [c, b] = card("🔌 AgentCore Gateway", g.ok ? badge(g.status === "READY", g.status) : badge(false, "error")); grid.appendChild(c);
+    if (!g.ok) sectionError(b, g); else {
+      b.appendChild(dl([["Name", g.name], ["Protocol", g.protocol], ["Authorizer", `${g.authorizer} · ${g.identity_provider || ""}`],
+        ["Updated", ago(g.updated)]]));
+      for (const t of g.targets) { const row = el("div"); row.append(el("b", null, `Target ${t.name} `), badge(t.status === "READY", t.status), el("span", null, ` · ${t.tools.length} tools`));
+        b.append(row, chips(t.tools)); }
+      const l = consoleLink(g.console); if (l) b.appendChild(l); } }
+
+  // Guardrail + model
+  { const g = d.guardrail; const [c, b] = card("🛡️ Bedrock Guardrail", g.ok ? badge(g.status === "READY", g.status) : badge(false, "error")); grid.appendChild(c);
+    if (!g.ok) sectionError(b, g); else {
+      b.appendChild(dl([["Name", g.name], ["Version", `v${g.version}`], ["Blocks", chips(g.blocks)], ["Other policies", g.other_policies.join(", ")], ["Updated", ago(g.updated)]]));
+      b.appendChild(spark("Interventions", M.gint, H)); const l = consoleLink(g.console); if (l) b.appendChild(l); } }
+
+  { const [c, b] = card("🧠 Bedrock model", badge(true, "Available")); grid.appendChild(c);
+    b.appendChild(dl([["Model", d.model.id], ["Latency p90", secs(M.modellat?.max) + " (worst hour)"]]));
+    b.appendChild(spark("Model invocations", M.model, H, v => n(v), "last 24 h · account-wide"));
+    const l = consoleLink(d.model.console); if (l) b.appendChild(l); }
+
+  // Lambda + DynamoDB
+  { const L = d.lambda; const [c, b] = card("⚙️ Tools (AWS Lambda)", L.ok ? badge(L.state === "Active", L.state) : badge(false, "error")); grid.appendChild(c);
+    if (!L.ok) sectionError(b, L); else {
+      b.appendChild(dl([["Function", L.name], ["Runtime", `${L.runtime} · ${L.architecture} · ${L.memory_mb} MB · ${L.timeout_s} s timeout`],
+        ["Last deploy", ago(L.last_modified)], ["Errors (24 h)", n(M.lmerr?.total)], ["Tool errors returned", n(M.toolerr?.total)]]));
+      b.appendChild(spark("Tool calls", M.tools, H)); const l = consoleLink(L.console); if (l) b.appendChild(l); } }
+
+  { const T = d.table; const [c, b] = card("🗄️ Bookings (DynamoDB)", T.ok ? badge(T.status === "ACTIVE", T.status) : badge(false, "error")); grid.appendChild(c);
+    if (!T.ok) sectionError(b, T); else b.appendChild(dl([["Table", T.name], ["Items (approx.)", n(T.items_approx)], ["Billing", T.billing], ["Bookings created (24 h)", n(M.bookings?.total)]])); }
+
+  // Activity
+  { const [c, b] = card("📈 Activity (hourly, last 24 h)"); grid.appendChild(c);
+    if (!d.metrics.ok) sectionError(b, d.metrics); else {
+      b.append(spark("Chat turns", M.turns, H), spark("Gateway requests", M.gwreq, H), spark("Live data searches (SerpApi)", M.serp, H));
+      b.appendChild(dl([["Chat reply p90", secs(M.turnlat?.max) + " (worst hour)"], ["Gateway latency p90", secs(M.gwlat?.max) + " (worst hour)"]])); } }
+
+  // Alarms
+  { const A = d.alarms; const [c, b] = card("🚨 Alarms", A.ok ? badge(firing.length === 0, firing.length ? `${firing.length} firing` : "All OK") : badge(false, "error")); grid.appendChild(c);
+    if (!A.ok) sectionError(b, A); else {
+      const tb = el("table"); const hr = tb.createTHead().insertRow(); ["Alarm", "State", "Since"].forEach(h => hr.appendChild(el("th", null, h)));
+      const body = tb.createTBody();
+      for (const a of A.alarms) { const r = body.insertRow(); const nm = r.insertCell(); nm.appendChild(el("b", null, a.name)); nm.appendChild(el("div", "d", a.description || ""));
+        r.insertCell().appendChild(badge(a.state === "OK" ? true : a.state === "ALARM" ? false : null, a.state === "INSUFFICIENT_DATA" ? "No data" : a.state));
+        r.insertCell().textContent = ago(a.since); }
+      b.appendChild(tb); const l = consoleLink(A.dashboard, "Open CloudWatch dashboard ↗"); if (l) b.appendChild(l); } }
+
+  main.appendChild(el("div", "foot", "Public, read-only view. Console links need an AWS sign-in; this page doesn't. Data is cached for 60 seconds."));
+}
+async function load() {
+  try { const r = await fetch("api/status", {credentials: "same-origin"}); if (!r.ok) throw new Error(r.status + " " + r.statusText); render(await r.json()); }
+  catch (e) { main.replaceChildren(el("div", "banner bad", "Couldn't load status: " + e.message)); }
+}
+load(); setInterval(load, 60000);
+</script>
+</body>
+</html>

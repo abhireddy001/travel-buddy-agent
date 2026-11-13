@@ -1,0 +1,1289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travel Buddy · Pack your bags and follow with Abhi</title>
+<style>
+:root {
+  color-scheme: light;
+  /* pastel holiday palette: peach-coral accent, sea teal, sky, sand */
+  --mustard: #FFC2A6; --mustard-deep: #177C8A; --mustard-soft: #D9F3F6; --mustard-wash: #F1FAFC;
+  --cream: #FFF8EE; --navy: #22476A; --navy-2: #2E6A8E; --ink: #22384B; --ink-2: #4A6377; --muted: #6B8597;
+  --line: #CFE9EF; --white: #fff; --ok: #157A3A; --warn-bg: #FFF1E8; --warn-ink: #9A3F12;
+  --glass: rgba(255, 255, 255, .84);
+  --shadow: 0 12px 34px rgba(23, 92, 120, .16), 0 2px 6px rgba(23, 92, 120, .08);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: #CFEFFA; color: var(--ink); font: 15px/1.5 "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif; }
+/* the beach scene sits behind everything */
+.beach { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+.beach > svg { width: 100%; height: 100%; display: block; }
+.beach .wave { animation: drift 9s ease-in-out infinite alternate; }
+.beach .wave.w2 { animation-duration: 12s; } .beach .boat { animation: sail 40s linear infinite; }
+@keyframes drift { from { transform: translateX(-18px); } to { transform: translateX(18px); } }
+@keyframes sail { from { transform: translateX(-160px); } to { transform: translateX(1600px); } }
+/* holiday activities */
+.beach .balloon { animation: bob 7s ease-in-out infinite alternate; }
+.beach .balloon.b2 { animation-duration: 9s; animation-delay: -3s; }
+.beach .chute { transform-box: fill-box; transform-origin: 50% 0%; animation: sway 5s ease-in-out infinite alternate; }
+.beach .jetski { animation: bounce 1.6s ease-in-out infinite; }
+.beach .spray { animation: spray 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: 100% 50%; }
+.beach .plane { animation: flyby 34s linear infinite; }
+.beach .wave-hand { transform-box: fill-box; transform-origin: 20% 90%; animation: wavehand 1.2s ease-in-out infinite alternate; }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-22px); } }
+@keyframes sway { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+@keyframes bounce { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-6px) rotate(-3deg); } }
+@keyframes spray { 0%, 100% { opacity: .5; transform: scaleX(.85); } 50% { opacity: 1; transform: scaleX(1.1); } }
+@keyframes flyby { from { transform: translateX(-420px); } to { transform: translateX(1900px); } }
+@keyframes wavehand { from { transform: rotate(-12deg); } to { transform: rotate(18deg); } }
+@media (prefers-reduced-motion: reduce) { .beach .wave, .beach .boat, .beach .balloon, .beach .chute, .beach .jetski, .beach .spray, .beach .plane, .beach .wave-hand { animation: none; } }
+a { color: inherit; }
+
+/* ---------- top nav */
+.nav { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 22px; padding: 10px clamp(14px, 3vw, 36px);
+  background: linear-gradient(90deg, rgba(205,239,251,.92), rgba(255,226,214,.92)); backdrop-filter: blur(8px);
+  box-shadow: 0 2px 14px rgba(23,92,120,.12); }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; color: var(--navy); letter-spacing: .2px; }
+.brand svg { width: 40px; height: 40px; filter: drop-shadow(0 2px 0 rgba(0,0,0,.12)); }
+.brand .wordmark { background: linear-gradient(90deg, #22476A, #1C8A99 55%, #E0715A); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.brand .ai { display: inline-block; margin-left: 7px; vertical-align: 3px; font-size: 10.5px; font-weight: 900; letter-spacing: .8px; color: #fff;
+  background: linear-gradient(135deg, #3FA3B3, #F08A70); padding: 1px 7px; border-radius: 6px; box-shadow: 0 0 0 2px rgba(255,255,255,.7), 0 0 12px rgba(63,163,179,.6); }
+.brand small { display: block; font-size: 11px; font-weight: 700; color: var(--ink-2); letter-spacing: .4px; text-transform: uppercase; margin-top: -3px; }
+.nav nav { display: flex; gap: 6px; margin-left: 12px; }
+.nav nav button { background: transparent; border: 0; font: inherit; font-weight: 700; color: var(--navy); padding: 7px 12px; border-radius: 999px; cursor: pointer; }
+.nav nav button:hover, .nav nav button:focus-visible { background: rgba(255,255,255,.75); outline: none; }
+.nav .spacer { flex: 1; }
+.pill { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(90deg, #2E6A8E, #3FA3B3); color: #fff; font-size: 12.5px; font-weight: 700;
+  padding: 6px 12px; border-radius: 999px; }
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; background: #5BE38A; box-shadow: 0 0 0 3px rgba(91,227,138,.25); }
+
+/* ---------- layout */
+.page { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 22px; max-width: 1240px; margin: 0 auto;
+  padding: 22px clamp(12px, 3vw, 32px); height: calc(100vh - 62px); }
+
+/* ---------- side panel */
+.side { display: flex; flex-direction: column; gap: 16px; overflow-y: auto; }
+.card { background: var(--glass); backdrop-filter: blur(10px); border-radius: 18px; box-shadow: var(--shadow); padding: 16px 18px; border: 1px solid var(--line); }
+.side h3 { margin: 0 0 8px; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; color: var(--mustard-deep); }
+.crew { display: grid; gap: 10px; }
+.crew-row { display: flex; align-items: center; gap: 12px; }
+.crew-row svg { width: 46px; height: 46px; flex: none; }
+.crew-row b { display: block; color: var(--navy); }
+.crew-row span { font-size: 12.5px; color: var(--ink-2); }
+.quick { display: grid; gap: 8px; }
+.quick button { text-align: left; display: flex; gap: 10px; align-items: center; font: inherit; font-size: 13.5px; font-weight: 700; color: var(--navy);
+  background: var(--mustard-wash); border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; cursor: pointer; }
+.quick button:hover, .quick button:focus-visible { background: #FFE6DA; border-color: var(--mustard); outline: none; }
+.quick .ico { font-size: 18px; }
+.trust { display: grid; gap: 8px; font-size: 13px; color: var(--ink-2); }
+.trust div { display: flex; gap: 8px; align-items: flex-start; }
+
+/* ---------- chat panel */
+.chat { display: flex; flex-direction: column; min-height: 0; background: var(--glass); backdrop-filter: blur(12px); border-radius: 22px; box-shadow: var(--shadow);
+  border: 1px solid var(--line); overflow: hidden; }
+.chat-head { display: flex; align-items: center; gap: 12px; padding: 12px 18px; background: linear-gradient(90deg, #2E6A8E, #3C8FA8 60%, #5BB5C4); color: #fff; }
+.chat-head svg { width: 44px; height: 44px; background: var(--mustard-soft); border-radius: 50%; }
+.chat-head b { font-size: 16px; }
+.chat-head .status { font-size: 12.5px; color: #E9F7FB; display: flex; align-items: center; gap: 6px; }
+.chat-head .status .dot { width: 8px; height: 8px; border-radius: 50%; background: #5BE38A; }
+.chat-head .actions { margin-left: auto; display: flex; gap: 8px; }
+.btn-ghost { font: inherit; font-weight: 700; font-size: 13px; color: var(--navy); background: var(--mustard); border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.btn-ghost:hover, .btn-ghost:focus-visible { background: #FFD3BF; outline: 2px solid #fff; outline-offset: 1px; }
+
+#log { flex: 1; overflow-y: auto; padding: 22px clamp(12px, 2.4vw, 26px); display: flex; flex-direction: column; gap: 16px;
+  background: linear-gradient(180deg, rgba(241,250,252,.6), rgba(255,255,255,.35) 260px); }
+.row { display: flex; gap: 10px; align-items: flex-end; max-width: 100%; }
+.row.user { flex-direction: row-reverse; }
+.avatar { width: 40px; height: 40px; flex: none; border-radius: 50%; box-shadow: 0 2px 0 rgba(0,0,0,.08); }
+.stack { display: flex; flex-direction: column; gap: 6px; min-width: 0; max-width: min(820px, 88%); }
+.row.user .stack { align-items: flex-end; }
+.name { font-size: 12px; font-weight: 800; color: var(--muted); padding: 0 6px; }
+.bubble { background: #fff; border: 1px solid var(--line); border-radius: 18px 18px 18px 6px; padding: 11px 15px; overflow-x: auto;
+  box-shadow: 0 1px 0 rgba(84,62,0,.05); }
+.row.user .bubble { background: var(--navy); color: #fff; border-color: var(--navy); border-radius: 18px 18px 6px 18px; white-space: pre-wrap; }
+.bubble p { margin: .35em 0; } .bubble h1, .bubble h2, .bubble h3, .bubble h4 { margin: .7em 0 .3em; font-size: 15.5px; color: var(--navy); }
+.bubble ul, .bubble ol { margin: .3em 0; padding-left: 1.3em; }
+.bubble strong { color: var(--navy); }
+.bubble table { border-collapse: separate; border-spacing: 0; margin: .6em 0; font-size: 13.5px; font-variant-numeric: tabular-nums;
+  border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.bubble th, .bubble td { padding: 7px 12px; text-align: left; white-space: nowrap; border-bottom: 1px solid #F6EBC6; }
+.bubble th { background: var(--mustard-soft); color: var(--navy); font-weight: 800; }
+.bubble tr:last-child td { border-bottom: 0; }
+.bubble tbody tr:nth-child(even) td { background: #FFFDF5; }
+.bubble code { background: var(--mustard-wash); padding: 1px 6px; border-radius: 6px; font-size: 13px; }
+.bubble pre { background: var(--mustard-wash); padding: 9px 11px; border-radius: 10px; overflow-x: auto; }
+.bubble pre code { background: none; padding: 0; }
+.bubble hr { border: 0; border-top: 1px dashed var(--line); margin: .8em 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; padding-left: 4px; }
+.tag { font-size: 11.5px; font-weight: 700; color: var(--ink-2); background: var(--mustard-wash); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
+.guard { display: inline-flex; gap: 8px; align-items: center; background: var(--warn-bg); color: var(--warn-ink); border: 1px solid #F5D3A6;
+  border-radius: 12px; padding: 6px 11px; font-size: 13px; font-weight: 700; }
+.chart { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; }
+.chart iframe { width: 100%; height: 820px; border: 0; display: block; }
+.chart a { display: block; padding: 8px 14px; font-size: 12.5px; font-weight: 700; color: var(--navy); background: var(--mustard-wash); border-top: 1px solid var(--line); text-decoration: none; }
+.err .bubble { background: #FFF1F0; border-color: #F3C2BE; color: #8A1C12; }
+
+/* welcome hero */
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; color: var(--navy);
+  border-radius: 20px; padding: 18px 20px; box-shadow: 0 6px 20px rgba(23,92,120,.14); border: 1px solid #fff; }
+.hero svg.scene { width: 230px; height: 120px; }
+.hero h2 { margin: 0 0 4px; font-size: 22px; }
+.hero { position: relative; overflow: hidden; background: linear-gradient(120deg, #FFD9C9 0%, #FFF1BF 45%, #C9F1EE 100%); }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,.35) 50%, transparent 60%);
+  transform: translateX(-100%); animation: shine 6s ease-in-out infinite; pointer-events: none; }
+@keyframes shine { 0%, 70% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+@media (prefers-reduced-motion: reduce) { .hero::after { animation: none; display: none; } }
+.hero .tagline { display: inline-block; font-size: 11.5px; font-weight: 900; letter-spacing: 1.2px; text-transform: uppercase; color: #fff;
+  background: linear-gradient(90deg, #2E6A8E, #3FA3B3); border-radius: 999px; padding: 3px 10px; margin-bottom: 6px; box-shadow: 0 0 14px rgba(63,163,179,.45); }
+.hero .caps { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.hero .caps span { font-size: 12.5px; font-weight: 800; color: var(--navy); background: rgba(255,255,255,.7); border-radius: 999px; padding: 3px 10px; }
+.hero p { margin: 0; color: var(--ink); font-size: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { font: inherit; font-size: 13px; font-weight: 700; color: var(--navy); background: #fff; border: 1.5px solid #9ED8E0;
+  border-radius: 999px; padding: 7px 13px; cursor: pointer; }
+.chips button:hover, .chips button:focus-visible { background: var(--mustard-soft); outline: none; }
+
+/* typing: a little plane flying along a dotted path */
+.typing { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13.5px; font-weight: 700; }
+.runway { position: relative; width: 120px; height: 18px; border-bottom: 2px dashed var(--line); }
+.runway svg { position: absolute; top: -3px; width: 22px; height: 22px; animation: fly 1.6s ease-in-out infinite; }
+@keyframes fly { 0% { left: 0; transform: translateY(2px) rotate(0); } 50% { transform: translateY(-4px) rotate(-6deg); } 100% { left: 98px; transform: translateY(2px) rotate(0); } }
+@media (prefers-reduced-motion: reduce) { .runway svg { animation: none; left: 50px; } }
+
+/* composer */
+form { display: flex; gap: 10px; align-items: flex-end; padding: 12px 16px 14px; border-top: 1px solid var(--line); background: rgba(255,255,255,.7); }
+textarea { flex: 1; resize: none; font: inherit; color: var(--ink); background: var(--mustard-wash); border: 1.5px solid var(--line);
+  border-radius: 16px; padding: 11px 14px; min-height: 48px; max-height: 160px; }
+textarea:focus { outline: none; border-color: #5BB5C4; box-shadow: 0 0 0 4px rgba(91,181,196,.22); }
+.send { width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--mustard); cursor: pointer; display: grid; place-items: center;
+  box-shadow: 0 3px 0 var(--mustard-deep); transition: transform .1s; }
+.send:hover { background: #FFD3BF; } .send:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--mustard-deep); }
+.send:disabled { opacity: .5; cursor: default; }
+.send svg { width: 22px; height: 22px; }
+.foot { font-size: 11.5px; color: var(--muted); text-align: center; padding: 0 16px 10px; background: transparent; }
+
+/* ---------- planner attachments: cards, transport, maps */
+.att { border: 1px solid var(--line); border-radius: 16px; background: #fff; overflow: hidden; }
+.att-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 14px; background: var(--mustard-wash); border-bottom: 1px solid var(--line); }
+.att-head b { color: var(--navy); font-size: 14.5px; }
+.att-head .src { margin-left: auto; font-size: 11.5px; font-weight: 700; color: var(--ink-2); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; padding: 12px; }
+.pcard { position: relative; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
+.pcard .ph { height: 118px; background: linear-gradient(135deg, var(--mustard-soft), #FFE7A0); display: grid; place-items: center; font-size: 30px; }
+.pcard .ph img { width: 100%; height: 118px; object-fit: cover; display: block; }
+.pcard .pin { position: absolute; top: 8px; left: 8px; }
+.pcard .body { padding: 9px 11px 11px; display: flex; flex-direction: column; gap: 3px; flex: 1; }
+.pcard .nm { font-weight: 800; color: var(--navy); font-size: 14px; line-height: 1.25; }
+.pcard .meta { font-size: 12.5px; color: var(--ink-2); }
+.pcard .price { font-weight: 800; color: var(--navy); font-size: 15px; margin-top: 2px; }
+.pcard .price small { font-weight: 600; color: var(--ink-2); font-size: 12px; }
+.pcard .chips2 { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+.pcard .chips2 span { font-size: 11px; background: var(--mustard-wash); border: 1px solid var(--line); border-radius: 999px; padding: 1px 7px; color: var(--ink-2); }
+.pcard .links { display: flex; gap: 10px; margin-top: auto; padding-top: 6px; }
+.pcard .links a, .tx a { font-size: 12.5px; font-weight: 800; color: var(--mustard-deep); text-decoration: none; }
+.pcard .links a:hover, .tx a:hover { text-decoration: underline; }
+.open { color: var(--ok); font-weight: 700; } .closed { color: #A15C00; font-weight: 700; }
+.pin { display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 6px; border-radius: 999px; background: var(--mustard);
+  color: var(--navy); font-size: 12px; font-weight: 900; border: 2px solid var(--navy); box-shadow: 0 2px 0 rgba(0,0,0,.2); }
+.tx { padding: 12px 14px; display: grid; gap: 10px; font-size: 13.5px; }
+.tx table { border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; width: 100%; }
+.tx th, .tx td { padding: 6px 10px; text-align: left; border-bottom: 1px solid #F6EBC6; white-space: nowrap; }
+.tx th { background: var(--mustard-soft); color: var(--navy); } .tx tr:last-child td { border-bottom: 0; }
+.tx .cab { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+.tx .cab b { color: var(--navy); }
+.tx .note { font-size: 12px; color: var(--muted); }
+.map { position: relative; height: 270px; overflow: hidden; background: #E8EEF2; border-top: 1px solid var(--line); }
+.map img.tile { position: absolute; width: 256px; height: 256px; user-select: none; -webkit-user-drag: none; }
+.map .pin { position: absolute; transform: translate(-50%, -100%); cursor: default; }
+.map .pin::after { content: ""; position: absolute; left: 50%; bottom: -7px; transform: translateX(-50%); border: 6px solid transparent; border-top-color: var(--navy); border-bottom: 0; }
+.map .attrib { position: absolute; right: 0; bottom: 0; font-size: 10.5px; background: rgba(255,255,255,.85); padding: 1px 6px; color: #333; }
+.map .attrib a { color: #333; }
+
+/* ---------- voice mode (Amazon Nova Sonic) */
+.mic { width: 48px; height: 48px; flex: none; border-radius: 50%; border: 2px solid #9ED8E0; background: #fff; color: #177C8A; cursor: pointer;
+  display: grid; place-items: center; position: relative; transition: background .2s, color .2s, border-color .2s; }
+.mic svg { width: 22px; height: 22px; }
+.mic:hover, .mic:focus-visible { background: #E6F7FA; outline: none; }
+.mic.connecting { opacity: .65; cursor: progress; }
+.mic.listening { background: #F08A70; border-color: #F08A70; color: #fff; }
+.mic.listening::before, .mic.listening::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(240,138,112,.55);
+  animation: mic-ring 1.6s ease-out infinite; }
+.mic.listening::after { animation-delay: .8s; }
+.mic.speaking { background: #3FA3B3; border-color: #3FA3B3; color: #fff; }
+.mic.speaking::before { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(63,163,179,.5); animation: mic-ring 1s ease-out infinite; }
+@keyframes mic-ring { from { transform: scale(.85); opacity: 1; } to { transform: scale(1.35); opacity: 0; } }
+.voicebar { position: absolute; left: 16px; bottom: calc(100% + 8px); max-width: calc(100% - 190px); z-index: 4; background: rgba(255,255,255,.95);
+  border: 1.5px solid #9ED8E0; border-radius: 14px; padding: 6px 12px; font-size: 13px; font-weight: 700; color: var(--navy);
+  box-shadow: 0 6px 18px rgba(23,92,120,.14); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.voicebar .who { color: #E0715A; font-weight: 900; margin-right: 4px; }
+.row.user .bubble .vtag { opacity: .8; margin-right: 4px; }
+.flash { animation: flash 1.8s ease-out 1; border-radius: 16px; }
+@keyframes flash { 0%, 40% { box-shadow: 0 0 0 4px rgba(240,138,112,.8); } 100% { box-shadow: 0 0 0 0 rgba(240,138,112,0); } }
+@media (prefers-reduced-motion: reduce) { .mic::before, .mic::after, .flash { animation: none !important; } }
+
+/* M1 Singapore travel plans block */
+.m1grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; padding: 12px; }
+.m1card { position: relative; border: 1.5px solid #CFE9EF; border-radius: 14px; padding: 12px 13px; background: #fff; display: flex; flex-direction: column; gap: 4px; }
+.m1card.best { border-color: #F08A70; box-shadow: 0 0 0 3px rgba(240,138,112,.15); }
+.m1card .grp { font-size: 11px; font-weight: 900; letter-spacing: .4px; text-transform: uppercase; color: #177C8A; }
+.m1card .nm { font-weight: 800; color: var(--navy); font-size: 14.5px; }
+.m1card .pr { font-size: 22px; font-weight: 900; color: var(--navy); font-variant-numeric: tabular-nums; }
+.m1card .pr small { font-size: 12px; font-weight: 700; color: var(--ink-2); }
+.m1card .ln { font-size: 12.5px; color: var(--ink-2); }
+.m1card .ln b { color: var(--navy); }
+.m1card .tag { position: absolute; top: 10px; right: 10px; font-size: 11px; font-weight: 900; color: #fff; background: #F08A70; border-radius: 999px; padding: 2px 8px; }
+.m1card a { margin-top: auto; padding-top: 6px; font-size: 12.5px; font-weight: 800; color: var(--mustard-deep); text-decoration: none; }
+.m1card a:hover { text-decoration: underline; }
+.m1note { font-size: 11.5px; color: var(--muted); padding: 0 14px 12px; }
+
+/* personalised "For you" chips */
+.foryou { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.foryou .lbl { font-size: 11.5px; font-weight: 900; letter-spacing: .4px; text-transform: uppercase; color: #E0715A; margin-right: 2px; }
+.foryou button { font: inherit; font-size: 12.5px; font-weight: 800; color: var(--navy); background: linear-gradient(90deg, #FFF1E8, #F1FAFC);
+  border: 1.5px solid #FFC2A6; border-radius: 999px; padding: 5px 11px; cursor: pointer; }
+.foryou button:hover, .foryou button:focus-visible { background: #FFE2D6; outline: none; }
+
+/* instagram reels */
+.igrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; padding: 12px; }
+.igcard { position: relative; border-radius: 16px; padding: 2px; background: linear-gradient(135deg, #FFC2A6, #F7A8C4 45%, #B9A7F2 75%, #9ED8E0); }
+.igcard.tt { background: linear-gradient(135deg, #9EEFF0, #C9F1EE 40%, #FFB3C7 80%, #FF9AA2); }
+.igcard.tt .kind { color: #E2245F; }
+.igcard.tt .acts a, .igcard.tt .acts button { color: #0F7E86; }
+.igcard .in { background: #fff; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; height: 100%; }
+.igcard .thumb { position: relative; aspect-ratio: 4 / 5; background: linear-gradient(160deg, #FFE2D6, #E7E0FF 60%, #D9F3F6); border: 0; padding: 0; cursor: pointer; width: 100%; display: block; }
+.igcard .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.igcard .thumb .play { position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%; background: rgba(255,255,255,.88);
+  display: grid; place-items: center; box-shadow: 0 4px 14px rgba(0,0,0,.18); font-size: 22px; color: #E0715A; }
+.igcard .thumb:hover .play, .igcard .thumb:focus-visible .play { transform: scale(1.08); background: #fff; }
+.igcard .thumb:focus-visible { outline: 3px solid #5BB5C4; outline-offset: -3px; }
+.igcard .dur { position: absolute; right: 8px; bottom: 8px; background: rgba(34,56,75,.82); color: #fff; font-size: 11.5px; font-weight: 800; border-radius: 6px; padding: 1px 6px; }
+.igcard .kind { position: absolute; left: 8px; top: 8px; background: rgba(255,255,255,.9); color: #C13584; font-size: 11px; font-weight: 900; border-radius: 999px; padding: 2px 8px; }
+.igcard .meta2 { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.igcard .t { font-weight: 800; font-size: 13.5px; color: var(--navy); line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.igcard .c { font-size: 12px; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.igcard .acts { display: flex; gap: 10px; margin-top: auto; padding-top: 4px; }
+.igcard .acts a, .igcard .acts button { font: inherit; font-size: 12.5px; font-weight: 800; color: #C13584; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: none; }
+.igcard .acts a:hover, .igcard .acts button:hover { text-decoration: underline; }
+.igcard iframe { width: 100%; height: 580px; border: 0; display: block; background: #fff; }
+.ig-note { font-size: 11.5px; color: var(--muted); padding: 0 14px 12px; }
+
+
+/* ---------- Mia: the cheerful beach companion (original character) */
+/* Mia stands on the top edge of the message box, by the send button, on every device */
+form { position: relative; }
+#log { padding-bottom: 150px; }            /* room so the newest message is never hidden behind her */
+#sunny { position: absolute; bottom: calc(100% - 4px); right: 58px; width: 72px; height: 98px; z-index: 4; pointer-events: none;
+  transition: right 2.6s linear; }          /* in front of the messages and the message box */
+#sunny svg.girl { width: 72px; height: 98px; position: absolute; bottom: 0; left: 0; overflow: visible; cursor: pointer; pointer-events: auto; }
+#sunny .flip { transform-box: fill-box; transform-origin: 50% 50%; transition: transform .25s; }
+#sunny.face-left .flip { transform: scaleX(-1); }
+#sunny .bob { transform-box: view-box; transform-origin: 50px 130px; }
+#sunny.walking .bob { animation: s-walk .5s ease-in-out infinite; }
+#sunny.walking .legL { animation: s-leg .5s ease-in-out infinite; } #sunny.walking .legR { animation: s-leg .5s ease-in-out infinite reverse; }
+#sunny .legL, #sunny .legR { transform-box: fill-box; transform-origin: 50% 0%; }
+#sunny .armL, #sunny .armR { transform-box: fill-box; transform-origin: 90% 10%; }
+#sunny .armR { transform-origin: 10% 10%; }
+#sunny .head { transform-box: view-box; transform-origin: 50px 70px; transition: transform .35s; }
+#sunny .pony { transform-box: fill-box; transform-origin: 10% 10%; animation: s-pony 1.6s ease-in-out infinite alternate; }
+#sunny .eyes { transform-box: fill-box; transform-origin: 50% 50%; animation: s-blink 4.5s infinite; }
+#sunny .m, #sunny .fx { display: none; }
+#sunny.mood-happy .m-smile, #sunny.mood-idle .m-smile, #sunny.mood-pointing .m-smile { display: inline; }
+#sunny.mood-excited .m-open, #sunny.mood-protect .m-open { display: inline; }
+#sunny.mood-curious .m-o, #sunny.mood-waiting .m-flat { display: inline; }
+#sunny.mood-sleepy .m-flat, #sunny.mood-sleepy .fx-z { display: inline; }
+#sunny.mood-sleepy .eyes { animation: none; transform: scaleY(.15); }
+#sunny.mood-excited .fx-spark { display: inline; } #sunny.mood-curious .fx-q { display: inline; }
+#sunny.mood-waiting .fx-dots { display: inline; } #sunny.mood-protect .fx-shield { display: inline; }
+#sunny.mood-pointing .fx-point { display: inline; }
+#sunny.mood-excited .bob { animation: s-jump .55s ease-out 3; }
+#sunny.mood-excited .armL { animation: s-cheerL .55s ease-in-out 3; } #sunny.mood-excited .armR { animation: s-cheerR .55s ease-in-out 3; }
+#sunny.mood-curious .head { transform: rotate(-10deg); }
+#sunny.mood-waiting .legR { animation: s-tap .45s ease-in-out infinite; }
+#sunny.mood-idle .armR { animation: s-wave .7s ease-in-out 4 alternate; }
+#sunny.mood-pointing .armR { transform: rotate(-120deg); }
+#sunny.mood-pointing .head { transform: rotate(-8deg) translateY(-2px); }
+#sunny.mood-sleepy .head { transform: rotate(8deg) translateY(2px); }
+#sunny .fx-spark { animation: s-twinkle .8s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+#sunny .fx-dots circle { animation: s-dot 1.2s ease-in-out infinite; } #sunny .fx-dots circle:nth-child(2) { animation-delay: .2s; } #sunny .fx-dots circle:nth-child(3) { animation-delay: .4s; }
+#sunny .fx-z { animation: s-z 2.4s ease-in-out infinite; }
+.sunny-bubble { position: absolute; bottom: calc(100% + 2px); right: -6px; transform: scale(.6); transform-origin: calc(100% - 42px) 100%; opacity: 0;
+  pointer-events: none; width: max-content; min-width: 140px; max-width: min(240px, 70vw); background: #fff; color: var(--navy); border: 2px solid #FFC2A6;
+  border-radius: 16px; padding: 7px 11px; font-size: 12.5px; font-weight: 800; line-height: 1.3; text-align: center;
+  box-shadow: 0 6px 18px rgba(23,92,120,.18); transition: opacity .25s, transform .25s; }
+.sunny-bubble.to-right { right: auto; left: -6px; transform-origin: 42px 100%; }
+.sunny-bubble.to-right::after { right: auto; left: 30px; }
+.sunny-bubble::after { content: ""; position: absolute; right: 36px; bottom: -9px; border: 8px solid transparent; border-top-color: #FFC2A6; border-bottom: 0; }
+.sunny-bubble.show { opacity: 1; transform: scale(1); }
+.sunny-bubble.clickable { pointer-events: auto; cursor: pointer; }
+.sunny-bubble.clickable:hover { background: #FFF1E8; }
+.sunny-bubble .cta { display: block; font-size: 11px; color: #E0715A; margin-top: 2px; }
+@keyframes s-walk { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes s-leg { 0%, 100% { transform: rotate(14deg); } 50% { transform: rotate(-14deg); } }
+@keyframes s-jump { 0% { transform: translateY(0); } 40% { transform: translateY(-22px); } 100% { transform: translateY(0); } }
+@keyframes s-cheerL { 50% { transform: rotate(130deg); } } @keyframes s-cheerR { 50% { transform: rotate(-130deg); } }
+@keyframes s-wave { from { transform: rotate(-150deg); } to { transform: rotate(-110deg); } }
+@keyframes s-tap { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-16deg); } }
+@keyframes s-pony { from { transform: rotate(-6deg); } to { transform: rotate(8deg); } }
+@keyframes s-blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(.1); } }
+@keyframes s-twinkle { from { transform: scale(.7); opacity: .6; } to { transform: scale(1.15); opacity: 1; } }
+@keyframes s-dot { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+@keyframes s-z { 0% { transform: translate(0, 0); opacity: 0; } 30% { opacity: 1; } 100% { transform: translate(10px, -18px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { #sunny, #sunny * { animation: none !important; transition: none !important; } }
+
+/* responsive (kept last so it overrides the desktop rules above) */
+@media (max-width: 900px) {
+  .page { grid-template-columns: 1fr; height: calc(100dvh - 104px); padding: 10px; }
+  .side { display: none; }
+  /* top-bar actions become a swipeable chip row under the logo */
+  .nav { flex-wrap: wrap; row-gap: 6px; padding: 8px 12px; }
+  .nav nav { order: 3; flex-basis: 100%; margin: 0; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; gap: 6px; }
+  .nav nav::-webkit-scrollbar { display: none; }
+  .nav nav button { flex: none; background: rgba(255,255,255,.7); padding: 6px 12px; font-size: 13.5px; }
+  form { padding-bottom: calc(12px + env(safe-area-inset-bottom)); }
+  textarea { font-size: 16px; }          /* stops iOS zooming into the message box */
+  .mic { width: 44px; height: 44px; } .voicebar { max-width: calc(100% - 120px); font-size: 12.5px; }
+}
+@media (max-width: 640px) {
+  .nav { gap: 10px; } .brand small { display: none; } .pill { display: none; }
+  .brand { white-space: nowrap; font-size: 18px; } .brand svg { width: 34px; height: 34px; }
+  .hero svg.scene { display: none; } .hero { padding: 12px 14px; gap: 6px; } .hero h2 { font-size: 18px; }
+  .hero p { font-size: 13.5px; } .chips button { font-size: 12.5px; padding: 6px 11px; }
+  .hero { grid-template-columns: 1fr; padding: 14px; } .hero svg.scene { width: 100%; height: 110px; }
+  .stack { max-width: calc(100% - 50px); } .chat-head .status { display: none; }
+  .chat-head .with { display: none; }
+  #sunny { width: 60px; height: 82px; right: 54px; } #sunny svg.girl { width: 60px; height: 82px; }
+  #log { padding-bottom: 128px; }
+  .sunny-bubble { min-width: 120px; font-size: 12px; }
+}
+[hidden] { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<div class="beach" aria-hidden="true"><svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE9FB"/><stop offset=".55" stop-color="#E6F7FD"/><stop offset="1" stop-color="#FFF1E6"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FDDE6"/><stop offset=".6" stop-color="#7ACFDC"/><stop offset="1" stop-color="#A8E6E4"/></linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF0D6"/><stop offset="1" stop-color="#FADDB4"/></linearGradient>
+    <radialGradient id="sun"><stop offset="0" stop-color="#FFF4C2"/><stop offset=".6" stop-color="#FFE59A"/><stop offset="1" stop-color="#FFE59A" stop-opacity="0"/></radialGradient>
+    <g id="shack">
+      <rect x="-6" y="70" width="6" height="40" fill="#C99A6B"/><rect x="104" y="70" width="6" height="40" fill="#C99A6B"/>
+      <rect x="-14" y="64" width="132" height="10" rx="3" fill="#D8AD7E"/>
+      <rect x="0" y="12" width="104" height="54" rx="4" fill="#FFE2C2" stroke="#D9A877" stroke-width="2"/>
+      <path d="M10 12 V66 M28 12 V66 M76 12 V66 M94 12 V66" stroke="#F3CFA6" stroke-width="3"/>
+      <rect x="40" y="28" width="24" height="38" rx="3" fill="#9ED8E0" stroke="#D9A877" stroke-width="2"/>
+      <rect x="12" y="24" width="18" height="16" rx="2" fill="#C9F1EE" stroke="#D9A877" stroke-width="2"/>
+      <rect x="74" y="24" width="18" height="16" rx="2" fill="#C9F1EE" stroke="#D9A877" stroke-width="2"/>
+      <path d="M-22 16 L52 -30 L126 16 Z" fill="#F2C48D" stroke="#D9A066" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M-10 9 L52 -24 M8 14 L52 -14 M96 14 L52 -14 M114 9 L52 -24" stroke="#E2AE6E" stroke-width="2"/>
+      <path d="M-22 16 q9 9 18 0 q9 9 18 0 q9 9 18 0 q9 9 18 0 q9 9 18 0 q9 9 18 0 q9 9 18 0 q8 8 12 0" fill="#F2C48D" stroke="#D9A066" stroke-width="2"/>
+      <rect x="18" y="44" width="10" height="6" rx="2" fill="#FFB4A2"/><path d="M84 46 h10" stroke="#FFB4A2" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <g id="headShades"><!-- smiling face with sunglasses, centred at 0,0 -->
+      <circle r="11" fill="#F2BC92" stroke="#22384B" stroke-width="1.6"/>
+      <path d="M-11 -3 Q-10 -13 0 -13 Q10 -13 11 -3 Q5 -8 0 -8 Q-5 -8 -11 -3 Z" fill="#4A2E1A"/>
+      <rect x="-8.5" y="-3.5" width="7" height="5" rx="2" fill="#22384B"/><rect x="1.5" y="-3.5" width="7" height="5" rx="2" fill="#22384B"/>
+      <path d="M-1.5 -1.5 h3" stroke="#22384B" stroke-width="1.4"/>
+      <path d="M-5 4.5 Q0 9 5 4.5" stroke="#22384B" stroke-width="1.6" fill="#fff" stroke-linecap="round"/>
+      <ellipse cx="-7.5" cy="3.5" rx="2" ry="1.2" fill="#FF9AA2" opacity=".8"/><ellipse cx="7.5" cy="3.5" rx="2" ry="1.2" fill="#FF9AA2" opacity=".8"/>
+    </g>
+    <g id="palm">
+      <path d="M0 0 Q-14 -90 10 -190" stroke="#B98A5E" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <path d="M0 0 Q-14 -90 10 -190" stroke="#D4A777" stroke-width="12" stroke-dasharray="4 14" fill="none"/>
+      <g fill="#8FD3A8" stroke="#5FB486" stroke-width="2">
+        <path d="M10 -190 Q-50 -215 -95 -170 Q-45 -195 10 -186 Z"/><path d="M10 -190 Q70 -220 118 -172 Q66 -196 10 -186 Z"/>
+        <path d="M10 -190 Q-20 -250 -70 -250 Q-22 -235 8 -192 Z"/><path d="M10 -190 Q40 -252 92 -246 Q44 -232 12 -192 Z"/>
+        <path d="M10 -190 Q-40 -175 -60 -120 Q-30 -165 8 -186 Z"/><path d="M10 -190 Q62 -170 80 -118 Q50 -162 12 -186 Z"/>
+      </g>
+      <circle cx="4" cy="-186" r="7" fill="#C99A6B"/><circle cx="16" cy="-184" r="7" fill="#B98A5E"/>
+    </g>
+  </defs>
+  <rect width="1440" height="900" fill="url(#sky)"/>
+  <circle cx="1160" cy="150" r="130" fill="url(#sun)"/><circle cx="1160" cy="150" r="58" fill="#FFF0B3"/>
+  <use href="#cloud" x="120" y="90" width="200" height="100"/><use href="#cloud" x="520" y="40" width="150" height="75"/>
+  <use href="#cloud" x="880" y="120" width="180" height="90"/><use href="#cloud" x="1290" y="60" width="140" height="70"/>
+  <path d="M60 210 q8 -8 16 0 q8 -8 16 0 M1000 70 q7 -7 14 0 q7 -7 14 0" stroke="#7BA7BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- aeroplane towing a banner -->
+  <g class="plane">
+    <g transform="translate(0 112)">
+      <path d="M-250 -14 h190 l-14 14 l14 14 h-190 q-10 0 -10 -14 q0 -14 10 -14 z" fill="#FFF8EE" stroke="#F08A70" stroke-width="2"/>
+      <text x="-160" y="6" text-anchor="middle" font-family="Nunito, Segoe UI, sans-serif" font-size="15" font-weight="900" fill="#E0715A">Pack your bags!</text>
+      <path d="M-60 0 L-8 0" stroke="#9AB3C4" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <path d="M-6 -6 L-16 -24 Q-17 -27 -13 -26 L4 -8 Z" fill="#9ED8E0" stroke="#22476A" stroke-width="1.8" stroke-linejoin="round"/>
+      <ellipse cx="26" cy="0" rx="34" ry="12" fill="#fff" stroke="#22476A" stroke-width="2"/>
+      <path d="M52 -8 Q64 -3 60 5 Q57 10 50 10" fill="#FFC2A6" stroke="#22476A" stroke-width="2"/>
+      <path d="M14 4 L4 22 Q3 25 7 24 L30 8 Z" fill="#9ED8E0" stroke="#22476A" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="34" cy="-2" r="4" fill="#fff" stroke="#22476A" stroke-width="1.5"/><circle cx="44" cy="-2" r="3.6" fill="#fff" stroke="#22476A" stroke-width="1.5"/>
+      <circle cx="35" cy="-1.5" r="2" fill="#22476A"/><circle cx="44.6" cy="-1.5" r="1.8" fill="#22476A"/>
+      <path d="M34 5 Q39 9 45 5" stroke="#22476A" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+      <ellipse cx="29" cy="4" rx="2.2" ry="1.3" fill="#FF9AA2"/>
+      <circle cx="8" cy="-1" r="2" fill="#BFE6F2"/><circle cx="16" cy="-1" r="2" fill="#BFE6F2"/>
+    </g>
+  </g>
+
+  <!-- small far-away balloon (left) -->
+  <g transform="translate(1336 405) scale(.5)"><g class="balloon b2">
+    <path d="M0 -60 C-42 -60 -46 -10 -14 22 L14 22 C46 -10 42 -60 0 -60 Z" fill="#C9F1EE" stroke="#5BB5C4" stroke-width="2"/>
+    <path d="M0 -60 C-14 -40 -14 0 -6 22 M0 -60 C14 -40 14 0 6 22" stroke="#FFC2A6" stroke-width="7" fill="none"/>
+    <path d="M-12 22 L-8 38 M12 22 L8 38" stroke="#9A7B5C" stroke-width="2"/><rect x="-11" y="36" width="22" height="16" rx="3" fill="#D8AD7E"/>
+  </g></g>
+
+  <!-- hot air balloon with a smiling face and a waving passenger (right) -->
+  <g transform="translate(1382 210)"><g class="balloon">
+    <path d="M0 -78 C-56 -78 -60 -14 -18 30 L18 30 C60 -14 56 -78 0 -78 Z" fill="#FFF1BF" stroke="#E6A15A" stroke-width="2.2"/>
+    <path d="M0 -78 C-34 -64 -40 -10 -18 30 L-6 30 C-22 -10 -18 -60 0 -78 Z" fill="#FFC2A6"/>
+    <path d="M0 -78 C34 -64 40 -10 18 30 L6 30 C22 -10 18 -60 0 -78 Z" fill="#9ED8E0"/>
+    <path d="M0 -78 C-56 -78 -60 -14 -18 30 L18 30 C60 -14 56 -78 0 -78 Z" fill="none" stroke="#E6A15A" stroke-width="2.2"/>
+    <circle cx="-10" cy="-30" r="3.2" fill="#22384B"/><circle cx="10" cy="-30" r="3.2" fill="#22384B"/>
+    <circle cx="-9" cy="-31" r="1" fill="#fff"/><circle cx="11" cy="-31" r="1" fill="#fff"/>
+    <path d="M-10 -18 Q0 -10 10 -18" stroke="#22384B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-19" cy="-21" rx="4" ry="2.4" fill="#FF9AA2" opacity=".8"/><ellipse cx="19" cy="-21" rx="4" ry="2.4" fill="#FF9AA2" opacity=".8"/>
+    <path d="M-16 30 L-12 52 M16 30 L12 52" stroke="#9A7B5C" stroke-width="2"/>
+    <use href="#headShades" transform="translate(-2 46) scale(.85)"/>
+    <path class="wave-hand" d="M7 47 l9 -12" stroke="#F2BC92" stroke-width="4.5" stroke-linecap="round"/>
+    <rect x="-16" y="50" width="32" height="22" rx="4" fill="#D8AD7E" stroke="#B88A5A" stroke-width="2"/>
+    <path d="M-16 58 h32 M-16 65 h32" stroke="#C99A6B" stroke-width="1.5"/>
+  </g></g>
+
+  <!-- parasailer (left), towed by the speedboat below -->
+  <g transform="translate(70 196)"><g class="chute">
+    <path d="M-52 0 Q0 -46 52 0 Q40 -6 26 -4 Q13 -10 0 -6 Q-13 -10 -26 -4 Q-40 -6 -52 0 Z" fill="#FFC2A6" stroke="#E0715A" stroke-width="2"/>
+    <path d="M-26 -4 Q-20 -30 0 -40 Q-10 -20 -13 -8 M26 -4 Q20 -30 0 -40 Q10 -20 13 -8" fill="#FFF1BF" stroke="#E0715A" stroke-width="1.5"/>
+    <path d="M-50 0 L-6 62 M50 0 L6 62 M-24 -4 L-3 62 M24 -4 L3 62" stroke="#9AB3C4" stroke-width="1.2"/>
+    <use href="#headShades" transform="translate(0 70)"/>
+    <path d="M-8 64 L-18 54 M8 64 L18 54" stroke="#F2BC92" stroke-width="4.5" stroke-linecap="round"/>
+    <rect x="-8" y="80" width="16" height="16" rx="5" fill="#2E6A8E"/>
+    <path d="M-4 96 L-7 112 M4 96 L7 112" stroke="#F2BC92" stroke-width="4.5" stroke-linecap="round"/>
+  </g></g>
+  <rect y="470" width="1440" height="290" fill="url(#sea)"/>
+  <path d="M0 470 H1440" stroke="#B5ECF1" stroke-width="3"/>
+  <g class="boat"><path d="M210 520 h70 l-12 14 h-46 z" fill="#FFB4A2"/><path d="M245 518 V462 L282 514 Z" fill="#fff"/><path d="M243 518 V470 L216 514 Z" fill="#FFE59A"/></g>
+  <g class="wave" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".75">
+    <path d="M40 560 q30 -14 60 0 t60 0"/><path d="M420 600 q30 -14 60 0 t60 0 t60 0"/><path d="M900 545 q30 -14 60 0 t60 0"/><path d="M1180 620 q30 -14 60 0 t60 0 t60 0"/>
+  </g>
+  <g class="wave w2" stroke="#E9FBFD" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8">
+    <path d="M180 660 q30 -14 60 0 t60 0 t60 0"/><path d="M700 690 q30 -14 60 0 t60 0"/><path d="M1020 670 q30 -14 60 0 t60 0"/>
+  </g>
+
+  <!-- tow rope + speedboat for the parasailer -->
+  <path d="M70 308 Q86 430 96 548" stroke="#9AB3C4" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+  <g class="jetski" style="animation-duration:2.4s">
+    <path d="M30 562 h86 l-16 18 h-62 z" fill="#fff" stroke="#22476A" stroke-width="2"/>
+    <path d="M44 562 l10 -14 h30 l8 14" fill="#9ED8E0" stroke="#22476A" stroke-width="2"/>
+    <use href="#headShades" transform="translate(70 540) scale(.8)"/>
+    <path class="wave-hand" d="M78 545 l8 -10" stroke="#F2BC92" stroke-width="4" stroke-linecap="round"/>
+    <path d="M114 574 q14 -6 22 4 M112 580 q18 0 28 10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- jet ski rider (right) -->
+  <g transform="translate(1340 528)"><g class="jetski">
+    <path class="spray" d="M-12 18 q-20 -16 -34 -6 M-10 24 q-26 -2 -40 12 M-8 12 q-14 -22 -30 -20" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M-8 22 Q30 32 78 18 Q82 12 74 8 L20 8 Q2 8 -8 22 Z" fill="#FFC2A6" stroke="#22476A" stroke-width="2"/>
+    <path d="M22 8 L34 -4 L58 -4 L66 8 Z" fill="#fff" stroke="#22476A" stroke-width="2"/>
+    <path d="M60 -6 l10 -10" stroke="#22476A" stroke-width="3" stroke-linecap="round"/>
+    <rect x="30" y="-24" width="18" height="22" rx="7" fill="#2E6A8E"/>
+    <path d="M44 -18 l18 6" stroke="#F2BC92" stroke-width="4.5" stroke-linecap="round"/>
+    <use href="#headShades" transform="translate(39 -36)"/>
+    <path d="M28 -40 Q39 -54 50 -40 Z" fill="#F08A70" stroke="#22384B" stroke-width="1.4"/>
+  </g></g>
+  <path d="M0 735 Q180 705 360 728 T720 724 T1080 730 T1440 718 V760 H0 Z" fill="#E9FBFD" opacity=".9"/>
+  <path d="M0 748 Q200 722 400 742 T800 738 T1200 744 T1440 734 V900 H0 Z" fill="url(#sand)"/>
+  <g fill="#F7D3A3" opacity=".7"><circle cx="300" cy="820" r="3"/><circle cx="520" cy="860" r="2.5"/><circle cx="880" cy="830" r="3"/><circle cx="1240" cy="870" r="2.5"/></g>
+  <use href="#palm" transform="translate(96 820) scale(.95)"/>
+  <use href="#shack" transform="translate(14 770) scale(.82)"/>
+  <use href="#palm" transform="translate(1352 815) scale(-.95 .95)"/>
+  <use href="#shack" transform="translate(1322 772) scale(.8)"/>
+  <use href="#shack" transform="translate(200 760) scale(.9)"/>
+  <use href="#shack" transform="translate(1150 756) scale(.9)"/>
+  <g transform="translate(980 790)">
+    <path d="M0 0 V-92" stroke="#9A7B5C" stroke-width="5"/>
+    <path d="M-80 -86 Q0 -150 80 -86 Z" fill="#FFB4A2"/><path d="M-80 -86 Q-40 -150 0 -118 Q40 -150 80 -86 Q40 -112 0 -100 Q-40 -112 -80 -86 Z" fill="#fff"/>
+    <path d="M-27 -100 Q-12 -142 0 -118 Q12 -142 27 -100 Z" fill="#9ED8E0"/>
+    <rect x="-90" y="20" width="110" height="24" rx="6" fill="#C9F1EE" transform="rotate(-6)"/><path d="M-84 30 h96" stroke="#FFB4A2" stroke-width="5" transform="rotate(-6)"/>
+  </g>
+  <g transform="translate(560 860)"><circle r="18" fill="#fff"/><path d="M-18 0 A18 18 0 0 1 18 0 Z" fill="#FFB4A2"/><path d="M-6 -17 A18 18 0 0 1 6 -17 L4 17 A18 18 0 0 1 -4 17 Z" fill="#9ED8E0"/></g>
+  <path d="M700 870 l10 -8 l10 8 l-10 6 z M712 850 l6 -4" fill="#FFB4A2"/>
+</svg></div>
+
+<!-- ======================= Original character art (SVG symbols) ======================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Buddy: the airplane mascot (the agent) -->
+    <symbol id="jetty" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="32" fill="#FFF1C2"/>
+      <path d="M6 22 l6 -2 l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none" opacity=".9"/>
+      <path d="M13 31 L8 16 Q8 14 10 15 L21 28 Z" fill="#E1AD01" stroke="#2B2310" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M29 28 L24 19 Q24 17 26 18 L36 27 Z" fill="#E1AD01" stroke="#2B2310" stroke-width="2" stroke-linejoin="round"/>
+      <ellipse cx="33" cy="35" rx="23" ry="12.5" fill="#fff" stroke="#2B2310" stroke-width="2"/>
+      <path d="M50 26.5 Q58 30 56 37 Q55 42 49 44" fill="#1F2A44" stroke="#2B2310" stroke-width="2"/>
+      <path d="M27 40 L18 54 Q17 56 19.5 55 L37 43 Z" fill="#E1AD01" stroke="#2B2310" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="39.5" cy="33" r="4" fill="#fff" stroke="#2B2310" stroke-width="1.8"/>
+      <circle cx="47" cy="33" r="3.6" fill="#fff" stroke="#2B2310" stroke-width="1.8"/>
+      <circle cx="40.3" cy="33.6" r="2" fill="#2B2310"/><circle cx="47.6" cy="33.6" r="1.8" fill="#2B2310"/>
+      <circle cx="41" cy="32.6" r=".7" fill="#fff"/><circle cx="48.2" cy="32.6" r=".6" fill="#fff"/>
+      <path d="M40 39.5 Q44 43 48 39.5" stroke="#2B2310" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+      <ellipse cx="36" cy="38.5" rx="2.3" ry="1.4" fill="#FF9AA2" opacity=".85"/>
+      <ellipse cx="51.5" cy="38" rx="1.8" ry="1.2" fill="#FF9AA2" opacity=".85"/>
+      <circle cx="19" cy="34" r="1.6" fill="#BFD7F5"/><circle cx="24.5" cy="34" r="1.6" fill="#BFD7F5"/><circle cx="30" cy="34" r="1.6" fill="#BFD7F5"/>
+    </symbol>
+
+    
+
+    
+
+    <!-- You: the traveller -->
+    <symbol id="traveller" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="32" fill="#DDEBFF"/>
+      <path d="M12 64 Q13 50 32 49 Q51 50 52 64 Z" fill="#1BAF7A"/>
+      <path d="M21 52 L19 64 M43 52 L45 64" stroke="#7A4F12" stroke-width="3.2" stroke-linecap="round"/>
+      <circle cx="18.6" cy="36" r="3" fill="#D9A27A" stroke="#2B2310" stroke-width="1.3"/>
+      <circle cx="45.4" cy="36" r="3" fill="#D9A27A" stroke="#2B2310" stroke-width="1.3"/>
+      <circle cx="32" cy="36" r="13.5" fill="#E8B48C" stroke="#2B2310" stroke-width="1.8"/>
+      <path d="M17.5 30 Q18 15 32 15 Q46 15 46.5 30 Z" fill="#1F2A44" stroke="#2B2310" stroke-width="1.8" stroke-linejoin="round"/>
+      <rect x="17" y="27" width="30" height="5" rx="2.5" fill="#E1AD01" stroke="#2B2310" stroke-width="1.5"/>
+      <circle cx="32" cy="13" r="3.4" fill="#E1AD01" stroke="#2B2310" stroke-width="1.5"/>
+      <circle cx="27" cy="37" r="1.9" fill="#2B2310"/><circle cx="37" cy="37" r="1.9" fill="#2B2310"/>
+      <circle cx="27.6" cy="36.4" r=".6" fill="#fff"/><circle cx="37.6" cy="36.4" r=".6" fill="#fff"/>
+      <path d="M26.5 42 Q32 47.5 37.5 42 Z" fill="#fff" stroke="#2B2310" stroke-width="1.7" stroke-linejoin="round"/>
+      <ellipse cx="23.4" cy="41.5" rx="2.1" ry="1.2" fill="#FF9AA2" opacity=".8"/><ellipse cx="40.6" cy="41.5" rx="2.1" ry="1.2" fill="#FF9AA2" opacity=".8"/>
+    </symbol>
+
+    <symbol id="cloud" viewBox="0 0 60 30">
+      <path d="M10 26 Q2 26 3 19 Q4 13 11 14 Q13 5 23 6 Q31 1 37 9 Q47 6 49 15 Q58 15 57 22 Q56 26 50 26 Z" fill="#fff" stroke="#EEDFAE" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="paperplane" viewBox="0 0 24 24">
+      <path d="M2.5 11.2 L21 3 L14.5 21 L11.3 13.2 Z" fill="#1F2A44"/><path d="M11.3 13.2 L21 3 L9.5 11.8 Z" fill="#2E3B5E"/>
+    </symbol>
+  </defs>
+</svg>
+
+
+<header class="nav">
+  <div class="brand"><svg aria-hidden="true"><use href="#jetty"/></svg><div><span class="wordmark">Travel Buddy</span><span class="ai">AI</span><small>Pack your bags and follow with Abhi</small></div></div>
+  <nav aria-label="Quick actions">
+    <button type="button" data-q="Find me the cheapest flights from Singapore to Bangkok next month">Flights</button>
+    <button type="button" data-q="Recommend 4-star hotels in Ubud, Bali for 2 adults from 2027-02-10 to 2027-02-13">Hotels</button>
+    <button type="button" data-q="How do I get from Ninoy Aquino International Airport to Makati, Manila, and which cab companies can I call?">Cabs</button>
+    <button type="button" data-q="What are the best places to explore and shop in Kuala Lumpur?">Places</button>
+    <button type="button" data-q="Show me the price trend for flights from Singapore to Ho Chi Minh City departing 2027-01-15">Trends</button>
+    <button type="button" data-q="Plan a 4-day trip from Singapore to Bali from 2027-01-15 to 2027-01-19: flights, hotels, getting around, things to see and shopping">Plan a trip</button>
+    <button type="button" data-q="What's the best M1 mobile plan to stay connected on my trip? Show prepaid, postpaid and tourist SIM options">Mobile plans</button>
+    <button type="button" onclick="location.href='status'">Status</button>
+  </nav>
+  <div class="spacer"></div>
+  <span class="pill"><span class="dot" aria-hidden="true"></span>Live flights · hotels · cabs · places</span>
+</header>
+
+<main class="page">
+  <aside class="side" aria-label="About Travel Buddy">
+    <section class="card">
+      <h3>Your travel buddy</h3>
+      <div class="crew">
+        <div class="crew-row"><svg aria-hidden="true"><use href="#jetty"/></svg><div><b>Travel Buddy</b><span>Your AI trip planner: flights, cabs, hotels, places & reels</span></div></div>
+        <div class="crew-row" id="guestRow" hidden><svg aria-hidden="true"><use href="#traveller"/></svg><div><b id="guestName"></b><span>Travelling with Travel Buddy</span></div></div>
+      </div>
+    </section>
+    <section class="card">
+      <h3><span aria-hidden="true">🔥</span> Hot ASEAN escapes</h3>
+      <div class="quick">
+        <button type="button" data-q="Plan 4 days in Bali from Singapore, 2027-01-15 to 2027-01-19: flights, a beach hotel, transfers and must-sees"><span class="ico" aria-hidden="true">🌺</span>Singapore → Bali</button>
+        <button type="button" data-q="Cheapest days to fly from Kuala Lumpur to Bangkok in December, plus hotels near Sukhumvit"><span class="ico" aria-hidden="true">🛕</span>Kuala Lumpur → Bangkok</button>
+        <button type="button" data-q="Plan 3 days at Angkor Wat: flights from Manila to Siem Reap on 2027-02-05, hotels and temples to see"><span class="ico" aria-hidden="true">🏯</span>Manila → Siem Reap (Angkor)</button>
+        <button type="button" data-q="Flights from Jakarta to Da Nang on 2027-03-10, beach hotels, and things to do in Hoi An"><span class="ico" aria-hidden="true">🏮</span>Jakarta → Da Nang &amp; Hoi An</button>
+        <button type="button" data-q="Island-hopping in the Philippines: flights from Ho Chi Minh City to Cebu on 2027-04-08 and beaches nearby"><span class="ico" aria-hidden="true">🏝️</span>Ho Chi Minh City → Cebu</button>
+      </div>
+    </section>
+    <section class="card">
+      <h3><span aria-hidden="true">📶</span> Stay connected with M1</h3>
+      <div class="quick">
+        <button type="button" data-q="I'm on M1 prepaid. Best roaming plan for 5 days in Bali?"><span class="ico" aria-hidden="true">📱</span>Prepaid roaming: Bali, 5 days</button>
+        <button type="button" data-q="I'm on M1 postpaid and travelling around ASEAN for 10 days. Which roaming plan is best?"><span class="ico" aria-hidden="true">🌏</span>Postpaid: ASEAN Data Passport</button>
+        <button type="button" data-q="I'm on M1 postpaid. Best roaming plan for 3 days in Bangkok?"><span class="ico" aria-hidden="true">⚡</span>Daily Passport: Bangkok, 3 days</button>
+        <button type="button" data-q="My friend is visiting Singapore. Which M1 tourist SIM should she buy?"><span class="ico" aria-hidden="true">🛬</span>Visiting Singapore: tourist SIM</button>
+      </div>
+    </section>
+  </aside>
+
+  <section class="chat" aria-label="Chat with Travel Buddy">
+    <div class="chat-head">
+      <svg aria-hidden="true"><use href="#jetty"/></svg>
+      <div><b id="chatTitle">Travel Buddy</b><div class="status"><span class="dot" aria-hidden="true"></span>Online · AI trip planner · pack your bags and follow with Abhi</div></div>
+      <div class="actions"><button class="btn-ghost" id="reset" type="button">New chat</button></div>
+    </div>
+    <div id="log" aria-live="polite"></div>
+    <form id="form">
+<div id="sunny" class="mood-happy face-left">
+  <div class="sunny-bubble" id="sunnyBubble" role="status" aria-live="polite"></div>
+  <svg class="girl" viewBox="0 0 100 140" role="img" aria-label="Mia, the cheerful beach companion">
+    <ellipse cx="50" cy="134" rx="24" ry="4.5" fill="rgba(160,120,70,.25)"/>
+    <g class="flip"><g class="bob">
+      <!-- legs + sandals -->
+      <g class="legL"><path d="M42 104 L41 126" stroke="#F2C29D" stroke-width="6.5" stroke-linecap="round"/><path d="M36 128 q5 -3 10 0" stroke="#5BB5C4" stroke-width="4" stroke-linecap="round" fill="none"/></g>
+      <g class="legR"><path d="M58 104 L59 126" stroke="#F2C29D" stroke-width="6.5" stroke-linecap="round"/><path d="M54 128 q5 -3 10 0" stroke="#5BB5C4" stroke-width="4" stroke-linecap="round" fill="none"/></g>
+      <!-- sundress -->
+      <path d="M38 72 Q50 66 62 72 L72 108 Q50 116 28 108 Z" fill="#FFB4A2" stroke="#E0715A" stroke-width="1.8" stroke-linejoin="round"/>
+      <g fill="#fff" opacity=".85"><circle cx="40" cy="96" r="2"/><circle cx="52" cy="90" r="2"/><circle cx="62" cy="100" r="2"/><circle cx="46" cy="106" r="2"/><circle cx="57" cy="80" r="1.7"/><circle cx="44" cy="82" r="1.7"/></g>
+      <path d="M40 72 Q50 78 60 72" stroke="#fff" stroke-width="2.2" fill="none"/>
+      <!-- arms -->
+      <g class="armL"><path d="M39 75 Q30 86 31 97" stroke="#F2C29D" stroke-width="6" stroke-linecap="round" fill="none"/></g>
+      <g class="armR"><path d="M61 75 Q70 86 69 97" stroke="#F2C29D" stroke-width="6" stroke-linecap="round" fill="none"/></g>
+      <!-- head -->
+      <g class="head">
+        <path class="pony" d="M66 46 Q84 50 80 70 Q76 60 66 56 Z" fill="#6B3F2A" stroke="#4A2A1C" stroke-width="1.4"/>
+        <circle cx="67" cy="49" r="3.2" fill="#9ED8E0" stroke="#3FA3B3" stroke-width="1.2"/>
+        <circle cx="50" cy="50" r="19" fill="#F6CDA8" stroke="#22384B" stroke-width="1.8"/>
+        <path d="M31 48 Q32 30 50 30 Q68 30 69 48 Q60 38 50 39 Q40 38 31 48 Z" fill="#6B3F2A"/>
+        <path d="M33 47 Q37 40 44 39 Q40 44 39 49 Z" fill="#6B3F2A"/>
+        <!-- straw sun hat with ribbon + sunglasses on the brim -->
+        <ellipse cx="50" cy="33" rx="31" ry="7.5" fill="#F7DFA8" stroke="#D9A066" stroke-width="1.8"/>
+        <path d="M34 32 Q36 14 50 14 Q64 14 66 32 Z" fill="#F7DFA8" stroke="#D9A066" stroke-width="1.8"/>
+        <path d="M35 28 Q50 32 65 28 L65.5 31.5 Q50 35.5 34.5 31.5 Z" fill="#FF9AA2"/>
+        <g transform="translate(50 22)"><rect x="-12" y="-3" width="9" height="6" rx="2.5" fill="#22476A"/><rect x="3" y="-3" width="9" height="6" rx="2.5" fill="#22476A"/><path d="M-3 0 h6" stroke="#22476A" stroke-width="1.5"/></g>
+        <g class="eyes"><ellipse cx="43" cy="51" rx="2.6" ry="3.3" fill="#22384B"/><ellipse cx="57" cy="51" rx="2.6" ry="3.3" fill="#22384B"/>
+          <circle cx="44" cy="49.8" r=".9" fill="#fff"/><circle cx="58" cy="49.8" r=".9" fill="#fff"/></g>
+        <path d="M39.5 46 l-2 -1.5 M60.5 46 l2 -1.5" stroke="#22384B" stroke-width="1.2" stroke-linecap="round"/>
+        <ellipse cx="38" cy="57" rx="3.2" ry="1.9" fill="#FF8FA3" opacity=".75"/><ellipse cx="62" cy="57" rx="3.2" ry="1.9" fill="#FF8FA3" opacity=".75"/>
+        <path class="m m-smile" d="M44 58 Q50 63.5 56 58" stroke="#C2410C" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path class="m m-open" d="M43.5 57.5 Q50 67 56.5 57.5 Z" fill="#fff" stroke="#C2410C" stroke-width="1.8" stroke-linejoin="round"/>
+        <ellipse class="m m-o" cx="50" cy="60" rx="2.6" ry="3" fill="#C2410C"/>
+        <path class="m m-flat" d="M46 60 h8" stroke="#C2410C" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g></g>
+    <!-- mood effects (not flipped) -->
+    <g class="fx fx-spark" fill="#FFD25A" stroke="#F0A93B" stroke-width="1"><path d="M14 30 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 z"/><path d="M86 22 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 z"/><path d="M90 60 l1.6 4 l4 1.6 l-4 1.6 l-1.6 4 l-1.6 -4 l-4 -1.6 l4 -1.6 z"/></g>
+    <text class="fx fx-q" x="78" y="20" font-family="Nunito, sans-serif" font-size="22" font-weight="900" fill="#3FA3B3">?</text>
+    <g class="fx fx-dots" fill="#3FA3B3"><circle cx="74" cy="16" r="3"/><circle cx="83" cy="12" r="3"/><circle cx="92" cy="8" r="3"/></g>
+    <text class="fx fx-z" x="72" y="18" font-family="Nunito, sans-serif" font-size="14" font-weight="900" fill="#6B8597">z z z</text>
+    <g class="fx fx-shield"><path d="M82 8 l12 4 v8 q0 9 -12 14 q-12 -5 -12 -14 v-8 z" fill="#C9F1EE" stroke="#177C8A" stroke-width="2"/><path d="M77 20 l4 4 l7 -8" stroke="#177C8A" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>
+    <g class="fx fx-point"><path d="M8 18 l6 -4 M4 28 h7 M8 38 l6 4" stroke="#F08A70" stroke-width="2.5" stroke-linecap="round"/></g>
+  </svg>
+</div>
+
+      <label class="sr" for="input">Message Travel Buddy</label>
+      <textarea id="input" rows="1" placeholder="Where to next? Flights, hotels, cabs, places… e.g. “Plan 3 days in Penang from Singapore in March”" autofocus></textarea>
+      <button class="mic" id="mic" type="button" aria-label="Talk to Travel Buddy" aria-pressed="false" title="Talk to Travel Buddy">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/>
+          <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      </button>
+      <div class="voicebar" id="voicebar" hidden role="status" aria-live="polite"></div>
+      <button class="send" id="send" type="submit" aria-label="Send"><svg aria-hidden="true"><use href="#paperplane"/></svg></button>
+    </form>
+    <div class="foot">Live data from Google Flights, Hotels and Maps via SerpApi. Prices are confirmed by the seller at checkout. Never share card details in chat.</div>
+  </section>
+</main>
+
+<script>
+const log = document.getElementById("log"), input = document.getElementById("input"),
+      form = document.getElementById("form"), send = document.getElementById("send");
+let sid = crypto.randomUUID();   // every page load is a fresh conversation (the greeting asks for the name again)
+
+const SUGGESTIONS = [
+  "Plan 5 days in Bali from Singapore, 15–20 Jan",
+  "✈️ Cheapest flights Kuala Lumpur to Bangkok on 12 Dec",
+  "🏨 Beachfront hotels in Phuket, 20–24 Dec",
+  "🚕 Taxi or train from Changi Airport to Marina Bay?",
+  "📍 Must-see places and street food in Hanoi",
+  "🎬 Show me Ha Long Bay on Instagram or TikTok",
+  "📶 Best M1 roaming plan for 5 days in Bali",
+  "🛬 Which M1 tourist SIM for visiting Singapore?",
+];
+const TOOL_LABELS = {
+  search_flights: "🔎 Searched flights", get_booking_options: "🏷️ Compared booking sites", find_cheapest_dates: "📅 Scanned dates",
+  get_price_trends: "📈 Analysed trends", search_hotels: "🏨 Found hotels", explore_places: "📍 Explored places",
+  find_ground_transport: "🚕 Checked transport", find_social_videos: "🎬 Found videos", get_m1_travel_plans: "📶 M1 travel plans", check_availability: "💺 Checked availability", search_airports: "🛫 Looked up airports",
+  book_flight: "🎫 Booked", get_booking: "📄 Found booking", cancel_booking: "↩️ Cancelled booking",
+};
+
+// ---------- minimal, safe markdown (escape first, then format)
+const esc = s => s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function inline(s) {
+  return s.replace(/`([^`]+)`/g, "<code>$1</code>")
+          .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+          .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, "$1<em>$2</em>");
+}
+function md(src) {
+  const lines = esc(src).split("\n"); let out = [], i = 0;
+  while (i < lines.length) {
+    let l = lines[i];
+    if (/^```/.test(l)) { const buf = []; i++; while (i < lines.length && !/^```/.test(lines[i])) buf.push(lines[i++]); i++;
+      out.push(`<pre><code>${buf.join("\n")}</code></pre>`); continue; }
+    if (/^\s*\|.*\|\s*$/.test(l) && i + 1 < lines.length && /^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1])) {
+      const row = r => r.trim().replace(/^\||\|$/g, "").split("|").map(c => inline(c.trim()));
+      const head = row(l); i += 2; const body = [];
+      while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) body.push(row(lines[i++]));
+      out.push(`<table><thead><tr>${head.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${
+        body.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`); continue; }
+    let m;
+    if ((m = l.match(/^(#{1,4})\s+(.*)/))) { out.push(`<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`); i++; continue; }
+    if (/^\s*(---|\*\*\*)\s*$/.test(l)) { out.push("<hr>"); i++; continue; }
+    if (/^\s*[-*]\s+/.test(l)) { const items = []; while (i < lines.length && /^\s*[-*]\s+/.test(lines[i]))
+        items.push(`<li>${inline(lines[i++].replace(/^\s*[-*]\s+/, ""))}</li>`); out.push(`<ul>${items.join("")}</ul>`); continue; }
+    if (/^\s*\d+\.\s+/.test(l)) { const items = []; while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i]))
+        items.push(`<li>${inline(lines[i++].replace(/^\s*\d+\.\s+/, ""))}</li>`); out.push(`<ol>${items.join("")}</ol>`); continue; }
+    if (!l.trim()) { i++; continue; }
+    const para = []; while (i < lines.length && lines[i].trim() && !/^(#{1,4}\s|```|\s*[-*]\s|\s*\d+\.\s|\s*\|)/.test(lines[i])) para.push(inline(lines[i++]));
+    if (para.length) out.push(`<p>${para.join("<br>")}</p>`); else { out.push(`<p>${inline(l)}</p>`); i++; }
+  }
+  return out.join("");
+}
+
+
+// ---------- planner attachments (all API strings go through textContent; URLs must be https)
+const safeUrl = u => (typeof u === "string" && /^https:\/\//.test(u)) ? u : null;
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function link(href, text) { const u = safeUrl(href); if (!u) return null; const a = el("a", null, text); a.href = u; a.target = "_blank"; a.rel = "noopener noreferrer"; return a; }
+const money = (v, cur = "USD") => v == null ? "" : new Intl.NumberFormat("en-US", {style: "currency", currency: cur, maximumFractionDigits: 0}).format(v);
+const stars = n => n ? "★".repeat(Math.round(n)) : "";
+function ratingText(r, n) { return r ? `⭐ ${r}${n ? ` (${Number(n).toLocaleString()})` : ""}` : ""; }
+function openClass(s) { return !s ? "" : /^open/i.test(s) || /open 24/i.test(s) ? "open" : /closed/i.test(s) ? "closed" : ""; }
+
+function attHead(title, source) { const h = el("div", "att-head"); h.appendChild(el("b", null, title)); if (source) h.appendChild(el("span", "src", source)); return h; }
+function photo(url, fallback) {
+  const ph = el("div", "ph"); const u = safeUrl(url);
+  if (u) { const img = document.createElement("img"); img.src = u; img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
+    img.onerror = () => { img.remove(); ph.textContent = fallback; }; ph.appendChild(img); } else ph.textContent = fallback;
+  return ph;
+}
+function hotelsAtt(a) {
+  const box = el("div", "att");
+  box.appendChild(attHead(`🏨 Hotels in ${a.location} · ${a.nights} night${a.nights === 1 ? "" : "s"} (${a.check_in_date} → ${a.check_out_date})`, "Google Hotels · live"));
+  const cards = el("div", "cards");
+  for (const h of a.hotels || []) {
+    const c = el("div", "pcard"); c.appendChild(photo(h.image, "🏨")); c.appendChild(el("span", "pin", String(h.pin)));
+    const b = el("div", "body"); b.appendChild(el("div", "nm", h.name));
+    b.appendChild(el("div", "meta", [stars(h.stars), ratingText(h.rating, h.reviews), h.type].filter(Boolean).join(" · ")));
+    const pr = el("div", "price", `${money(h.price_per_night, h.currency)} `); pr.appendChild(el("small", null, `/ night · ${money(h.total_price, h.currency)} total`)); b.appendChild(pr);
+    if (h.deal) b.appendChild(el("div", "meta open", h.deal));
+    if (h.amenities?.length) { const ch = el("div", "chips2"); h.amenities.slice(0, 4).forEach(x => ch.appendChild(el("span", null, x))); b.appendChild(ch); }
+    const ln = el("div", "links"); [link(h.website, "Website ↗"), link(h.maps_link, "Map ↗")].forEach(x => x && ln.appendChild(x)); b.appendChild(ln);
+    c.appendChild(b); cards.appendChild(c);
+  }
+  box.appendChild(cards);
+  const more = link(a.google_hotels_url, "See all prices on Google Hotels ↗"); if (more) { const t = el("div", "tx"); t.appendChild(more); box.appendChild(t); }
+  if (a.map) box.appendChild(mapView(a.map));
+  return box;
+}
+const CAT_ICON = {attractions: "🎡", shopping: "🛍️", markets: "🧺", restaurants: "🍽️", cafes: "☕", nightlife: "🍸", museums: "🏛️", parks: "🌳", beaches: "🏖️", kids: "🧸"};
+function placesAtt(a) {
+  const box = el("div", "att"); const icon = CAT_ICON[a.category] || "📍";
+  box.appendChild(attHead(`${icon} ${a.category[0].toUpperCase() + a.category.slice(1)} in ${a.location}`, "Google Maps · live"));
+  const cards = el("div", "cards");
+  for (const p of a.places || []) {
+    const c = el("div", "pcard"); c.appendChild(photo(p.image, icon)); c.appendChild(el("span", "pin", String(p.pin)));
+    const b = el("div", "body"); b.appendChild(el("div", "nm", p.name));
+    b.appendChild(el("div", "meta", [ratingText(p.rating, p.reviews), p.price_level, p.type].filter(Boolean).join(" · ")));
+    if (p.open_state) b.appendChild(el("div", "meta " + openClass(p.open_state), p.open_state));
+    if (p.address) b.appendChild(el("div", "meta", p.address));
+    const ln = el("div", "links"); [link(p.maps_link, "Map ↗"), link(p.website, "Website ↗")].forEach(x => x && ln.appendChild(x)); b.appendChild(ln);
+    c.appendChild(b); cards.appendChild(c);
+  }
+  box.appendChild(cards); if (a.map) box.appendChild(mapView(a.map));
+  return box;
+}
+function transportAtt(a) {
+  const box = el("div", "att"); box.appendChild(attHead(`🚕 Getting from ${a.from} to ${a.to}`, "Google Maps · live"));
+  const t = el("div", "tx");
+  if (a.options?.length) {
+    const tb = el("table"); const hr = tb.createTHead().insertRow();
+    ["Mode", "Route", "Time", "Typical", "Distance", "Fare"].forEach(h => hr.appendChild(el("th", null, h)));
+    const body = tb.createTBody();
+    for (const o of a.options) { const r = body.insertRow();
+      [{Driving: "🚗 Car / taxi", Transit: "🚆 Transit", Walking: "🚶 Walk", Cycling: "🚲 Bike", Flight: "✈️ Flight"}[o.mode] || o.mode, o.via, o.duration, o.typical_range, o.distance, o.fare]
+        .forEach(v => r.insertCell().textContent = v || "–"); }
+    const wrap = el("div"); wrap.style.overflowX = "auto"; wrap.appendChild(tb); t.appendChild(wrap);
+  }
+  if (a.taxi_ride_estimate) t.appendChild(el("div", null, `🚕 Taxi ride: about ${a.taxi_ride_estimate.duration}${a.taxi_ride_estimate.typical_range ? ` (typically ${a.taxi_ride_estimate.typical_range})` : ""}, ${a.taxi_ride_estimate.distance}`));
+  if (a.taxi_companies?.length) {
+    t.appendChild(el("b", null, "Local taxi & cab companies"));
+    for (const c of a.taxi_companies) { const row = el("div", "cab"); row.appendChild(el("b", null, c.name));
+      const meta = [ratingText(c.rating, c.reviews), c.type].filter(Boolean).join(" · "); if (meta) row.appendChild(el("span", "meta", meta));
+      if (c.open_state) row.appendChild(el("span", openClass(c.open_state), c.open_state));
+      if (c.phone) { const tel = el("a", null, "📞 " + c.phone); tel.href = "tel:" + c.phone.replace(/[^+\d]/g, ""); row.appendChild(tel); }
+      const m = link(c.maps_link, "Map ↗"); if (m) row.appendChild(m); t.appendChild(row); }
+  }
+  const dl = link(a.directions_link, "Open directions in Google Maps ↗"); if (dl) t.appendChild(dl);
+  if (a.note) t.appendChild(el("div", "note", "Ride-hailing apps (Uber, Lyft, Grab, Bolt) aren't checked live. Open them for real-time cab availability."));
+  box.appendChild(t); if (a.map) box.appendChild(mapView(a.map));
+  return box;
+}
+
+// Static map from OpenStreetMap tiles (Web Mercator), with numbered pins matching the cards.
+function mapView(m) {
+  const wrap = el("div", "map"); wrap.setAttribute("role", "img"); wrap.setAttribute("aria-label", m.title || "Map");
+  const pts = (m.markers || []).filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lng));
+  if (!pts.length) return wrap;
+  requestAnimationFrame(() => drawMap(wrap, pts));
+  return wrap;
+}
+function drawMap(wrap, pts) {
+  const W = wrap.clientWidth || 600, H = wrap.clientHeight || 270, pad = 46;
+  const proj = (lat, lng, z) => { const s = 256 * 2 ** z, r = Math.max(-85, Math.min(85, lat)) * Math.PI / 180;
+    return [(lng + 180) / 360 * s, (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * s]; };
+  let z = 16;
+  for (; z > 2; z--) { const xy = pts.map(p => proj(p.lat, p.lng, z)); const xs = xy.map(a => a[0]), ys = xy.map(a => a[1]);
+    if (Math.max(...xs) - Math.min(...xs) <= W - 2 * pad && Math.max(...ys) - Math.min(...ys) <= H - 2 * pad) break; }
+  if (pts.length === 1) z = 14;
+  const xy = pts.map(p => proj(p.lat, p.lng, z)); const xs = xy.map(a => a[0]), ys = xy.map(a => a[1]);
+  const cx = (Math.max(...xs) + Math.min(...xs)) / 2, cy = (Math.max(...ys) + Math.min(...ys)) / 2;
+  const ox = cx - W / 2, oy = cy - H / 2, n = 2 ** z;
+  for (let tx = Math.floor(ox / 256); tx <= Math.floor((ox + W) / 256); tx++)
+    for (let ty = Math.floor(oy / 256); ty <= Math.floor((oy + H) / 256); ty++) {
+      if (ty < 0 || ty >= n) continue;
+      const img = document.createElement("img"); img.className = "tile"; img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "strict-origin-when-cross-origin";
+      img.src = `https://tile.openstreetmap.org/${z}/${((tx % n) + n) % n}/${ty}.png`;
+      img.style.left = (tx * 256 - ox) + "px"; img.style.top = (ty * 256 - oy) + "px"; wrap.appendChild(img);
+    }
+  pts.forEach((p, i) => { const pin = el("span", "pin", p.label || String(i + 1)); pin.title = p.title || "";
+    pin.style.left = (xy[i][0] - ox) + "px"; pin.style.top = (xy[i][1] - oy - 4) + "px"; wrap.appendChild(pin); });
+  const at = el("div", "attrib"); at.append("© "); const a = el("a", null, "OpenStreetMap"); a.href = "https://www.openstreetmap.org/copyright";
+  a.target = "_blank"; a.rel = "noopener"; at.append(a, " contributors"); wrap.appendChild(at);
+}
+const IG_URL = /^https:\/\/www\.instagram\.com\/(reel|p|tv)\/[A-Za-z0-9_-]{5,40}\/(embed\/)?$/;
+const TT_URL = /^https:\/\/www\.tiktok\.com\/(@[A-Za-z0-9_.]{2,40}\/video\/\d{8,25}|player\/v1\/\d{8,25})$/;
+function socialAtt(a) {
+  const box = el("div", "att"), tiktok = a.platform === "tiktok", name = tiktok ? "TikTok" : "Instagram";
+  box.appendChild(attHead(`🎬 See it on ${name}: ${a.place}${a.location && !a.place.toLowerCase().includes(a.location.toLowerCase()) ? ", " + a.location : ""}`, `${name} · live`));
+  if (a.fallback_used) box.appendChild(el("div", "ig-note", "No Instagram reels found for this place, so here are TikToks instead."));
+  const grid = el("div", "igrid");
+  for (const v of a.videos || []) {
+    const ok = v.platform === "tiktok" ? TT_URL.test(v.url || "") && TT_URL.test(v.embed_url || "") : IG_URL.test(v.url || "") && IG_URL.test(v.embed_url || "");
+    if (!ok) continue;
+    const card = el("div", "igcard" + (v.platform === "tiktok" ? " tt" : "")), inner = el("div", "in"); card.appendChild(inner);
+    const thumb = el("button", "thumb"); thumb.type = "button"; thumb.setAttribute("aria-label", `Play: ${v.title || "Instagram video"}`);
+    const tu = safeUrl(v.thumbnail);
+    if (tu) { const img = document.createElement("img"); img.src = tu; img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer"; img.onerror = () => img.remove(); thumb.appendChild(img); }
+    thumb.appendChild(el("span", "kind", v.platform === "tiktok" ? "TikTok" : v.kind === "reel" ? "Reel" : "Video"));
+    if (v.duration) thumb.appendChild(el("span", "dur", v.duration));
+    thumb.appendChild(el("span", "play", "▶"));
+    const play = () => {
+      const f = document.createElement("iframe"); f.src = v.embed_url; f.title = v.title || "Instagram video"; f.loading = "lazy";
+      f.setAttribute("allow", "encrypted-media; autoplay; clipboard-write; picture-in-picture");
+      f.setAttribute("sandbox", "allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-presentation");
+      f.setAttribute("scrolling", "no"); thumb.replaceWith(f); watch.remove();
+    };
+    thumb.onclick = play; inner.appendChild(thumb);
+    const meta = el("div", "meta2"); meta.appendChild(el("div", "t", v.title || `${name} video`));
+    if (v.author) meta.appendChild(el("div", "c", v.author_name && v.author_name !== v.author.slice(1) ? `${v.author_name} · ${v.author}` : v.author));
+    const compact = x => x == null ? null : new Intl.NumberFormat("en", {notation: "compact", maximumFractionDigits: 1}).format(x);
+    const stats = [v.plays != null && `▶ ${compact(v.plays)} plays`, v.likes != null && `♥ ${compact(v.likes)}`,
+                   v.published && new Date(v.published + "T00:00:00Z").toLocaleDateString("en", {month: "short", year: "numeric"})].filter(Boolean);
+    if (stats.length) meta.appendChild(el("div", "c", stats.join(" · ")));
+    if (v.caption) meta.appendChild(el("div", "c", v.caption));
+    const acts = el("div", "acts"); const watch = el("button", null, "▶ Watch here"); watch.type = "button"; watch.onclick = play; acts.appendChild(watch);
+    const open = link(v.url, `Open on ${name} ↗`); if (open) acts.appendChild(open);
+    meta.appendChild(acts); inner.appendChild(meta); grid.appendChild(card);
+  }
+  if (!grid.children.length) return null;
+  box.appendChild(grid);
+  box.appendChild(el("div", "ig-note", `Public posts from ${name} creators, found via Google. Tap one to play it here with ${name}'s own player.`));
+  return box;
+}
+function m1Att(a) {
+  const box = el("div", "att"), where = a.country && a.country !== "Singapore" ? ` for ${a.country}` : a.customer_type === "visitor" || a.country === "Singapore" ? " for visiting Singapore" : "";
+  box.appendChild(attHead(`📶 M1 travel plans${where}${a.trip_days ? ` · ${a.trip_days} days` : ""}`, "M1 Singapore · m1.com.sg"));
+  const grid = el("div", "m1grid");
+  const sgd = v => v === 0 ? "Free" : "S$" + Number(v).toFixed(Number.isInteger(v) ? 0 : 2);
+  for (const pl of a.plans || []) {
+    const c = el("div", "m1card" + (pl.recommended ? " best" : ""));
+    if (pl.recommended) c.appendChild(el("span", "tag", "⭐ Best pick"));
+    c.appendChild(el("div", "grp", pl.group)); c.appendChild(el("div", "nm", pl.name));
+    const pr = el("div", "pr", sgd(pl.price_sgd)); if (/\/day/.test(pl.name)) pr.appendChild(el("small", null, " / day")); c.appendChild(pr);
+    if (pl.trip_total_sgd != null && a.trip_days) c.appendChild(el("div", "ln", `Trip total: S$${Number(pl.trip_total_sgd).toFixed(2)}`));
+    for (const [k, v] of [["Data", pl.data], ["Validity", pl.validity], ["Includes", pl.extras], ["How to get it", pl.how_to_buy], ["Note", pl.note]]) {
+      if (!v) continue; const ln = el("div", "ln"); ln.appendChild(el("b", null, k + ": ")); ln.append(v); c.appendChild(ln);
+    }
+    const lk = link(pl.link, "View on m1.com.sg ↗"); if (lk) c.appendChild(lk);
+    grid.appendChild(c);
+  }
+  if (!grid.children.length) grid.appendChild(el("div", "ln", "No listed M1 plan matched this destination. Check M1's roaming page for Pay-as-you-go Roaming."));
+  box.appendChild(grid);
+  box.appendChild(el("div", "m1note", `Plans from m1.com.sg as of ${a.as_of}. Please confirm the latest price on the M1 page before buying.`));
+  return box;
+}
+function attachmentView(a) {
+  try { return a.kind === "hotels" ? hotelsAtt(a) : a.kind === "places" ? placesAtt(a) : a.kind === "transport" ? transportAtt(a) : a.kind === "social_videos" ? socialAtt(a) : a.kind === "m1_plans" ? m1Att(a) : null; }
+  catch (e) { console.warn("attachment render failed", e); return null; }
+}
+
+// ---------- message rows
+const NS = "http://www.w3.org/2000/svg";
+function avatar(symbol, label) {
+  const s = document.createElementNS(NS, "svg"); s.setAttribute("class", "avatar"); s.setAttribute("role", "img"); s.setAttribute("aria-label", label);
+  const u = document.createElementNS(NS, "use"); u.setAttribute("href", "#" + symbol); s.appendChild(u); return s;
+}
+function row(who) {
+  const r = document.createElement("div"); r.className = "row " + who;
+  r.appendChild(who === "user" ? avatar("traveller", "You") : avatar("jetty", "Travel Buddy"));
+  const st = document.createElement("div"); st.className = "stack";
+  const n = document.createElement("div"); n.className = "name"; n.textContent = who === "user" ? (travellerName || "You") : "Travel Buddy";
+  st.appendChild(n); r.appendChild(st); log.appendChild(r); log.scrollTop = log.scrollHeight; return st;
+}
+function userMsg(text) { const st = row("user"); const b = document.createElement("div"); b.className = "bubble"; b.textContent = text; st.appendChild(b); }
+function agentMsg(data) {
+  const st = row("agent"); const b = document.createElement("div"); b.className = "bubble"; b.innerHTML = md(data.reply || ""); st.appendChild(b);
+  if (data.guardrail_intervened) { const g = document.createElement("div"); g.className = "guard";
+    g.textContent = "🛡️ Protected: card details are never accepted in chat"; st.appendChild(g); }
+  for (const a of data.attachments || []) { const v = attachmentView(a); if (v) { v.dataset.kind = a.kind; st.appendChild(v); } }
+  for (const c of data.charts || []) {
+    const box = document.createElement("div"); box.className = "chart";
+    const f = document.createElement("iframe"); f.src = "charts/" + encodeURIComponent(c); f.title = "Fare trend chart"; f.loading = "lazy";
+    const a = document.createElement("a"); a.href = f.src; a.target = "_blank"; a.rel = "noopener"; a.textContent = "📈 Open the full chart in a new tab ↗";
+    box.append(f, a); st.appendChild(box);
+  }
+  if (data.tools && data.tools.some(x => !x.startsWith("remember_traveller"))) { const t = document.createElement("div"); t.className = "tags";
+    for (const n of [...new Set(data.tools)].filter(x => !x.startsWith("remember_traveller"))) { const s = document.createElement("span"); s.className = "tag"; s.textContent = TOOL_LABELS[n] || n; t.appendChild(s); }
+    st.appendChild(t); }
+  log.scrollTop = log.scrollHeight;
+}
+function errorMsg(text) { const st = row("agent"); st.parentElement.classList.add("err");
+  const b = document.createElement("div"); b.className = "bubble"; b.textContent = text; st.appendChild(b); }
+
+
+// ---------- Mia: a cheerful girl who reacts to typing, waiting, results, idle time and the beach scene
+const Mia = (() => {
+  const root = document.getElementById("sunny"), bubble = document.getElementById("sunnyBubble"), svg = root.querySelector("svg.girl");
+  let moodTimer, sayTimer, idleTimer, sleepTimer, typingAt = 0, waiting = false, waitTimer, asleep = false;
+  const attractions = [];             // from places results, so Mia can recommend them while you chat
+  let prof = {interests: []}, dest = null;
+  const matchesInterest = a => prof.interests.some(i => (`${a.category || ""} ${a.name} ${a.type || ""}`).toLowerCase().includes(i.split(" ")[0]) ||
+                                                     (/food|eat/.test(i) && /restaurant|market|food|cafe/.test(a.category || "")) ||
+                                                     (/shop/.test(i) && /shop|market|mall/.test(`${a.category} ${a.type}`.toLowerCase())) ||
+                                                     (/beach/.test(i) && /beach/.test(`${a.category} ${a.type}`.toLowerCase())) ||
+                                                     (/temple|culture|history/.test(i) && /temple|museum|attraction|shrine|pagoda/.test(`${a.category} ${a.type}`.toLowerCase())));
+  const SCENE = ["Whee! Parasailing looks SO fun 🪂", "Speedboat ride, anyone? 🚤", "Beach-shack smoothies! 🍹", "That sailboat! ⛵ Sea breeze vibes!",
+                 "Look up! A plane. Pack your bags! ✈️", "Hot-air balloon at sunrise? Yes please! 🎈", "Jet ski race! 🌊💨",
+                 "Hammock under the palms 🌴", "Sun's out, sunnies on! 😎", "I can see a balloon smiling at us! 🎈"];
+  const pick = a => a[Math.floor(Math.random() * a.length)];
+  const HOME = () => (matchMedia("(max-width: 640px)").matches ? 54 : 58);   // by the send button
+  let pos = HOME(), walkDone;
+  function walkTo(r, fast = false) {    // stroll along the top edge of the message box, always in front of the chat
+    const form = document.getElementById("form"), maxR = Math.max(HOME(), form.clientWidth - root.offsetWidth - 16);
+    r = Math.max(HOME(), Math.min(maxR, r));
+    if (Math.abs(r - pos) < 4) return Promise.resolve();
+    root.classList.toggle("face-left", r > pos);          // moving towards the text (left) or back to the send button
+    const ms = fast ? 700 : Math.min(6000, Math.abs(r - pos) * 14);
+    root.style.transitionDuration = ms + "ms"; root.classList.add("walking"); root.style.right = r + "px"; pos = r;
+    clearTimeout(walkDone);
+    return new Promise(res => { walkDone = setTimeout(() => { root.classList.remove("walking"); root.classList.add("face-left"); res(); }, ms); });
+  }
+  const goHome = () => walkTo(HOME(), true);
+  function mood(m, ms = 0) {
+    root.className = root.className.replace(/\bmood-\w+/g, "").trim() + " mood-" + m;
+    clearTimeout(moodTimer); if (ms) moodTimer = setTimeout(() => mood(waiting ? "waiting" : "happy"), ms);
+  }
+  function say(text, ms = 4200, onClick = null, cta = "") {
+    bubble.textContent = text;
+    if (cta) { const c = document.createElement("span"); c.className = "cta"; c.textContent = cta; bubble.appendChild(c); }
+    bubble.classList.toggle("clickable", !!onClick); bubble.onclick = onClick;
+    // open the bubble towards the side with more room, so it never runs off the chat window
+    const form = document.getElementById("form"), leftRoom = form.clientWidth - pos - root.offsetWidth;
+    bubble.classList.toggle("to-right", leftRoom < Math.min(240, form.clientWidth * .7) - 40);
+    bubble.classList.add("show"); clearTimeout(sayTimer); sayTimer = setTimeout(() => bubble.classList.remove("show"), ms);
+  }
+  async function react() {              // idle: stroll along the message box, then recommend an attraction or enjoy the beach
+    if (waiting || asleep) return;
+    bubble.classList.remove("show");
+    const form = document.getElementById("form");
+    await walkTo(HOME() + Math.random() * Math.max(0, form.clientWidth - root.offsetWidth - 16 - HOME()));
+    if (waiting || asleep) return;
+    const liked = attractions.filter(matchesInterest), ideas = typeof interestIdeas === "function" ? interestIdeas(2) : [];
+    if (!liked.length && ideas.length && Math.random() < .5) {   // an idea that fits what they like
+      const idea = pick(ideas); mood("pointing", 6000);
+      say(`Psst! You'd love this: ${idea}`, 7000, () => ask(idea.replace(/^\S+\s/, "")), "Tap to ask Travel Buddy"); return;
+    }
+    if (attractions.length && Math.random() < .6) {
+      const a = pick(liked.length ? liked : attractions); mood("pointing", 6000);
+      const why = liked.includes(a) ? " Right up your street!" : "";
+      say(`📍 Psst! ${a.name}${a.rating ? ` (${a.rating}⭐)` : ""} looks amazing!${why}`, 7000,
+          () => ask(`Tell me more about ${a.name}${a.location ? " in " + a.location : ""}, and show me videos of it`), "Tap to ask Travel Buddy");
+    } else if (!travellerName && Math.random() < .4) { mood("idle", 4000); say("Psst… tell Travel Buddy your name! 😊"); }
+    else if (Math.random() < .3) {
+      const where = dest || (attractions.at(-1) || {}).location;
+      const q = where ? `Best M1 roaming plan for my trip to ${where}` : "What's the best M1 mobile plan to stay connected on my trip?";
+      mood("pointing", 6000); say(`📶 Psst! Got data sorted${where ? ` for ${where}` : ""}? M1 has travel plans!`, 7000, () => ask(q), "Tap to see M1 plans");
+    }
+    else { mood(Math.random() < .5 ? "pointing" : "excited", 3500); say(pick(SCENE)); }
+  }
+  function resetIdle() {
+    clearTimeout(idleTimer); clearTimeout(sleepTimer);
+    if (asleep) { asleep = false; mood("excited", 2200); say("Oh! You're back! 🎉 Where to next?"); }
+    idleTimer = setTimeout(function loop() { react(); idleTimer = setTimeout(loop, 18000 + Math.random() * 12000); }, 16000);
+    sleepTimer = setTimeout(() => { if (!waiting) { asleep = true; mood("sleepy"); say("Dreaming of beaches… 😴", 3500); } }, 120000);
+  }
+  function typing() {
+    resetIdle(); if (waiting) return;
+    goHome(); mood("curious", 2500);
+    if (Date.now() - typingAt > 9000) { typingAt = Date.now(); say(pick(["Ooh, where to? 👀", "Typing an adventure? ✨", "I'm listening! 🎧", "Somewhere sunny, I hope! ☀️"]), 2600); }
+  }
+  function startWaiting() {
+    waiting = true; resetIdle(); goHome(); mood("waiting"); say(pick(["Checking… 🔎", "Ooh, let's see! 🧭", "Finding the good stuff… ✨"]), 3000);
+    clearTimeout(waitTimer); waitTimer = setTimeout(() => waiting && say("Almost there… packing your results! 🧳", 5000), 12000);
+  }
+  function results(data) {
+    waiting = false; clearTimeout(waitTimer); resetIdle(); goHome();
+    if (data.guardrail_intervened) { mood("protect", 5000); say("Eek! Keep card numbers secret 🛡️ Pay on the seller's site!", 5500); return; }
+    const att = data.attachments || [], by = k => att.find(a => a.kind === k);
+    for (const a of att) if (a.kind === "places") for (const p of (a.places || []).slice(0, 6))
+      if (p.name && !attractions.some(q => q.name === p.name)) attractions.push({name: p.name, rating: p.rating, location: a.location, category: a.category, type: p.type});
+    attractions.splice(0, Math.max(0, attractions.length - 24));
+    let msg;
+    const pl = by("places"), ho = by("hotels"), tr = by("transport"), sv = by("social_videos");
+    if (pl && pl.places?.length) msg = `Yay! ${pl.places[0].name}${pl.places[0].rating ? ` (${pl.places[0].rating}⭐)` : ""} is a must-see! 📍`;
+    else if (ho && ho.hotels?.length) msg = `Ooh, ${ho.hotels.length} hotels! ${ho.hotels[0].name} looks dreamy 🏨`;
+    else if (sv && sv.videos?.length) msg = "Videos! Tap one, it's sooo pretty 🎬";
+    else if (tr && tr.taxi_ride_estimate) msg = `Taxi in about ${tr.taxi_ride_estimate.duration}! 🚕`;
+    else if (data.charts?.length) msg = "A price chart! Let's catch the cheapest day 📈";
+    else if ((data.tools || []).includes("search_flights")) msg = "Flights found! ✈️ Pack your bags!";
+    else if ((data.tools || []).includes("remember_traveller_name") && travellerName) msg = `Yay, hi ${travellerName}! 🎉 Let's go places!`;
+    else msg = pick(["Ooh, good one! 💡", "Love it! ✨", "Adventure time! 🌴"]);
+    mood("excited", 2600); say(msg, 5000);
+  }
+  function oops() { waiting = false; clearTimeout(waitTimer); mood("curious", 3000); say("Oops! Let's try that again 🙈", 3500); }
+  function hello() { mood("excited", 2400); say("Hi! I'm Mia 🌸 Tell Travel Buddy your name!", 5000); resetIdle(); }
+  svg.addEventListener("click", () => {
+    resetIdle(); mood("excited", 2000);
+    if (attractions.length) { const a = pick(attractions); say(`${a.name}? Let's ask! 📍`, 4000); ask(`Tell me more about ${a.name}${a.location ? " in " + a.location : ""}`); }
+    else say(pick(["Try “Plan 3 days in Bali” 🌺", "Island-hop in the Philippines? 🏝️", "Street food in Bangkok? Yum! 🍜", "Angkor Wat at sunrise! 🏯", "Ha Long Bay cruise? 🚢"]));
+  });
+  ["pointerdown", "keydown", "scroll"].forEach(e => addEventListener(e, () => resetIdle(), {passive: true}));
+  addEventListener("resize", () => { pos = -1; walkTo(HOME(), true); });
+  function setProfile(p, d) { prof = p || {interests: []}; dest = d; }
+  return {typing, startWaiting, results, oops, hello, mood, say, setProfile, _attractions: attractions, _walkTo: walkTo};
+})();
+
+
+// ---------- personalisation: the traveller's interests (learned by the agent) drive suggestions as the chat goes on
+let profile = {interests: [], travel_style: [], destinations: [], dislikes: [], budget: null}, lastDestination = null;
+const askedPrompts = new Set();
+const INTEREST_IDEAS = [
+  [/street food|food|eat|cuisine|hawker|foodie/, "🍜", d => `Best street food in ${d}`, "Best street food cities in Southeast Asia"],
+  [/beach|island|snorkel|div(e|ing)|surf/, "🏖️", d => `Best beaches near ${d}`, "Dreamiest beaches in Southeast Asia"],
+  [/temple|culture|history|heritage|museum/, "🏯", d => `Temples and culture in ${d}`, "Top temple trips in Southeast Asia"],
+  [/shop|market|mall|souvenir/, "🛍️", d => `Shopping and markets in ${d}`, "Best shopping cities in Southeast Asia"],
+  [/night|bar|party|club/, "🍸", d => `Nightlife in ${d}`, "Best nightlife in Southeast Asia"],
+  [/nature|hik|trek|waterfall|jungle|park/, "🌿", d => `Nature and hikes near ${d}`, "Best nature escapes in Southeast Asia"],
+  [/spa|wellness|relax|yoga|massage/, "💆", d => `Spas and wellness in ${d}`, "Relaxing wellness retreats in Southeast Asia"],
+  [/cafe|coffee|brunch/, "☕", d => `Cosy cafés in ${d}`, "Best café cities in Southeast Asia"],
+  [/photo|instagram|view|sunset/, "📸", d => `Best sunset and photo spots in ${d}`, "Most photogenic places in Southeast Asia"],
+  [/adventure|zipline|rafting|thrill/, "🧗", d => `Adventure activities in ${d}`, "Top adventure spots in Southeast Asia"],
+];
+function interestIdeas(limit = 3) {
+  const dest = profile.destinations.at(-1) || lastDestination, out = [];
+  const likes = [...profile.interests].reverse();                 // newest interests first
+  for (const like of likes) {
+    if (profile.dislikes.some(x => like.includes(x))) continue;
+    const hit = INTEREST_IDEAS.find(([re]) => re.test(like));
+    const text = hit ? `${hit[1]} ${dest ? hit[2](dest) : hit[3]}` : (dest ? `✨ Best ${like} in ${dest}` : `✨ Where to go for ${like} in Southeast Asia`);
+    if (!out.includes(text) && !askedPrompts.has(text.replace(/^\S+\s/, ""))) out.push(text);
+  }
+  if (dest) {
+    if (profile.travel_style.some(x => /family|kid/.test(x))) out.push(`🧸 Family-friendly things to do in ${dest}`);
+    if (profile.travel_style.some(x => /couple|honeymoon|romantic/.test(x))) out.push(`💞 Romantic spots in ${dest}`);
+    if (/budget|cheap|backpack/.test(profile.budget || "")) out.push(`💸 Budget hotels in ${dest}`);
+    if (/luxury|5-star|premium/.test(profile.budget || "")) out.push(`✨ Luxury hotels in ${dest}`);
+  }
+  if (dest && !/singapore/i.test(dest)) {
+    const plan = profile.budget && /budget|cheap/.test(profile.budget) ? `📶 Cheapest M1 roaming plan for ${dest}` : `📶 M1 roaming plan for ${dest}`;
+    out.splice(Math.min(out.length, limit - 1), 0, plan);                 // always keep a mobile-plan idea in view
+  }
+  return out.filter(t => !askedPrompts.has(t.replace(/^\S+\s/, ""))).slice(0, limit);
+}
+function forYouChips(st) {
+  const ideas = interestIdeas(); if (!ideas.length) return;
+  const box = el("div", "foryou"); box.appendChild(el("span", "lbl", "✨ For you"));
+  for (const t of ideas) { const b = el("button", null, t); b.type = "button"; b.onclick = () => ask(t.replace(/^\S+\s/, "")); box.appendChild(b); }
+  st.appendChild(box);
+}
+function updateProfile(data) {
+  if (data.profile) profile = {interests: [], travel_style: [], destinations: [], dislikes: [], budget: null, ...data.profile};
+  for (const a of data.attachments || []) if (a.location) lastDestination = a.location;
+  Mia.setProfile(profile, lastDestination);
+}
+
+
+// ---------- voice mode: browser mic <-> Amazon Nova 2.5 Sonic (via /ws/voice), works on phones, tablets and laptops
+const Voice = (() => {
+  const btn = document.getElementById("mic"), bar = document.getElementById("voicebar");
+  let ws = null, ctxIn = null, ctxOut = null, stream = null, workletNode = null, state = "off", nextTime = 0, sources = [], thinkingRow = null, barTimer;
+  const WORKLET = `class TBDown extends AudioWorkletProcessor {
+    constructor() { super(); this.ratio = sampleRate / 16000; this.k = 0; this.sum = 0; this.frac = 0; this.out = new Int16Array(1600); this.n = 0; }
+    process(inputs) { const ch = inputs[0] && inputs[0][0]; if (!ch) return true;
+      for (let i = 0; i < ch.length; i++) { this.sum += ch[i]; this.k++;
+        if (this.k + this.frac >= this.ratio) { const v = Math.max(-1, Math.min(1, this.sum / this.k));
+          this.out[this.n++] = v < 0 ? v * 0x8000 : v * 0x7fff; this.frac = this.k + this.frac - this.ratio; this.k = 0; this.sum = 0;
+          if (this.n === this.out.length) { this.port.postMessage(this.out.buffer.slice(0)); this.n = 0; } } }
+      return true; } }
+  registerProcessor("tb-down", TBDown);`;
+  const b64 = buf => { const u = new Uint8Array(buf); let s = ""; for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000)); return btoa(s); };
+  function setState(s) {
+    state = s; btn.classList.remove("connecting", "listening", "speaking");
+    if (s !== "off") btn.classList.add(s);
+    btn.setAttribute("aria-pressed", s === "off" ? "false" : "true");
+    btn.title = s === "off" ? "Talk to Travel Buddy" : "Stop talking";
+  }
+  function caption(who, text, ms = 0) {
+    bar.replaceChildren(); if (who) bar.appendChild(el("span", "who", who)); bar.append(text); bar.hidden = false;
+    clearTimeout(barTimer); if (ms) barTimer = setTimeout(() => { bar.hidden = true; }, ms);
+  }
+  function stopPlayback() { for (const s of sources) { try { s.stop(); } catch (e) {} } sources = []; nextTime = 0; if (state === "speaking") setState("listening"); }
+  function play(b64data) {
+    if (!ctxOut) return;
+    const bin = atob(b64data), n = bin.length >> 1, f = new Float32Array(n);
+    for (let i = 0; i < n; i++) { let v = bin.charCodeAt(2 * i) | (bin.charCodeAt(2 * i + 1) << 8); if (v >= 0x8000) v -= 0x10000; f[i] = v / 0x8000; }
+    const buf = ctxOut.createBuffer(1, n, 16000); buf.copyToChannel(f, 0);
+    const src = ctxOut.createBufferSource(); src.buffer = buf; src.connect(ctxOut.destination);
+    const at = Math.max(ctxOut.currentTime + 0.04, nextTime); src.start(at); nextTime = at + buf.duration;
+    sources.push(src); setState("speaking");
+    src.onended = () => { sources = sources.filter(x => x !== src); if (!sources.length && state === "speaking") setState("listening"); };
+  }
+  function uiAction(action, target) {
+    const lastOf = sel => [...log.querySelectorAll(sel)].at(-1);
+    const focus = elx => { if (!elx) return false; elx.scrollIntoView({behavior: "smooth", block: "center"}); elx.classList.remove("flash"); void elx.offsetWidth; elx.classList.add("flash"); return true; };
+    const kinds = {hotels: '[data-kind="hotels"]', places: '[data-kind="places"]', transport: '[data-kind="transport"]', cabs: '[data-kind="transport"]',
+                   videos: '[data-kind="social_videos"]', chart: ".chart", map: ".map", latest: ".row:last-child"};
+    if (action === "show") return focus(lastOf(kinds[target] || kinds.latest)) || focus(lastOf(".row"));
+    if (action === "scroll") { const h = log.clientHeight * .8;
+      if (target === "top") log.scrollTo({top: 0, behavior: "smooth"}); else if (target === "bottom") log.scrollTo({top: log.scrollHeight, behavior: "smooth"});
+      else log.scrollBy({top: target === "up" ? -h : h, behavior: "smooth"}); return true; }
+    if (action === "play_video") { const box = lastOf('[data-kind="social_videos"]'); const n = Math.max(1, parseInt(target) || 1);
+      const card = box && box.querySelectorAll(".igcard")[n - 1]; if (card) { focus(card); card.querySelector(".thumb")?.click(); } return !!card; }
+    if (action === "open_chart") return focus(lastOf(".chart"));
+    if (action === "click_suggestion") { const b = lastOf(".foryou")?.querySelectorAll("button")[Math.max(1, parseInt(target) || 1) - 1]; if (b) b.click(); return !!b; }
+    if (action === "new_chat") { stop(); document.getElementById("reset").click(); Mia.say("Fresh start! Tap the mic to talk again 🎙️", 4500); return true; }
+    if (action === "open_status") { stop(); location.href = "status"; return true; }
+    return false;
+  }
+  function onMessage(ev) {
+    let m; try { m = JSON.parse(ev.data); } catch { return; }
+    if (m.type === "ready") { setState("listening"); caption("🎙️", "I'm listening… talk to me!", 4000); Mia.mood("curious", 3000); Mia.say("I'm all ears! 🎙️", 3000); }
+    else if (m.type === "audio") play(m.data);
+    else if (m.type === "interrupt") stopPlayback();
+    else if (m.type === "transcript") {
+      if (m.role === "user" && m.final) { const st = row("user"); const b = el("div", "bubble"); b.appendChild(el("span", "vtag", "🎙️")); b.append(m.text); st.appendChild(b); log.scrollTop = log.scrollHeight; Mia.typing(); }
+      else if (m.role !== "user") caption("Travel Buddy:", m.text, 9000);
+    }
+    else if (m.type === "thinking") { if (!thinkingRow) thinkingRow = typing(); Mia.startWaiting(); }
+    else if (m.type === "chat") {
+      if (thinkingRow) { thinkingRow.remove(); thinkingRow = null; }
+      const d = m.data || {}; const firstName = setName(d.traveller_name); updateProfile(d); agentMsg(d); Mia.results(d);
+      const stk = log.lastElementChild.querySelector(".stack"); if (firstName) suggestionChips(stk); else forYouChips(stk);
+    }
+    else if (m.type === "ui") uiAction(m.action, m.target);
+    else if (m.type === "guard") { stopPlayback(); const g = {reply: m.message, guardrail_intervened: true}; agentMsg(g); Mia.results(g); }
+    else if (m.type === "error" || m.type === "closed") { caption("⚠️", m.message || m.reason || "Voice stopped.", 7000); stop(true); }
+  }
+  async function start() {
+    if (state !== "off") return stop();
+    if (!navigator.mediaDevices?.getUserMedia || !window.AudioWorkletNode) { caption("⚠️", "Voice isn't supported in this browser. Please type instead.", 6000); return; }
+    setState("connecting"); caption("🎙️", "Connecting to Travel Buddy's voice…");
+    try {
+      ctxOut = new AudioContext(); await ctxOut.resume();        // created inside the tap so iOS/Android allow playback
+      stream = await navigator.mediaDevices.getUserMedia({audio: {channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true}});
+      ctxIn = new AudioContext(); await ctxIn.resume();
+      await ctxIn.audioWorklet.addModule(URL.createObjectURL(new Blob([WORKLET], {type: "application/javascript"})));
+      const src = ctxIn.createMediaStreamSource(stream); workletNode = new AudioWorkletNode(ctxIn, "tb-down");
+      const mute = ctxIn.createGain(); mute.gain.value = 0; src.connect(workletNode); workletNode.connect(mute); mute.connect(ctxIn.destination);
+      const url = new URL("ws/voice", location.href); url.protocol = location.protocol === "https:" ? "wss:" : "ws:"; url.searchParams.set("sid", sid);
+      ws = new WebSocket(url);
+      ws.onmessage = onMessage;
+      ws.onclose = () => { if (state !== "off") { caption("🎙️", "Voice chat ended. Tap the mic to talk again.", 5000); stop(true); } };
+      ws.onerror = () => caption("⚠️", "Couldn't reach the voice service. Please try again.", 6000);
+      workletNode.port.onmessage = e => { if (ws && ws.readyState === 1) ws.send(JSON.stringify({type: "audio", data: b64(e.data)})); };
+    } catch (e) {
+      caption("⚠️", e && e.name === "NotAllowedError" ? "Microphone permission is needed to talk. You can still type!" : "Couldn't start voice: " + (e.message || e), 7000);
+      stop(true);
+    }
+  }
+  function stop(silent = false) {
+    if (ws && ws.readyState === 1) { try { ws.send(JSON.stringify({type: "stop"})); } catch (e) {} }
+    try { ws && ws.close(); } catch (e) {} ws = null;
+    stopPlayback(); stream?.getTracks().forEach(t => t.stop()); stream = null;
+    try { ctxIn && ctxIn.close(); } catch (e) {} try { ctxOut && ctxOut.close(); } catch (e) {} ctxIn = ctxOut = null; workletNode = null;
+    if (thinkingRow) { thinkingRow.remove(); thinkingRow = null; }
+    setState("off"); if (!silent) caption("🎙️", "Voice off. Tap the mic any time!", 3000);
+  }
+  btn.addEventListener("click", start);
+  addEventListener("pagehide", () => stop(true));
+  return {start, stop, uiAction, _onMessage: onMessage};
+})();
+
+function welcome() {
+  log.replaceChildren();
+  const hero = document.createElement("div"); hero.className = "hero";
+  hero.innerHTML = `
+    <svg class="scene" viewBox="0 0 230 120" aria-hidden="true">
+      <use href="#cloud" x="4" y="6" width="60" height="30"/><use href="#cloud" x="160" y="2" width="64" height="32"/>
+      <path d="M20 96 Q115 40 214 70" stroke="#1F2A44" stroke-width="2" stroke-dasharray="5 6" fill="none" opacity=".45"/>
+      <use href="#jetty" x="62" y="10" width="106" height="106"/>
+    </svg>
+    <div><div class="tagline">Pack your bags and follow with Abhi</div><h2>Hi, I'm Travel Buddy ✈️</h2>
+      <p>Your AI trip planner. Tell me where you're headed and I'll line up live flights, hotels, cabs from the airport,
+         places to explore and shopping, with photos, maps and a day-by-day plan.</p>
+      <div class="caps"><span>✈️ Flights</span><span>🚕 Cabs</span><span>🏨 Hotels</span><span>📍 Places</span><span>📈 Trends</span><span>📶 Mobile plans</span></div></div>`;
+  log.appendChild(hero);
+  const st = row("agent");
+  const b = document.createElement("div"); b.className = "bubble";
+  b.innerHTML = md("Hi there, and welcome aboard! 👋 I'm **Travel Buddy**, your AI trip planner. Pack your bags and follow with Abhi!\n\nBefore we start, **how may I address you?**");
+  st.appendChild(b);
+  input.placeholder = "Type your name, e.g. “Priya”";
+}
+function suggestionChips(st) {
+  const chips = document.createElement("div"); chips.className = "chips";
+  for (const q of SUGGESTIONS) { const btn = document.createElement("button"); btn.type = "button"; btn.textContent = q;
+    btn.onclick = () => ask(q); chips.appendChild(btn); }
+  st.appendChild(chips);
+}
+let travellerName = null;
+function setName(name) {
+  if (!name || name === travellerName) return false;
+  const first = !travellerName; travellerName = name;
+  document.getElementById("guestName").textContent = name; document.getElementById("guestRow").hidden = false;
+  const title = document.getElementById("chatTitle"); title.textContent = "Travel Buddy";
+  const withSpan = document.createElement("span"); withSpan.className = "with"; withSpan.textContent = ` · travelling with ${name}`; title.appendChild(withSpan);
+  input.placeholder = matchMedia("(max-width: 640px)").matches ? `Where to next, ${name}?` : `Where to next, ${name}? Flights, hotels, cabs, places…`;
+  document.querySelectorAll(".row.user .name").forEach(n => n.textContent = name);
+  return first;
+}
+
+function typing() {
+  const st = row("agent"); const b = document.createElement("div"); b.className = "bubble";
+  b.innerHTML = `<div class="typing"><div class="runway"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#jetty"/></svg></div>Travel Buddy is planning…</div>`;
+  st.appendChild(b); return st.parentElement;
+}
+
+async function submit(text) {
+  userMsg(text); send.disabled = true; input.disabled = true; Mia.startWaiting();
+  const t = typing();
+  try {
+    const r = await fetch("api/chat", {method: "POST", headers: {"content-type": "application/json"},
+      body: JSON.stringify({session_id: sid, message: text}), credentials: "same-origin"});
+    const data = await r.json(); t.remove();
+    if (!r.ok) { errorMsg(data.error || r.statusText); Mia.oops(); }
+    else { const firstName = setName(data.traveller_name); updateProfile(data); agentMsg(data); Mia.results(data);
+           if (!firstName) forYouChips(log.lastElementChild.querySelector(".stack"));
+           if (firstName) suggestionChips(log.lastElementChild.querySelector(".stack")); }
+  } catch (e) { t.remove(); errorMsg("Network error: " + e.message); Mia.oops(); }
+  send.disabled = false; input.disabled = false; input.focus();
+}
+function ask(q) { askedPrompts.add(q); if (send.disabled) return; input.value = ""; autosize(); submit(q); }
+form.addEventListener("submit", e => { e.preventDefault(); const v = input.value.trim(); if (!v || send.disabled) return; ask(v); });
+input.addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); } });
+function autosize() { input.style.height = "auto"; input.style.height = Math.min(input.scrollHeight, 160) + "px"; }
+input.addEventListener("input", autosize);
+input.addEventListener("input", () => Mia.typing());
+document.querySelectorAll("[data-q]").forEach(b => b.addEventListener("click", () => ask(b.dataset.q)));
+document.getElementById("reset").onclick = async () => {
+  if (typeof Voice !== "undefined" && document.getElementById("mic").getAttribute("aria-pressed") === "true") Voice.stop(true);
+  await fetch("api/reset", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({session_id: sid})});
+  sid = crypto.randomUUID(); travellerName = null;
+  profile = {interests: [], travel_style: [], destinations: [], dislikes: [], budget: null}; lastDestination = null; askedPrompts.clear();
+  Mia.setProfile(profile, null);
+  document.getElementById("guestRow").hidden = true; document.getElementById("chatTitle").textContent = "Travel Buddy"; welcome(); Mia.hello(); };
+welcome();
+requestAnimationFrame(() => Mia.hello());
+</script>
+</body>
+</html>

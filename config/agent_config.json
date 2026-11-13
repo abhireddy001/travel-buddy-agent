@@ -1,0 +1,15 @@
+{
+  "agent_name": "TravelAgent",
+  "agent_version": "travel-agent-v1",
+  "model": {
+    "provider": "bedrock",
+    "model_id": "global.anthropic.claude-sonnet-5",
+    "max_tokens": 8000
+  },
+  "mcp_server": {
+    "name": "flight-service",
+    "path": "mcp_servers/flight_mcp_server.py",
+    "transport": "stdio"
+  },
+  "system_prompt_file": "config/system_prompt.md"
+}

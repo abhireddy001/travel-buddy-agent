@@ -1,0 +1,1890 @@
+{
+ "google_hotels": {
+  "search_metadata": {
+   "google_hotels_url": "https://www.google.com/travel/search?q=Paris&hl=en&gl=us"
+  },
+  "properties": [
+   {
+    "type": "hotel",
+    "name": "The People Belleville",
+    "description": "Bright dorms & private rooms in a trendy property featuring a rooftop terrace & a vibrant bar.",
+    "link": "https://www.thepeoplehostel.com/en/destinations/paris-belleville/",
+    "property_token": "ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB",
+    "serpapi_property_details_link": "https://serpapi.com/search.json?adults=2&check_in_date=2027-01-21&check_out_date=2027-01-24&children=0&currency=USD&engine=google_hotels&gl=us&hl=en&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB&q=Paris",
+    "gps_coordinates": {
+     "latitude": 48.8700202,
+     "longitude": 2.3789075
+    },
+    "check_in_time": "3:00\u202fPM",
+    "check_out_time": "12:00\u202fPM",
+    "rate_per_night": {
+     "display_price": "$52",
+     "extracted_display_price": 52,
+     "lowest": "$58",
+     "extracted_lowest": 58,
+     "before_taxes_fees": "$52",
+     "extracted_before_taxes_fees": 52,
+     "after_taxes_fees": "$58",
+     "extracted_after_taxes_fees": 58
+    },
+    "total_rate": {
+     "display_price": "$157",
+     "extracted_display_price": 157,
+     "lowest": "$173",
+     "extracted_lowest": 173,
+     "before_taxes_fees": "$157",
+     "extracted_before_taxes_fees": 157,
+     "after_taxes_fees": "$173",
+     "extracted_after_taxes_fees": 173
+    },
+    "deal": "18% less than usual",
+    "deal_description": "Deal",
+    "nearby_places": [
+     {
+      "name": "Cimeti\u00e8re du P\u00e8re-Lachaise",
+      "transportations": [
+       {
+        "type": "Public transport",
+        "duration": "8 min"
+       }
+      ]
+     },
+     {
+      "name": "A\u00e9roport de Paris-Charles de Gaulle",
+      "transportations": [
+       {
+        "type": "Taxi",
+        "duration": "34 min"
+       },
+       {
+        "type": "Public transport",
+        "duration": "51 min"
+       }
+      ]
+     },
+     {
+      "name": "The Hood",
+      "transportations": [
+       {
+        "type": "Walking",
+        "duration": "6 min"
+       }
+      ]
+     }
+    ],
+    "images": [
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLd3KbrvYCKF0UMSbvdmSWvKR_W29eCKRIJw8wYOCDtQk79GaRsFqF7BfSoPJgMQO5bMycM8HImrw9KHRsaEYTB7O4QNH_zuxMuWFtZg2YEp0zBpIz60cm6eccnxn7u075YCDXR5Rw=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLd3KbrvYCKF0UMSbvdmSWvKR_W29eCKRIJw8wYOCDtQk79GaRsFqF7BfSoPJgMQO5bMycM8HImrw9KHRsaEYTB7O4QNH_zuxMuWFtZg2YEp0zBpIz60cm6eccnxn7u075YCDXR5Rw=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeer2Ea0PUoHN0UYXRjqkcXRCmPIhv1SDeIhyEI1BQPDjWUFdfsrAd1VZ-Yj1ReX-rxeUgGaBUIaQgjrVDaIgrjfKXjjsIo0jU3O10Kp99vxSW4SzMuOB7BRJ4l9L0O2v7HzgLCmwLTMNaT=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLeer2Ea0PUoHN0UYXRjqkcXRCmPIhv1SDeIhyEI1BQPDjWUFdfsrAd1VZ-Yj1ReX-rxeUgGaBUIaQgjrVDaIgrjfKXjjsIo0jU3O10Kp99vxSW4SzMuOB7BRJ4l9L0O2v7HzgLCmwLTMNaT=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW1zI2iMnFw1rgmC55Ka6rre_QGt3zQSVNt7Cpt0NdORSJawqy9smEvil9ojp1Uoy9V_6JZUIOwNB62FKUzsUzlKyRzpnvB1PgsQnK1Qft0xOpbeUFd__AP1jSZT3sTcwt6-NyA5GKKf84rld9kz5dFWsAqJ0NgtW8UqO2mBR9MXCwtFAMdvr9RgOg=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://photos.hotelbeds.com/giata/original/76/766265/766265a_hb_w_001.jpg"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW1dt6lStU6O04XgYHPJN5i73w8qjKGMRFDLETnTEuMFXvzhRrN7kBptnPgzVHvBOrRcURV1Y4wbvWz2s_zuGAz8_vAUeSu-yNm2AwBaupEbdX9OtXiGFPJO85oA1mR4F5O_jCRtbLmyyrJiGlP_jPqZwnnAcidVcF70W9rljGqgN45YdNvjr7VF=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://www.iceportal.com/data/2813-182368-f88017593_XXLejpg/France/Paris/The-People-Paris-Belleville/Photo/The-People-Paris-Belleville-Paris-Undefined-people-belleville.jpg"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeryvYOcIOqTVNjsF7ZpvYd5I6P3M1x8hK5j3T78Qs8ad4nt5mEjazvU7qaAxtPfSon_QZOYv3G_AFxuWQO7oQhDr0XtrDQ4_mlCsgTy3W18q_kn3hB4Hg1Fr-PIYluW7HcWa6W=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLeryvYOcIOqTVNjsF7ZpvYd5I6P3M1x8hK5j3T78Qs8ad4nt5mEjazvU7qaAxtPfSon_QZOYv3G_AFxuWQO7oQhDr0XtrDQ4_mlCsgTy3W18q_kn3hB4Hg1Fr-PIYluW7HcWa6W=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfrup5_3qPhPKjWoPbw0bosaz6_OWFeQRg88yokSi5sbOTWroiOsTz93GnC3sBmOSZsoojo68SaBhBXuFmUAT8QaiKD2-NURZ4W6I7vQl3wHm4gcQNouDhKJqict5s-mRChSp40C3Bx2pDa=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLfrup5_3qPhPKjWoPbw0bosaz6_OWFeQRg88yokSi5sbOTWroiOsTz93GnC3sBmOSZsoojo68SaBhBXuFmUAT8QaiKD2-NURZ4W6I7vQl3wHm4gcQNouDhKJqict5s-mRChSp40C3Bx2pDa=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLf60DNXxX0uohgDxIw19LE_cBZMGjEYm_tBjZBjNnsMthlj7KiSxLIZg5lW-Cx-KOUqjgvMvyblmiwtUb9cBiwmLvPCz1DOpYqA3l4Oj8PcYOvvz8_-HDaOlrM2T0Q4SU3ZaAL1XSpf-vA=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLf60DNXxX0uohgDxIw19LE_cBZMGjEYm_tBjZBjNnsMthlj7KiSxLIZg5lW-Cx-KOUqjgvMvyblmiwtUb9cBiwmLvPCz1DOpYqA3l4Oj8PcYOvvz8_-HDaOlrM2T0Q4SU3ZaAL1XSpf-vA=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfrJ1s3PdmI3_rPSMTiRB9DN5n2T_HX9O0Wlk5aOY2NtFEv0XsundWKjRQqsn8kesXFewhoCggqi1c4TQbXaiBB6tjee3KrORXmcAq1kwYJMAorSigEcIU9Yi1OAtXTDfTmvu6-=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLfrJ1s3PdmI3_rPSMTiRB9DN5n2T_HX9O0Wlk5aOY2NtFEv0XsundWKjRQqsn8kesXFewhoCggqi1c4TQbXaiBB6tjee3KrORXmcAq1kwYJMAorSigEcIU9Yi1OAtXTDfTmvu6-=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdU38a8bZfaxnmnweELCj7d3a54dbPk7zKwabnTcBYEkdqELVQyNwozmHqPOkBvY7K8IVxUQgorzogMwU3g0MwqP1ZMMgWJGF7sDA5cnegGeUMnLCkU50wCClOJTya2LK7yAQ28_GUGfjMo=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdU38a8bZfaxnmnweELCj7d3a54dbPk7zKwabnTcBYEkdqELVQyNwozmHqPOkBvY7K8IVxUQgorzogMwU3g0MwqP1ZMMgWJGF7sDA5cnegGeUMnLCkU50wCClOJTya2LK7yAQ28_GUGfjMo=s10000"
+     }
+    ],
+    "overall_rating": 4.3,
+    "reviews": 2348,
+    "ratings": [
+     {
+      "stars": 5,
+      "count": 1413
+     },
+     {
+      "stars": 4,
+      "count": 591
+     },
+     {
+      "stars": 3,
+      "count": 181
+     },
+     {
+      "stars": 2,
+      "count": 58
+     },
+     {
+      "stars": 1,
+      "count": 105
+     }
+    ],
+    "location_rating": 3.5,
+    "reviews_breakdown": [
+     {
+      "name": "Nightlife",
+      "description": "Nightlife",
+      "total_mentioned": 45,
+      "positive": 34,
+      "negative": 6,
+      "neutral": 5,
+      "category_token": "jCBqW3ica1yRnFiSmp5fVDl5pV9mekZJTmZaKiOCCQDpcg2i",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=jCBqW3ica1yRnFiSmp5fVDl5pV9mekZJTmZaKiOCCQDpcg2i&engine=google_hotels_reviews&hl=en&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB"
+     },
+     {
+      "name": "Bar",
+      "description": "Bar or lounge",
+      "total_mentioned": 142,
+      "positive": 105,
+      "negative": 19,
+      "neutral": 18,
+      "category_token": "qI-Rpnica1yRnFiSmp5fVDl5rVNikUJ-kUJOfmleeirjYiAXAMhXDEE",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=qI-Rpnica1yRnFiSmp5fVDl5rVNikUJ-kUJOfmleeirjYiAXAMhXDEE&engine=google_hotels_reviews&hl=en&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB"
+     },
+     {
+      "name": "Dining",
+      "description": "Food and Beverage",
+      "total_mentioned": 93,
+      "positive": 71,
+      "negative": 14,
+      "neutral": 8,
+      "category_token": "2aMhPHica1yRnFiSmp5fVDl5o1t-fopCYl6KglNqWWpRYnoq4zKXzLzMvHQAKAwO6A",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=2aMhPHica1yRnFiSmp5fVDl5o1t-fopCYl6KglNqWWpRYnoq4zKXzLzMvHQAKAwO6A&engine=google_hotels_reviews&hl=en&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB"
+     },
+     {
+      "name": "Safety",
+      "description": "Safety",
+      "total_mentioned": 59,
+      "positive": 26,
+      "negative": 29,
+      "neutral": 4,
+      "category_token": "ItReBXica1yRnFiSmp5fVDl5WXBiWmpJJQOUBgCdBAs_",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=ItReBXica1yRnFiSmp5fVDl5WXBiWmpJJQOUBgCdBAs_&engine=google_hotels_reviews&hl=en&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB"
+     },
+     {
+      "name": "Sleep",
+      "description": "Sleep",
+      "total_mentioned": 205,
+      "positive": 116,
+      "negative": 63,
+      "neutral": 26,
+      "category_token": "9rMFAXica1yRnFiSmp5fVDl5aXBOamoBA4QCAIaqClc",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=9rMFAXica1yRnFiSmp5fVDl5aXBOamoBA4QCAIaqClc&engine=google_hotels_reviews&hl=en&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB"
+     },
+     {
+      "name": "Bathroom",
+      "description": "Bathroom and toiletries",
+      "total_mentioned": 176,
+      "positive": 89,
+      "negative": 69,
+      "neutral": 18,
+      "category_token": "CStECHica1yRnFiSmp5fVDl5u1NiSUZRfn6uQmJeikJJfmZOaklRZmoxwwqYBAC6uRKp",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=CStECHica1yRnFiSmp5fVDl5u1NiSUZRfn6uQmJeikJJfmZOaklRZmoxwwqYBAC6uRKp&engine=google_hotels_reviews&hl=en&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB"
+     }
+    ],
+    "amenities": [
+     "Breakfast ($)",
+     "Free Wi-Fi",
+     "Air conditioning",
+     "Bar",
+     "Restaurant",
+     "Accessible",
+     "Kid-friendly"
+    ],
+    "eco_certified": true,
+    "serpapi_google_hotels_reviews_link": "https://serpapi.com/search.json?engine=google_hotels_reviews&hl=en&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB",
+    "serpapi_google_hotels_photos_link": "https://serpapi.com/search.json?engine=google_hotels_photos&property_token=ChoIh--v1tzql_y2ARoNL2cvMTFjbHdtaGZ5bBAB"
+   },
+   {
+    "type": "hotel",
+    "name": "H\u00f4tel Whistler Paris - 10e arrondissement",
+    "description": "Laid-back hotel with railway-inspired decor & a hammam, plus free breakfast & Wi-Fi.",
+    "link": "https://www.whistlerparis.com/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb_whistler",
+    "property_token": "ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE",
+    "serpapi_property_details_link": "https://serpapi.com/search.json?adults=2&check_in_date=2027-01-21&check_out_date=2027-01-24&children=0&currency=USD&engine=google_hotels&gl=us&hl=en&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE&q=Paris",
+    "gps_coordinates": {
+     "latitude": 48.879305599999995,
+     "longitude": 2.3559889
+    },
+    "check_in_time": "3:00\u202fPM",
+    "check_out_time": "12:00\u202fPM",
+    "rate_per_night": {
+     "display_price": "$130",
+     "extracted_display_price": 130,
+     "lowest": "$143",
+     "extracted_lowest": 143,
+     "before_taxes_fees": "$130",
+     "extracted_before_taxes_fees": 130,
+     "after_taxes_fees": "$143",
+     "extracted_after_taxes_fees": 143
+    },
+    "total_rate": {
+     "display_price": "$391",
+     "extracted_display_price": 391,
+     "lowest": "$430",
+     "extracted_lowest": 430,
+     "before_taxes_fees": "$391",
+     "extracted_before_taxes_fees": 391,
+     "after_taxes_fees": "$430",
+     "extracted_after_taxes_fees": 430
+    },
+    "deal": "26% less than usual",
+    "deal_description": "Great Deal",
+    "nearby_places": [
+     {
+      "name": "Gare du Nord - Dunkerque",
+      "transportations": [
+       {
+        "type": "Walking",
+        "duration": "1 min"
+       }
+      ]
+     },
+     {
+      "name": "A\u00e9roport de Paris-Charles de Gaulle",
+      "transportations": [
+       {
+        "type": "Taxi",
+        "duration": "33 min"
+       },
+       {
+        "type": "Public transport",
+        "duration": "34 min"
+       }
+      ]
+     },
+     {
+      "name": "Les Chenapans",
+      "transportations": [
+       {
+        "type": "Walking",
+        "duration": "6 min"
+       }
+      ]
+     }
+    ],
+    "hotel_class": "4-star tourist hotel",
+    "extracted_hotel_class": 4,
+    "images": [
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLerX4VEQuvJL4TWSNF0GqXPiXWY_cMbrjf5AvMh_sjvGoXrUYxQ_rT4MA2qiM0ovcCf2vJRQ8ptL1H9GpIJLMRcSKjVqD7LhthxcRTfKAvoyajbqR3O0xfQLUdFfN3nv8xz7f95Ww=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLerX4VEQuvJL4TWSNF0GqXPiXWY_cMbrjf5AvMh_sjvGoXrUYxQ_rT4MA2qiM0ovcCf2vJRQ8ptL1H9GpIJLMRcSKjVqD7LhthxcRTfKAvoyajbqR3O0xfQLUdFfN3nv8xz7f95Ww=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeR6rhM1tOdPtEumAKHdExXZxg7tXbGU4yXOqfrKEcHspiSrOA0RNwgtsctUaiIQg0f-3Oe2FM1ApzasOqV3pqcDta5Ips6-JiymwTHUpLfbjjU3iWkx-O3_dugfqtJP-bxU0ie=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLeR6rhM1tOdPtEumAKHdExXZxg7tXbGU4yXOqfrKEcHspiSrOA0RNwgtsctUaiIQg0f-3Oe2FM1ApzasOqV3pqcDta5Ips6-JiymwTHUpLfbjjU3iWkx-O3_dugfqtJP-bxU0ie=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcrk3xzyyRyOMMa3bi2daQ2ufEChCR-Pu4TJ7UPTWXQsfOdFkAN3r2BHTKfqyxL0yaPAyHfIll0owkisWcpvsNcmtLCvUHVkC-38WayViflRtoW2oBjh1JIVyQibo5GF-5nTu8HMQ=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLcrk3xzyyRyOMMa3bi2daQ2ufEChCR-Pu4TJ7UPTWXQsfOdFkAN3r2BHTKfqyxL0yaPAyHfIll0owkisWcpvsNcmtLCvUHVkC-38WayViflRtoW2oBjh1JIVyQibo5GF-5nTu8HMQ=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW3q3KcvZhsfGOHpTzuoXobz3OYaf9ZjqTXJLswxWb7TMvBdR8NK67dUqAIqYlWUShvq710YJoPl-MjEGmfSNglh8XXEi2svxsoCLzPkdlgWt8NQcedBKAZYKYZELjAl-5qbuvVFjedPtJUSqMOk5gXP7TI82CMyOdyWDmgiO718yZcW8MtoClYaKQ=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://d2hyz2bfif3cr8.cloudfront.net/imageRepo/2/0/211/530/560/YIv0o9546kqQs0e2FoS9DA_hotel-whistler-offres-030_S.jpg"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdldzZidffLsWozY2jfc43kmzjtA2wFZhB8zcinT--SgWq7svOl5ArFS-zL3d74Vs4c4eLcKCgThiIqcORX_W_hVlnXCS-DDd4tAGKR9EkamsJpjpcel4aP32GFdxFrA5zwn2DMZA=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdldzZidffLsWozY2jfc43kmzjtA2wFZhB8zcinT--SgWq7svOl5ArFS-zL3d74Vs4c4eLcKCgThiIqcORX_W_hVlnXCS-DDd4tAGKR9EkamsJpjpcel4aP32GFdxFrA5zwn2DMZA=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLem6L6HcBai-sGHRYE0G-WhT74eTUDI1Vn7P0853N_yoAi2eA7iafKUwqppZUSUZNtKEypsMrFOwFnCciCsOAVmJ1ka07ikQ5DOUX75WrW938x5GdvlOJjYkxOShpgWVIq2ASMp=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLem6L6HcBai-sGHRYE0G-WhT74eTUDI1Vn7P0853N_yoAi2eA7iafKUwqppZUSUZNtKEypsMrFOwFnCciCsOAVmJ1ka07ikQ5DOUX75WrW938x5GdvlOJjYkxOShpgWVIq2ASMp=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdOAyaAzjHGou-onFdfyhVwIZSuOklkPlIcsEXR4Mg8QW-rX2VUtoMXoCtiMKmlCz25sNgGVZ7W472skUa2knpmFM_OTOP5n15jnGZfuJ8aMugWTZotUUphCzRAt5_BTpfGOYix=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdOAyaAzjHGou-onFdfyhVwIZSuOklkPlIcsEXR4Mg8QW-rX2VUtoMXoCtiMKmlCz25sNgGVZ7W472skUa2knpmFM_OTOP5n15jnGZfuJ8aMugWTZotUUphCzRAt5_BTpfGOYix=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW38TWGYhbQouC646GsPdvXPqzkHiw9cGIc5T12foAl6eSzV1guszTZ9JaIZoQ8wLT9vu0Pq1j780S62ynPnSfVZCPicZsYkQku2nhyNmvAtUNV3EnYBDCXlXS7rFg4gzL2iUVeAheY_OHuqr5prWQVzgeHzJKyawduKMqgLoAv2fyZ0SDL19Mwo=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://images.trvl-media.com/lodging/2000000/1610000/1603500/1603419/cf042696.jpg?impolicy=ccrop&w=1000&h=666&q=medium"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfiDMBERXuZQ5jMB9Z7NSS0HTuBtq0RX9cbMoG1Jbk0X-H82Rx0fTxwZql-UIlsq9zwLOwu8m2V1kaSfOGtOuzP68R0H7DBczzeOfgawYvTvNwK_MEIxY2eqMbMtOL2_1wwvbMp=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLfiDMBERXuZQ5jMB9Z7NSS0HTuBtq0RX9cbMoG1Jbk0X-H82Rx0fTxwZql-UIlsq9zwLOwu8m2V1kaSfOGtOuzP68R0H7DBczzeOfgawYvTvNwK_MEIxY2eqMbMtOL2_1wwvbMp=s10000"
+     }
+    ],
+    "overall_rating": 4.5,
+    "reviews": 664,
+    "ratings": [
+     {
+      "stars": 5,
+      "count": 458
+     },
+     {
+      "stars": 4,
+      "count": 146
+     },
+     {
+      "stars": 3,
+      "count": 34
+     },
+     {
+      "stars": 2,
+      "count": 10
+     },
+     {
+      "stars": 1,
+      "count": 16
+     }
+    ],
+    "location_rating": 4.7,
+    "reviews_breakdown": [
+     {
+      "name": "Transit",
+      "description": "Public transit",
+      "total_mentioned": 82,
+      "positive": 72,
+      "negative": 3,
+      "neutral": 7,
+      "category_token": "o5NNbnica1yRnFiSmp5fVDl5XUBpUk5mskJJUWJecWYJ4_IQCAMAFAMO2g",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=o5NNbnica1yRnFiSmp5fVDl5XUBpUk5mskJJUWJecWYJ4_IQCAMAFAMO2g&engine=google_hotels_reviews&hl=en&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE"
+     },
+     {
+      "name": "Breakfast",
+      "description": "Breakfast",
+      "total_mentioned": 87,
+      "positive": 74,
+      "negative": 9,
+      "neutral": 4,
+      "category_token": "B2S1iHica1yRnFiSmp5fVDl5pVNRamJ2WmJxCSOCCQDoBQ2U",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=B2S1iHica1yRnFiSmp5fVDl5pVNRamJ2WmJxCSOCCQDoBQ2U&engine=google_hotels_reviews&hl=en&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE"
+     },
+     {
+      "name": "Property",
+      "description": "Property",
+      "total_mentioned": 166,
+      "positive": 140,
+      "negative": 12,
+      "neutral": 14,
+      "category_token": "qPRjhHica1yRnFiSmp5fVDl5RUBRfkFqUUklI5wFANGQDTY",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=qPRjhHica1yRnFiSmp5fVDl5RUBRfkFqUUklI5wFANGQDTY&engine=google_hotels_reviews&hl=en&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE"
+     },
+     {
+      "name": "Service",
+      "description": "Service",
+      "total_mentioned": 153,
+      "positive": 134,
+      "negative": 12,
+      "neutral": 7,
+      "category_token": "DZ7RYHica1yRnFiSmp5fVDl5eXBqUVlmciojjAEAtX8MDA",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=DZ7RYHica1yRnFiSmp5fVDl5eXBqUVlmciojjAEAtX8MDA&engine=google_hotels_reviews&hl=en&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE"
+     },
+     {
+      "name": "Location",
+      "description": "Location",
+      "total_mentioned": 133,
+      "positive": 121,
+      "negative": 4,
+      "neutral": 8,
+      "category_token": "jLN0PHica1yRnFiSmp5fVDl5hU8-kJ2Zn8cIZwEAzmAM3g",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=jLN0PHica1yRnFiSmp5fVDl5hU8-kJ2Zn8cIZwEAzmAM3g&engine=google_hotels_reviews&hl=en&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE"
+     },
+     {
+      "name": "Restaurant",
+      "description": "Restaurant",
+      "total_mentioned": 40,
+      "positive": 33,
+      "negative": 4,
+      "neutral": 3,
+      "category_token": "WeWj6Hica1yRnFiSmp5fVDl5VVBqcUliaVFiXgkjEhsACXMOwg",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=WeWj6Hica1yRnFiSmp5fVDl5VVBqcUliaVFiXgkjEhsACXMOwg&engine=google_hotels_reviews&hl=en&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE"
+     }
+    ],
+    "amenities": [
+     "Free breakfast",
+     "Free Wi-Fi",
+     "Air conditioning",
+     "Pet-friendly",
+     "Bar",
+     "Room service",
+     "Airport shuttle",
+     "Full-service laundry",
+     "Accessible",
+     "Smoke-free property"
+    ],
+    "serpapi_google_hotels_reviews_link": "https://serpapi.com/search.json?engine=google_hotels_reviews&hl=en&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE",
+    "serpapi_google_hotels_photos_link": "https://serpapi.com/search.json?engine=google_hotels_photos&property_token=ChkI55b8kLfm0YIpGg0vZy8xMWR5YmNicWowEAE"
+   },
+   {
+    "type": "hotel",
+    "name": "The Neuville hotel Paris",
+    "description": "Refined hotel in a 19th-century mansion, plus a sophisticated bar & complimentary Wi-Fi.",
+    "link": "https://www.hotel-de-neuville-arc-de-triomphe.com/",
+    "property_token": "ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ",
+    "serpapi_property_details_link": "https://serpapi.com/search.json?adults=2&check_in_date=2027-01-21&check_out_date=2027-01-24&children=0&currency=USD&engine=google_hotels&gl=us&hl=en&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ&q=Paris",
+    "gps_coordinates": {
+     "latitude": 48.887032999999995,
+     "longitude": 2.300566
+    },
+    "check_in_time": "2:00\u202fPM",
+    "check_out_time": "12:00\u202fPM",
+    "rate_per_night": {
+     "display_price": "$88",
+     "extracted_display_price": 88,
+     "lowest": "$97",
+     "extracted_lowest": 97,
+     "before_taxes_fees": "$88",
+     "extracted_before_taxes_fees": 88,
+     "after_taxes_fees": "$97",
+     "extracted_after_taxes_fees": 97
+    },
+    "total_rate": {
+     "display_price": "$265",
+     "extracted_display_price": 265,
+     "lowest": "$291",
+     "extracted_lowest": 291,
+     "before_taxes_fees": "$265",
+     "extracted_before_taxes_fees": 265,
+     "after_taxes_fees": "$291",
+     "extracted_after_taxes_fees": 291
+    },
+    "nearby_places": [
+     {
+      "name": "Arc de Triomphe",
+      "transportations": [
+       {
+        "type": "Taxi",
+        "duration": "7 min"
+       }
+      ]
+     },
+     {
+      "name": "Pereire",
+      "transportations": [
+       {
+        "type": "Walking",
+        "duration": "5 min"
+       }
+      ]
+     },
+     {
+      "name": "A\u00e9roport de Paris-Charles de Gaulle",
+      "transportations": [
+       {
+        "type": "Taxi",
+        "duration": "27 min"
+       },
+       {
+        "type": "Public transport",
+        "duration": "1 hr 7 min"
+       }
+      ]
+     },
+     {
+      "name": "La terrasse 108 - Brasserie Paris 17",
+      "transportations": [
+       {
+        "type": "Walking",
+        "duration": "6 min"
+       }
+      ]
+     }
+    ],
+    "hotel_class": "4-star tourist hotel",
+    "extracted_hotel_class": 4,
+    "images": [
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdfkkdk6mcN6DfQwmyGzvERAGlrC5YZXmgnvBjZI1ofbOWtczUSK2FWuZPP05LLxpMs4FzH3wKvNlhlev6ffHopbSUzw67zJZaUx0nAVGMhNjtsNELwiJdiPx82h41wc0UG5kQS=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdfkkdk6mcN6DfQwmyGzvERAGlrC5YZXmgnvBjZI1ofbOWtczUSK2FWuZPP05LLxpMs4FzH3wKvNlhlev6ffHopbSUzw67zJZaUx0nAVGMhNjtsNELwiJdiPx82h41wc0UG5kQS=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdxQM8B7HXeqIrwWwvVnlo39RH53CulcL7aFLYE7hHtP328E0pmMFDSOgphH-XHmfBxbsODVf0KjEfJkPxd5b5AWZiu4B3B2zzweoFu3HwEctLMMlAs_6e5IebMvg4bBav6mai96sg-iSPL=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdxQM8B7HXeqIrwWwvVnlo39RH53CulcL7aFLYE7hHtP328E0pmMFDSOgphH-XHmfBxbsODVf0KjEfJkPxd5b5AWZiu4B3B2zzweoFu3HwEctLMMlAs_6e5IebMvg4bBav6mai96sg-iSPL=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcBb3-sYjCjMoEjkHL56JfgxLbGBqqxtP-U_A42QF4AGNBgMWh1o8zqiP29g0zqhc3SKtBuNrs6NdB-rY4n1ZWzWSRyWhi2Ax704Oz80mKgXgV8oUK-g7Aoqv2_OgCKk__PqvZs=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLcBb3-sYjCjMoEjkHL56JfgxLbGBqqxtP-U_A42QF4AGNBgMWh1o8zqiP29g0zqhc3SKtBuNrs6NdB-rY4n1ZWzWSRyWhi2Ax704Oz80mKgXgV8oUK-g7Aoqv2_OgCKk__PqvZs=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcFNMYTBRZNJSTR4oAjJLUujBACoVQzr8MSbLzrQ7DgG-GBbfxD-hxO9GQOxycvGq4ejF2WEll2I6bG32A7whIR4XTN-yZ4Bqe8LNDwbp2zpfzogrel9eHh573pPBnKREs6zKGSUA=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLcFNMYTBRZNJSTR4oAjJLUujBACoVQzr8MSbLzrQ7DgG-GBbfxD-hxO9GQOxycvGq4ejF2WEll2I6bG32A7whIR4XTN-yZ4Bqe8LNDwbp2zpfzogrel9eHh573pPBnKREs6zKGSUA=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcjNaxjBYW9fvoXtDyk4Sflg6quU2Ii03rtr2LVMQ_09BXeCkJ1J9yX9DTxF0Xs_4Coih8FIcwBKrGF2QrRKEGk6KenO0a_PCAt1JnGV9raFUfcf92HjIh3XT8eodrAZ-vzMmM=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLcjNaxjBYW9fvoXtDyk4Sflg6quU2Ii03rtr2LVMQ_09BXeCkJ1J9yX9DTxF0Xs_4Coih8FIcwBKrGF2QrRKEGk6KenO0a_PCAt1JnGV9raFUfcf92HjIh3XT8eodrAZ-vzMmM=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdWOctdexn1tJ9stV41fHXB_Y18O_Zh3UZTBCLKcRO6ZnZhG6I3XytX1HTYWMKznoSYAaVbU4FDtddDqdICtkqUFv1IUKcLIxQCmDmI82a5xtw1juaedZgKidZDaWjH1IDwH4AO=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdWOctdexn1tJ9stV41fHXB_Y18O_Zh3UZTBCLKcRO6ZnZhG6I3XytX1HTYWMKznoSYAaVbU4FDtddDqdICtkqUFv1IUKcLIxQCmDmI82a5xtw1juaedZgKidZDaWjH1IDwH4AO=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLd9lHYumC4oStgVqDggJjKsnqr2Bn2V4EbojOQi-LTwIB_0mqmsJCwDG8-HoFGnrvGds7pqWmXDaXIuZs9w-iIYxjP565E7spf3y51qKScwm6d-PWfPrcjYu5pMvRsekDaIn-Pt=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLd9lHYumC4oStgVqDggJjKsnqr2Bn2V4EbojOQi-LTwIB_0mqmsJCwDG8-HoFGnrvGds7pqWmXDaXIuZs9w-iIYxjP565E7spf3y51qKScwm6d-PWfPrcjYu5pMvRsekDaIn-Pt=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfU_FdQiMAz9r0iQxVO8Eypb6E1kjx6SeE-io_BJs2epR2VQLRwqsizaHgdjL3pZiAwGzKERdceoI542qPH19QmkL-MA-ssS-S7p6HHhloH10PFbz3olYnExZGAAqA7K9-vt1HEag=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLfU_FdQiMAz9r0iQxVO8Eypb6E1kjx6SeE-io_BJs2epR2VQLRwqsizaHgdjL3pZiAwGzKERdceoI542qPH19QmkL-MA-ssS-S7p6HHhloH10PFbz3olYnExZGAAqA7K9-vt1HEag=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfRBVB_4dd2DdEOSFfyCvoaFiXOxFJwcPjpTpm0Mhs3BsadCPhuPLPbtKOy6Hnz5ZbNPRS3VFMwiZHYCVNAQd7T6aQiNCQAMedmmrpZKeDtCtTvplAtzo7LFchOOnJkj1NIg94=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLfRBVB_4dd2DdEOSFfyCvoaFiXOxFJwcPjpTpm0Mhs3BsadCPhuPLPbtKOy6Hnz5ZbNPRS3VFMwiZHYCVNAQd7T6aQiNCQAMedmmrpZKeDtCtTvplAtzo7LFchOOnJkj1NIg94=s10000"
+     }
+    ],
+    "overall_rating": 4.4,
+    "reviews": 568,
+    "ratings": [
+     {
+      "stars": 5,
+      "count": 363
+     },
+     {
+      "stars": 4,
+      "count": 130
+     },
+     {
+      "stars": 3,
+      "count": 39
+     },
+     {
+      "stars": 2,
+      "count": 11
+     },
+     {
+      "stars": 1,
+      "count": 25
+     }
+    ],
+    "location_rating": 3.5,
+    "reviews_breakdown": [
+     {
+      "name": "Service",
+      "description": "Service",
+      "total_mentioned": 75,
+      "positive": 66,
+      "negative": 8,
+      "neutral": 1,
+      "category_token": "DZ7RYHica1yRnFiSmp5fVDl5eXBqUVlmciojjAEAtX8MDA",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=DZ7RYHica1yRnFiSmp5fVDl5eXBqUVlmciojjAEAtX8MDA&engine=google_hotels_reviews&hl=en&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ"
+     },
+     {
+      "name": "Accessibility",
+      "description": "Accessibility",
+      "total_mentioned": 17,
+      "positive": 2,
+      "negative": 12,
+      "neutral": 3,
+      "category_token": "HfRzRXica1yRnFiSmp5fVDl5rWNycmpxcWZSZk5mSSUTKhcAZeYRBw",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=HfRzRXica1yRnFiSmp5fVDl5rWNycmpxcWZSZk5mSSUTKhcAZeYRBw&engine=google_hotels_reviews&hl=en&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ"
+     },
+     {
+      "name": "Property",
+      "description": "Property",
+      "total_mentioned": 69,
+      "positive": 58,
+      "negative": 4,
+      "neutral": 7,
+      "category_token": "qPRjhHica1yRnFiSmp5fVDl5RUBRfkFqUUklI5wFANGQDTY",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=qPRjhHica1yRnFiSmp5fVDl5RUBRfkFqUUklI5wFANGQDTY&engine=google_hotels_reviews&hl=en&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ"
+     },
+     {
+      "name": "Location",
+      "description": "Location",
+      "total_mentioned": 56,
+      "positive": 52,
+      "negative": 1,
+      "neutral": 3,
+      "category_token": "jLN0PHica1yRnFiSmp5fVDl5hU8-kJ2Zn8cIZwEAzmAM3g",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=jLN0PHica1yRnFiSmp5fVDl5hU8-kJ2Zn8cIZwEAzmAM3g&engine=google_hotels_reviews&hl=en&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ"
+     },
+     {
+      "name": "Breakfast",
+      "description": "Breakfast",
+      "total_mentioned": 23,
+      "positive": 18,
+      "negative": 3,
+      "neutral": 2,
+      "category_token": "B2S1iHica1yRnFiSmp5fVDl5pVNRamJ2WmJxCSOCCQDoBQ2U",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=B2S1iHica1yRnFiSmp5fVDl5pVNRamJ2WmJxCSOCCQDoBQ2U&engine=google_hotels_reviews&hl=en&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ"
+     },
+     {
+      "name": "Safety",
+      "description": "Safety",
+      "total_mentioned": 10,
+      "positive": 9,
+      "negative": 1,
+      "neutral": 0,
+      "category_token": "M1tSYXica1yRnFiSmp5fVDl5WXBiWmpJJSOUBgCdDAtA",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=M1tSYXica1yRnFiSmp5fVDl5WXBiWmpJJSOUBgCdDAtA&engine=google_hotels_reviews&hl=en&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ"
+     }
+    ],
+    "amenities": [
+     "Breakfast ($)",
+     "Free Wi-Fi",
+     "Air conditioning",
+     "Pet-friendly",
+     "Fitness center",
+     "Bar",
+     "Room service",
+     "Full-service laundry",
+     "Kid-friendly",
+     "Smoke-free property"
+    ],
+    "eco_certified": true,
+    "serpapi_google_hotels_reviews_link": "https://serpapi.com/search.json?engine=google_hotels_reviews&hl=en&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ",
+    "serpapi_google_hotels_photos_link": "https://serpapi.com/search.json?engine=google_hotels_photos&property_token=ChgI_6TIm_ra6pSkARoLL2cvMXRycmNobW0QAQ"
+   },
+   {
+    "type": "hotel",
+    "name": "Glint Paris",
+    "description": "Modern rooms & suites, some with garden views, in a hip property offering a wine bar & a brasserie.",
+    "link": "https://www.glint-stay.com/",
+    "property_token": "ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB",
+    "serpapi_property_details_link": "https://serpapi.com/search.json?adults=2&check_in_date=2027-01-21&check_out_date=2027-01-24&children=0&currency=USD&engine=google_hotels&gl=us&hl=en&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB&q=Paris",
+    "gps_coordinates": {
+     "latitude": 48.8886184,
+     "longitude": 2.3498299
+    },
+    "check_in_time": "3:00\u202fPM",
+    "check_out_time": "11:00\u202fAM",
+    "rate_per_night": {
+     "display_price": "$64",
+     "extracted_display_price": 64,
+     "lowest": "$77",
+     "extracted_lowest": 77,
+     "before_taxes_fees": "$64",
+     "extracted_before_taxes_fees": 64,
+     "after_taxes_fees": "$77",
+     "extracted_after_taxes_fees": 77
+    },
+    "total_rate": {
+     "display_price": "$193",
+     "extracted_display_price": 193,
+     "lowest": "$230",
+     "extracted_lowest": 230,
+     "before_taxes_fees": "$193",
+     "extracted_before_taxes_fees": 193,
+     "after_taxes_fees": "$230",
+     "extracted_after_taxes_fees": 230
+    },
+    "deal": "43% less than usual",
+    "deal_description": "Great Deal",
+    "nearby_places": [
+     {
+      "name": "Ch\u00e2teau Rouge",
+      "transportations": [
+       {
+        "type": "Walking",
+        "duration": "3 min"
+       }
+      ]
+     },
+     {
+      "name": "A\u00e9roport de Paris-Charles de Gaulle",
+      "transportations": [
+       {
+        "type": "Taxi",
+        "duration": "25 min"
+       },
+       {
+        "type": "Public transport",
+        "duration": "48 min"
+       }
+      ]
+     },
+     {
+      "name": "Peppe 69",
+      "transportations": [
+       {
+        "type": "Walking",
+        "duration": "3 min"
+       }
+      ]
+     }
+    ],
+    "images": [
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdkoSBuD9z19PVwgPhGP2x3pOtqId0NStIjdkk5mpLAHDAaO5yaa_jzV1ICRrMmUjLKQUFQQtWVAcNsS8V-b3WaoD03CYItVEm53J-3B4i41OqfGdqN60neM1ViBW33ax0zOY_u2R9zQ3k=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdkoSBuD9z19PVwgPhGP2x3pOtqId0NStIjdkk5mpLAHDAaO5yaa_jzV1ICRrMmUjLKQUFQQtWVAcNsS8V-b3WaoD03CYItVEm53J-3B4i41OqfGdqN60neM1ViBW33ax0zOY_u2R9zQ3k=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfnRecF3p5P2i3TKVjBmrso425OqdXF3Sw4KkwxHHNUaTDbn9UtIca2CgIAS4-57RWHZWtpvCH_ht5Lw7pnnpMwT6jZorUQggzNQmTNINdeeLlyBNwJyDbQKMmqeSa1QYi4H0p1gb1Zwio7=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLfnRecF3p5P2i3TKVjBmrso425OqdXF3Sw4KkwxHHNUaTDbn9UtIca2CgIAS4-57RWHZWtpvCH_ht5Lw7pnnpMwT6jZorUQggzNQmTNINdeeLlyBNwJyDbQKMmqeSa1QYi4H0p1gb1Zwio7=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdLyWZd2-j4LWmT5GQLkwutW289X1i10UDdLXehdnyK2rUIAyXtJ_iUHuE06qqGTG3I_M0PkaD7_5VXaMk_Qcbgdo-CcjAHLJafWTmEzJu8FJRnp0CGo9oH7SSVPmUVpFt3A3GdiDg4oqlk=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdLyWZd2-j4LWmT5GQLkwutW289X1i10UDdLXehdnyK2rUIAyXtJ_iUHuE06qqGTG3I_M0PkaD7_5VXaMk_Qcbgdo-CcjAHLJafWTmEzJu8FJRnp0CGo9oH7SSVPmUVpFt3A3GdiDg4oqlk=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLe2KsTXOt9r03GhcNITOrzeDzKxNGltLmDM7qNWQZnmzbgvt4kEIX90ZSrZxEi7HJwSB1euvNlgzAvMwUtT8pP0Ns4BVXELFRbmQgHwaJy4vlNakMzaL32evGu9jyAvb647x8tfl3t2vCBv=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLe2KsTXOt9r03GhcNITOrzeDzKxNGltLmDM7qNWQZnmzbgvt4kEIX90ZSrZxEi7HJwSB1euvNlgzAvMwUtT8pP0Ns4BVXELFRbmQgHwaJy4vlNakMzaL32evGu9jyAvb647x8tfl3t2vCBv=s10000"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW0HKrZrYygxGS2DnIXLEt_k8vocYyMPb0V8Bb0rVwtU4TaJFHJfuN-OjjJtV8eQBeXG3vkVjNMk-pdZgS3ymleEmT_qpfoZnCu7oKr3fHRw3jnhfMC35rhuKkrnfxgAY-kGOJi1D6_ys5a_kS4Q3ZjmUGBEAdZEeohakyT6jcfT0BmjanMJ7sy3=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://photos.hotelbeds.com/giata/original/12/125529/125529a_hb_ba_010.jpg?20241225174630?20250423164830?20250423170036?20250711200324"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW0P8oeYspsZbg0UJwYGtzaufTrv_ZHQnTZrbh_p9Kvvke30Ml6juuI02BnhNfJgPYyihLJndtzsWEpaQCaeaY5ixd9WOE5y7litO-SK6sEseuKgQCWLap_bF0joljSy9E5bduHVB8hvNSph4IPkJH0_quWjYnZgD1ajwO1MMIdbK_sfB6fXHxs=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/76/41/54/best-western-montmartre.jpg?w=1700&h=1200&s=1"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW3u9BrJ8skqUEPtMfY4fRmKSeuZn48NLHJrpsbq7E2F-zzGz9ytmRUicJE27KjHDnEbgrr08iDUXzIQ9Mqb9-G673AhFEpJJ4xNNfSdXdTRzTtWmLYsckRDK1IvyJzkQd96AEwuFMNdIRvng3y1RH8DQ5hYq2laJXhS8ToBBYeQ8mt_rleddLVcew=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://images.trvl-media.com/lodging/2000000/1170000/1166100/1166042/8c9c6ab5.jpg?impolicy=ccrop&w=1000&h=666&q=medium"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW28E_8q7oQWRdKrUAvVrm4Hv9DyglwsA4UuDNnDUCroKipiHJrhgOPZLkYm7xuHwrYh9wBELEUpwd-iYZt9_joGJu3-tImG4lVjT95Li6bWQpctyfVTGuRhGZJ9RZM1xjpgeI-qCn8Z5_ifbGYHxl2J0qmr4cZ-WI1mNCaJUjn8i7YoxrV5U7kxYA=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://photos.hotelbeds.com/giata/original/12/125529/125529a_hb_a_090.jpg?20241225174629?20250423164829?20250423170036?20250711200324"
+     },
+     {
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW0WtR1L9OCYNTgcq3HCxR4NQfXb_84m4xZUIcq3RS8XQrxVtmyOx_aVurrevueeA89n67Bbn-XjiPumhB3bNUg_ODvjKER8Qef3dtoN4015VXkdAxp83oefUHFbwpjEEKUf9codDcMjQrSspG6XdsJnI3ONuokFOJXFJdZBVxbPwAN319H7mXpO=s287-w287-h192-n-k-no-v1",
+      "original_image": "https://photos.hotelbeds.com/giata/original/12/125529/125529a_hb_r_009.jpg?20250109105019?20250423164830?20250423170037?20250711200325"
+     }
+    ],
+    "overall_rating": 4.5,
+    "reviews": 3332,
+    "ratings": [
+     {
+      "stars": 5,
+      "count": 2339
+     },
+     {
+      "stars": 4,
+      "count": 623
+     },
+     {
+      "stars": 3,
+      "count": 189
+     },
+     {
+      "stars": 2,
+      "count": 79
+     },
+     {
+      "stars": 1,
+      "count": 102
+     }
+    ],
+    "location_rating": 4.0,
+    "reviews_breakdown": [
+     {
+      "name": "Bar",
+      "description": "Bar or lounge",
+      "total_mentioned": 63,
+      "positive": 57,
+      "negative": 3,
+      "neutral": 3,
+      "category_token": "qI-Rpnica1yRnFiSmp5fVDl5rVNikUJ-kUJOfmleeirjYiAXAMhXDEE",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=qI-Rpnica1yRnFiSmp5fVDl5rVNikUJ-kUJOfmleeirjYiAXAMhXDEE&engine=google_hotels_reviews&hl=en&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB"
+     },
+     {
+      "name": "Safety",
+      "description": "Safety",
+      "total_mentioned": 45,
+      "positive": 19,
+      "negative": 23,
+      "neutral": 3,
+      "category_token": "ItReBXica1yRnFiSmp5fVDl5WXBiWmpJJQOUBgCdBAs_",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=ItReBXica1yRnFiSmp5fVDl5WXBiWmpJJQOUBgCdBAs_&engine=google_hotels_reviews&hl=en&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB"
+     },
+     {
+      "name": "Service",
+      "description": "Service",
+      "total_mentioned": 252,
+      "positive": 232,
+      "negative": 17,
+      "neutral": 3,
+      "category_token": "DZ7RYHica1yRnFiSmp5fVDl5eXBqUVlmciojjAEAtX8MDA",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=DZ7RYHica1yRnFiSmp5fVDl5eXBqUVlmciojjAEAtX8MDA&engine=google_hotels_reviews&hl=en&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB"
+     },
+     {
+      "name": "Breakfast",
+      "description": "Breakfast",
+      "total_mentioned": 113,
+      "positive": 101,
+      "negative": 7,
+      "neutral": 5,
+      "category_token": "B2S1iHica1yRnFiSmp5fVDl5pVNRamJ2WmJxCSOCCQDoBQ2U",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=B2S1iHica1yRnFiSmp5fVDl5pVNRamJ2WmJxCSOCCQDoBQ2U&engine=google_hotels_reviews&hl=en&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB"
+     },
+     {
+      "name": "Location",
+      "description": "Location",
+      "total_mentioned": 201,
+      "positive": 151,
+      "negative": 27,
+      "neutral": 23,
+      "category_token": "jLN0PHica1yRnFiSmp5fVDl5hU8-kJ2Zn8cIZwEAzmAM3g",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=jLN0PHica1yRnFiSmp5fVDl5hU8-kJ2Zn8cIZwEAzmAM3g&engine=google_hotels_reviews&hl=en&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB"
+     },
+     {
+      "name": "Cleanliness",
+      "description": "Cleanliness",
+      "total_mentioned": 161,
+      "positive": 134,
+      "negative": 21,
+      "neutral": 6,
+      "category_token": "JXKy3Xica1yRnFiSmp5fVDl5tXNOamJeTmZeanExIzIHACQKD1Q",
+      "serpapi_link": "https://serpapi.com/search.json?category_token=JXKy3Xica1yRnFiSmp5fVDl5tXNOamJeTmZeanExIzIHACQKD1Q&engine=google_hotels_reviews&hl=en&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB"
+     }
+    ],
+    "amenities": [
+     "Breakfast ($)",
+     "Free Wi-Fi",
+     "Air conditioning",
+     "Pet-friendly",
+     "Bar",
+     "Accessible",
+     "Business center",
+     "Kid-friendly",
+     "Smoke-free property"
+    ],
+    "serpapi_google_hotels_reviews_link": "https://serpapi.com/search.json?engine=google_hotels_reviews&hl=en&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB",
+    "serpapi_google_hotels_photos_link": "https://serpapi.com/search.json?engine=google_hotels_photos&property_token=ChcIhPDt-4LWsolAGgsvZy8xdjZsNnQ2bRAB"
+   }
+  ]
+ },
+ "google_maps": {
+  "local_results": [
+   {
+    "position": 1,
+    "title": "Galeries Lafayette Champs-\u00c9lys\u00e9es",
+    "place_id": "ChIJU0nn0uZv5kcRbncuncHdnXE",
+    "data_id": "0x47e66fe6d2e74953:0x719dddc19d2e776e",
+    "data_cid": "8186943521264924526",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x47e66fe6d2e74953%3A0x719dddc19d2e776e&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x47e66fe6d2e74953%3A0x719dddc19d2e776e&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+     "latitude": 48.8706988,
+     "longitude": 2.3062649
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJU0nn0uZv5kcRbncuncHdnXE",
+    "provider_id": "/g/11h99bcfrc",
+    "rating": 4.4,
+    "reviews": 14311,
+    "type": "Department store",
+    "types": [
+     "Department store",
+     "Beauty supply store",
+     "Deli",
+     "Fashion accessories store",
+     "Fast food restaurant",
+     "Gift shop",
+     "Mediterranean restaurant",
+     "Men's clothing store",
+     "Restaurant",
+     "Women's clothing store"
+    ],
+    "address": "60 Av. des Champs-\u00c9lys\u00e9es, 75008 Paris, France",
+    "country": "France",
+    "open_state": "Closed \u00b7 Opens 10\u202fAM",
+    "hours": "Closed \u00b7 Opens 10\u202fAM",
+    "operating_hours": {
+     "friday": "10\u202fAM\u20139\u202fPM",
+     "saturday": "10\u202fAM\u20139\u202fPM",
+     "sunday": "10\u202fAM\u20139\u202fPM",
+     "monday": "10\u202fAM\u20139\u202fPM",
+     "tuesday": "10\u202fAM\u20139\u202fPM",
+     "wednesday": "10\u202fAM\u20139\u202fPM",
+     "thursday": "10\u202fAM\u20139\u202fPM"
+    },
+    "phone": "+33 1 83 65 61 00",
+    "website": "https://www.galerieslafayette.com/m/magasin-champs-elysees",
+    "extensions": [
+     {
+      "accessibility": [
+       "Wheelchair accessible entrance",
+       "Wheelchair accessible parking lot"
+      ]
+     }
+    ],
+    "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcwxeObWO7ckTrwXX4FptMHezurxAjLUP6uosvgJ2AQvtXVbqaNHfs3AtKzopeOwsyGJCo5iLjyYnSIihSnONKG39XaSWgVnI77c4AKiZpfcKItMr-YQycy_Age6HmmFsSfzI8s=w1000-h1000-c-n",
+    "serpapi_thumbnail": "https://serpapi.com/images/url/N_LRbnicHcTdEoFAGADQJ0pRhBkXy0xKEZOfuDH1zbaFdrPfJvWCnsHbmHEuzveTK1XhVNcfudljQrAHrZFKEFxRrnogSp3JBFED1AmZ38sAmjcN01Now30vmzi2nEqtXdrV8k1uwWE7qgW-2GpAdi8VH9NnsnEzNInyO1HRsMF2uVqIYRHc2jOPvCKPeLjxl-YkTqITO3LPtsEifnGpMvA9tZbaeddCeyWMjtyydDDKOm-Ms6ZvGIaW_weN_wCIV0di"
+   },
+   {
+    "position": 2,
+    "title": "Shopping centre \"Saint-Lazare\"",
+    "place_id": "ChIJPUBtQTVu5kcRnPMYVq9Mthg",
+    "data_id": "0x47e66e35416d403d:0x18b64caf5618f39c",
+    "data_cid": "1780695018619073436",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x47e66e35416d403d%3A0x18b64caf5618f39c&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x47e66e35416d403d%3A0x18b64caf5618f39c&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+     "latitude": 48.875888499999995,
+     "longitude": 2.3240292
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJPUBtQTVu5kcRnPMYVq9Mthg",
+    "provider_id": "/g/1hd_rvsvr",
+    "rating": 4,
+    "reviews": 25386,
+    "type": "Shopping mall",
+    "types": [
+     "Shopping mall",
+     "Beauty supply store",
+     "Clothing store",
+     "Fast food restaurant",
+     "Lingerie store",
+     "Men's clothing store",
+     "Shoe store",
+     "Sportswear store",
+     "Women's clothing store",
+     "Youth clothing store"
+    ],
+    "address": "1 Cr de Rome, 75008 Paris, France",
+    "country": "France",
+    "open_state": "Closed \u00b7 Opens 7:30\u202fAM",
+    "hours": "Closed \u00b7 Opens 7:30\u202fAM",
+    "operating_hours": {
+     "friday": "7:30\u202fAM\u20138\u202fPM",
+     "saturday": "9\u202fAM\u20138\u202fPM",
+     "sunday": "10\u202fAM\u20137\u202fPM",
+     "monday": "7:30\u202fAM\u20138\u202fPM",
+     "tuesday": "7:30\u202fAM\u20138\u202fPM",
+     "wednesday": "7:30\u202fAM\u20138\u202fPM",
+     "thursday": "7:30\u202fAM\u20138\u202fPM"
+    },
+    "phone": "+33 1 53 42 12 54",
+    "website": "https://st-lazare-paris.klepierre.fr/",
+    "extensions": [
+     {
+      "accessibility": [
+       "Wheelchair accessible entrance",
+       "Wheelchair accessible parking lot",
+       "Wheelchair accessible restroom"
+      ]
+     }
+    ],
+    "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLelbCVGnzT9Cm9EnimgIiJmEtiL8Ap8AekrnhCA0ZsT45g4oL63eUf6PlE2JMRbtYp2WYzv9AHKLQuSUn6M5VMI7pxb4xCf8ofTshlJlEsT-dowVne2MEB2wYpU_D1arWIiKO4=w1000-h1000-c-n",
+    "serpapi_thumbnail": "https://serpapi.com/images/url/fpuV8nicHcRJDoIwAADAFyGLiGDioWCjIMQNMHgxgKUldgutYnygf_A3Js5hvh-itVQL06RkOsFCYIoeCg2t4BpxPWkFM_FQK2W0ygQgvLMU0SYq1_ydBxELIO8ZjvuEQd2nPpA-QPeBkwhYF5W7M-yK1JuiovP2FDpJdmx0JZ1z9X4GYLNND49Twb1sVmbxXL4a9xV1vuhyRWhCocqNmxhLjpwMhs5YyeK6suvhHPfbnbscbcuyDPK_NfgPMONEOQ"
+   },
+   {
+    "position": 3,
+    "title": "Le Bon March\u00e9",
+    "place_id": "ChIJAYa7ntNx5kcRcmJxXPZ7m9k",
+    "data_id": "0x47e671d39ebb8601:0xd99b7bf65c716272",
+    "data_cid": "15680262825663619698",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x47e671d39ebb8601%3A0xd99b7bf65c716272&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x47e671d39ebb8601%3A0xd99b7bf65c716272&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+     "latitude": 48.851203999999996,
+     "longitude": 2.3244849999999997
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJAYa7ntNx5kcRcmJxXPZ7m9k",
+    "provider_id": "/m/074jyl",
+    "rating": 4.5,
+    "reviews": 22424,
+    "type": "Department store",
+    "types": [
+     "Department store",
+     "Beauty supply store",
+     "Boot store",
+     "Children's store",
+     "Home goods store",
+     "Leather goods store",
+     "Lingerie store",
+     "Men's clothing store",
+     "Shoe store",
+     "Women's clothing store"
+    ],
+    "address": "24 Rue de S\u00e8vres, 75007 Paris, France",
+    "country": "France",
+    "open_state": "Closed \u00b7 Opens 10\u202fAM",
+    "hours": "Closed \u00b7 Opens 10\u202fAM",
+    "operating_hours": {
+     "friday": "10\u202fAM\u20137:45\u202fPM",
+     "saturday": "10\u202fAM\u20137:45\u202fPM",
+     "sunday": "11\u202fAM\u20137:45\u202fPM",
+     "monday": "10\u202fAM\u20137:45\u202fPM",
+     "tuesday": "10\u202fAM\u20137:45\u202fPM",
+     "wednesday": "10\u202fAM\u20137:45\u202fPM",
+     "thursday": "10\u202fAM\u20137:45\u202fPM"
+    },
+    "phone": "+33 1 44 39 80 00",
+    "website": "https://www.lebonmarche.com/",
+    "description": "Elegant high-end shopping experience. Upmarket 19th-century mall for designer apparel, housewares, beauty products & gourmet groceries.",
+    "extensions": [
+     {
+      "accessibility": [
+       "Assistive hearing loop",
+       "Wheelchair accessible entrance",
+       "Wheelchair accessible parking lot",
+       "Wheelchair accessible restroom",
+       "Wheelchair accessible seating"
+      ]
+     }
+    ],
+    "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeoMpDPEVqEZKDdxTHu2dSOtziino3yjQorIGkZe70YS1uBu1-d4R4UUuSaL0DN_fWaZr_H0SUNYEWBd-9OU6xhoPlzS1Prz2EmgRnA9qdTC8I0is_ChqlsfeugVZpkGo9A0ho_=w1000-h1000-c-n",
+    "serpapi_thumbnail": "https://serpapi.com/images/url/Y5Xn7XicHcRbjoIwFADQFVWKmhkx8QOEqBkfaAUjP4TQ2jJAL_QRlQ26Bndj4vk475cwptNzx2nEZMQBeMOsZqoEaZg0oxJah6tCa1Rqx_eDut0y2HVhHKV9lP2F9HFe2zElBzNUlYTJ8_8IarOqM_aLr8S1gXURnZ6mSWJJscXhPr9dikzla0yS_TW6BBR5h-TnISBuBuLGahhHLT9J3-vpeTnb4ErnS9E3-sYsT7OuXoHnYwH54u5ijJH4XiL5Aa04RWo"
+   },
+   {
+    "position": 4,
+    "title": "Passage du Havre",
+    "place_id": "ChIJQbHKmTVu5kcRco5OGh_Zns4",
+    "data_id": "0x47e66e3599cab141:0xce9ed91f1a4e8e72",
+    "data_cid": "14888576145742007922",
+    "reviews_link": "https://serpapi.com/search.json?data_id=0x47e66e3599cab141%3A0xce9ed91f1a4e8e72&engine=google_maps_reviews&hl=en",
+    "photos_link": "https://serpapi.com/search.json?data_id=0x47e66e3599cab141%3A0xce9ed91f1a4e8e72&engine=google_maps_photos&hl=en",
+    "gps_coordinates": {
+     "latitude": 48.8753007,
+     "longitude": 2.3276936
+    },
+    "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJQbHKmTVu5kcRco5OGh_Zns4",
+    "provider_id": "/m/0cp_0s",
+    "rating": 4.2,
+    "reviews": 14271,
+    "type": "Shopping mall",
+    "types": [
+     "Shopping mall",
+     "Boutique",
+     "Clothing store",
+     "Fashion accessories store",
+     "Fast food restaurant",
+     "Home goods store",
+     "Jewelry store",
+     "Parking garage",
+     "Perfume store",
+     "Shoe store"
+    ],
+    "address": "109 Rue Saint-Lazare, 75009 Paris, France",
+    "country": "France",
+    "open_state": "Closed \u00b7 Opens 9:30\u202fAM",
+    "hours": "Closed \u00b7 Opens 9:30\u202fAM",
+    "operating_hours": {
+     "friday": "9:30\u202fAM\u20138:30\u202fPM",
+     "saturday": "9:30\u202fAM\u20138\u202fPM",
+     "sunday": "11\u202fAM\u20137\u202fPM",
+     "monday": "9:30\u202fAM\u20138\u202fPM",
+     "tuesday": "9:30\u202fAM\u20138\u202fPM",
+     "wednesday": "9:30\u202fAM\u20138\u202fPM",
+     "thursday": "9:30\u202fAM\u20138:30\u202fPM"
+    },
+    "website": "https://www.passageduhavre.com/",
+    "description": "Contemporary mall for shopping & dining. Prominent, urban mall featuring national & global retailers & restaurants in an airy, stylish venue.",
+    "extensions": [
+     {
+      "accessibility": [
+       "Wheelchair accessible entrance",
+       "Wheelchair accessible parking lot",
+       "Wheelchair accessible restroom"
+      ]
+     }
+    ],
+    "unsupported_extensions": [
+     {
+      "accessibility": [
+       "Wheelchair accessible seating"
+      ]
+     }
+    ],
+    "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLd1d69jj9St2XtTXyoJu8zPD955eba1m_u3dospWtGL269XopUkSqmAcqpmDpgH1rsyUFrjhZubW5DeVck_u3fk5Psr1mnHlSH9Gfcd4HVWperuxjFvN7tOTr-l1akPUJuD9Z8=w1000-h1000-c-n",
+    "serpapi_thumbnail": "https://serpapi.com/images/url/FamgwnicHcvbCoIwAADQLzKdZbmgB0NSIkpQU3wJm9PhnJu7dPvA_qG_KXo5b-fzJloLtbbtgcxnHefdgI3CEvFR41HPEGd2J2ulLKTsINhSdmhAs4R9D1Ptljorn3xv_FcSQs_D1xqwi5k3XIlCRwd3CUsucppOLECTYKHoYiDVM9_JnlTmWnghPiP6Gy31EiUBG-MhjWHUomYRnwuBpXn0u9txpU-ZtAZQ0yTfmxBW_uYOHMexyF9kjV-xUEX0"
+   }
+  ]
+ },
+ "google_maps_directions": {
+  "places_info": [
+   {
+    "address": "A\u00e9roport de Paris-Charles de Gaulle",
+    "data_id": "0x47e63e038e4ccf5b:0x42be0982f5ba62c",
+    "gps_coordinates": {
+     "latitude": 49.007882699999996,
+     "longitude": 2.5507855
+    }
+   },
+   {
+    "address": "Louvre Museum, 75001 Paris, France",
+    "data_id": "0x47e671d877937b0f:0xb975fcfa192f84d4",
+    "gps_coordinates": {
+     "latitude": 48.8606111,
+     "longitude": 2.337644
+    }
+   }
+  ],
+  "directions": [
+   {
+    "travel_mode": "Driving",
+    "via": "A1",
+    "distance": 33487,
+    "duration": 2414,
+    "typical_duration_range": "32\u201350 min",
+    "formatted_distance": "33.5 km",
+    "formatted_duration": "40 min",
+    "extensions": [
+     "Fastest route, the usual traffic"
+    ],
+    "icon": "https://serpapi.com/assets/google_maps_directions/driving.svg"
+   },
+   {
+    "travel_mode": "Driving",
+    "via": "A1 and Blvd P\u00e9riph\u00e9rique",
+    "distance": 33443,
+    "duration": 2430,
+    "typical_duration_range": "32\u201351 min",
+    "formatted_distance": "33.4 km",
+    "formatted_duration": "41 min",
+    "icon": "https://serpapi.com/assets/google_maps_directions/driving.svg"
+   },
+   {
+    "travel_mode": "Transit",
+    "via": "every 6 min",
+    "start_time": "5:23\u202fAM",
+    "end_time": "6:09\u202fAM",
+    "distance": 30572,
+    "duration": 2788,
+    "formatted_distance": "30.6 km",
+    "formatted_duration": "46 min",
+    "cost": 14,
+    "currency": "EUR",
+    "icon": "https://serpapi.com/assets/google_maps_directions/transit.svg"
+   }
+  ]
+ },
+ "google_videos": {
+  "video_results": [
+   {
+    "position": 1,
+    "title": "The tower was the tallest man-made structure in the world for ...",
+    "link": "https://www.instagram.com/reel/DZUvO7PSBKr/",
+    "displayed_link": "www.instagram.com \u203a reel",
+    "thumbnail": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/VUYv2Zi2_gsWm1S1eOO4H3SVC4lwmON59WtdD18NHuU.jpg",
+    "snippet": "Did you know the Eiffel Tower was once hated by many people in Paris? Built in 1889, this incredible 330-meter-tall landmark was originally ...",
+    "duration": "0:13",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "Jun 8, 2026"
+      },
+      "extensions": [
+       "Instagram",
+       "Pradeep Krishnan",
+       "Jun 8, 2026"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "Did you know the Eiffel Tower was once hated by many people in Paris? Built in 1889, this incredible 330-meter-tall landmark was originally ...",
+      "icon": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/VUYv2Zi2_gsWm1S1eOO4H2zEMDfIUfvnQupyZ1JFaWmx_x-vz612S-c7g7cnRjdE.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWF9DRUlBRE03SkJmLU5iczhxUHZPYXRzY0V6d1pHSVRSQ1JuSVdzUW5LNi1pMktfZzVKUU1lcmU4d3k4dlI3dnZtSHhNQ3hCQjdsQzBtWkxfTlJ3REVDU0NER2tuYXdWbmxmQTVXMlBzUnRYbGdaMmgyRVhPQmVheVlMMmxTeklJWWc5MhIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqPBRIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWhEIARINaW5zdGFncmFtLmNvbXIAegCCQNoECAAQABgAIAAqRgoGZWlmZmVsFS56EUAaC2VpZmZlbHRvd2VyGgtpdjtwO2VpZmZlbBoLZWlmZmVsdG93ZXIaCXdpa2lwZWRpYRoFcGFyaXMqggEKBXRvd2VyFWMkikAaBnRvd2VycxoLZWlmZmVsdG93ZXIaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJYnVpbGRpbmdzGgxhcmNoaXRlY3R1cmUaCXN0cnVjdHVyZRoKc2t5c2NyYXBlchoGc3RhdHVlGgd0YWxsZXN0MpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWF9DRUlBRE03SkJmLU5iczhxUHZPYXRzY0V6d1pHSVRSQ1JuSVdzUW5LNi1pMktfZzVKUU1lcmU4d3k4dlI3dnZtSHhNQ3hCQjdsQzBtWkxfTlJ3REVDU0NER2tuYXdWbmxmQTVXMlBzUnRYbGdaMmgyRVhPQmVheVlMMmxTeklJWWc5MjpIVGhlIDxiPnRvd2VyPC9iPiB3YXMgdGhlIHRhbGxlc3QgbWFuLW1hZGUgc3RydWN0dXJlIGluIHRoZSB3b3JsZCBmb3IgLi4uQpsBRGlkIHlvdSBrbm93IHRoZSA8Yj5FaWZmZWwgVG93ZXI8L2I-IHdhcyBvbmNlIGhhdGVkIGJ5IG1hbnkgcGVvcGxlIGluIFBhcmlzPyBCdWlsdCBpbiAxODg5LCB0aGlzIGluY3JlZGlibGUgMzMwLW1ldGVyLXRhbGwgbGFuZG1hcmsgd2FzIG9yaWdpbmFsbHkmbmJzcDsuLi4iAhABSABYAGgA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWF9DRUlBRE03SkJmLU5iczhxUHZPYXRzY0V6d1pHSVRSQ1JuSVdzUW5LNi1pMktfZzVKUU1lcmU4d3k4dlI3dnZtSHhNQ3hCQjdsQzBtWkxfTlJ3REVDU0NER2tuYXdWbmxmQTVXMlBzUnRYbGdaMmgyRVhPQmVheVlMMmxTeklJWWc5MhIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqPBRIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWhEIARINaW5zdGFncmFtLmNvbXIAegCCQNoECAAQABgAIAAqRgoGZWlmZmVsFS56EUAaC2VpZmZlbHRvd2VyGgtpdjtwO2VpZmZlbBoLZWlmZmVsdG93ZXIaCXdpa2lwZWRpYRoFcGFyaXMqggEKBXRvd2VyFWMkikAaBnRvd2VycxoLZWlmZmVsdG93ZXIaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJYnVpbGRpbmdzGgxhcmNoaXRlY3R1cmUaCXN0cnVjdHVyZRoKc2t5c2NyYXBlchoGc3RhdHVlGgd0YWxsZXN0MpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWF9DRUlBRE03SkJmLU5iczhxUHZPYXRzY0V6d1pHSVRSQ1JuSVdzUW5LNi1pMktfZzVKUU1lcmU4d3k4dlI3dnZtSHhNQ3hCQjdsQzBtWkxfTlJ3REVDU0NER2tuYXdWbmxmQTVXMlBzUnRYbGdaMmgyRVhPQmVheVlMMmxTeklJWWc5MjpIVGhlIDxiPnRvd2VyPC9iPiB3YXMgdGhlIHRhbGxlc3QgbWFuLW1hZGUgc3RydWN0dXJlIGluIHRoZSB3b3JsZCBmb3IgLi4uQpsBRGlkIHlvdSBrbm93IHRoZSA8Yj5FaWZmZWwgVG93ZXI8L2I-IHdhcyBvbmNlIGhhdGVkIGJ5IG1hbnkgcGVvcGxlIGluIFBhcmlzPyBCdWlsdCBpbiAxODg5LCB0aGlzIGluY3JlZGlibGUgMzMwLW1ldGVyLXRhbGwgbGFuZG1hcmsgd2FzIG9yaWdpbmFsbHkmbmJzcDsuLi4iAhABSABYAGgA"
+   },
+   {
+    "position": 2,
+    "title": "5 Eiffel Tower Secrets That Will Make You See Paris' Iconic ...",
+    "link": "https://www.instagram.com/p/C8LejYJxVWf/",
+    "displayed_link": "www.instagram.com \u203a ...",
+    "thumbnail": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/B-jcWyJYpn8adxNR7_xFBbUnI9-WOu3xqGt9crlRUI0.jpg",
+    "snippet": "2. The Eiffel Tower was once the world's tallest man-made structure until the Chrysler Building in New York City was completed in 1930. 3.",
+    "duration": "0:12",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "Jun 13, 2024"
+      },
+      "extensions": [
+       "Instagram",
+       "Jenn Barlow",
+       "Jun 13, 2024"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "2. The Eiffel Tower was once the world's tallest man-made structure until the Chrysler Building in New York City was completed in 1930. 3.",
+      "icon": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/B-jcWyJYpn8adxNR7_xFBc4cAANWu2IKEt_FWjcUm6W1d1mYUXZH7rqrA4-K_Qkp.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CpYBL2dvdG8_dXJsPUNBRVNaUUhFSWtYWGdnYl9CUGdlSnZFM1NUT0JsSVFPcDU0MFNfMENoVnFPMDVpLXpiVFJFZ084Y2h1dWMxa1RWajJDMUpSdFA1U01VY3hrS0ZOQVFVbi0xN1JGM0NReHNBT2I1OWhyck5WazB1akNfNzk1ak5IWHpKc2lxaXdkZ0VkN1Z3bTNyU3JQEhYKEAoECDBIAgoECEhIAgoCCD8aAggAGocFEgAaACIAKgAyBggDEgJ1czoAQgQIARAASgBaEQgBEg1pbnN0YWdyYW0uY29tcgB6AIJA0gQIABAAGAAgACpGCgZlaWZmZWwVKz2sQBoLZWlmZmVsdG93ZXIaC2l2O3A7ZWlmZmVsGgtlaWZmZWx0b3dlchoJd2lraXBlZGlhGgVwYXJpcyqCAQoFdG93ZXIVg6ykQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50GglidWlsZGluZ3MaDGFyY2hpdGVjdHVyZRoJc3RydWN0dXJlGgpza3lzY3JhcGVyGgZzdGF0dWUaB3RhbGxlc3QylgEvZ290bz91cmw9Q0FFU1pRSEVJa1hYZ2diX0JQZ2VKdkUzU1RPQmxJUU9wNTQwU18wQ2hWcU8wNWktemJUUkVnTzhjaHV1YzFrVFZqMkMxSlJ0UDVTTVVjeGtLRk5BUVVuLTE3UkYzQ1F4c0FPYjU5aHJyTlZrMHVqQ183OTVqTkhYekpzaXFpd2RnRWQ3VndtM3JTclA6SjUgPGI-RWlmZmVsIFRvd2VyPC9iPiBTZWNyZXRzIFRoYXQgV2lsbCBNYWtlIFlvdSBTZWUgUGFyaXMmIzM5OyBJY29uaWMgLi4uQpUBMi4gVGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gd2FzIG9uY2UgdGhlIHdvcmxkJiMzOTtzIHRhbGxlc3QgbWFuLW1hZGUgc3RydWN0dXJlIHVudGlsIHRoZSBDaHJ5c2xlciBCdWlsZGluZyBpbiBOZXcgWW9yayBDaXR5IHdhcyBjb21wbGV0ZWQgaW4gMTkzMC4gMy4iAhABSABYAGgA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CpYBL2dvdG8_dXJsPUNBRVNaUUhFSWtYWGdnYl9CUGdlSnZFM1NUT0JsSVFPcDU0MFNfMENoVnFPMDVpLXpiVFJFZ084Y2h1dWMxa1RWajJDMUpSdFA1U01VY3hrS0ZOQVFVbi0xN1JGM0NReHNBT2I1OWhyck5WazB1akNfNzk1ak5IWHpKc2lxaXdkZ0VkN1Z3bTNyU3JQEhYKEAoECDBIAgoECEhIAgoCCD8aAggAGocFEgAaACIAKgAyBggDEgJ1czoAQgQIARAASgBaEQgBEg1pbnN0YWdyYW0uY29tcgB6AIJA0gQIABAAGAAgACpGCgZlaWZmZWwVKz2sQBoLZWlmZmVsdG93ZXIaC2l2O3A7ZWlmZmVsGgtlaWZmZWx0b3dlchoJd2lraXBlZGlhGgVwYXJpcyqCAQoFdG93ZXIVg6ykQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50GglidWlsZGluZ3MaDGFyY2hpdGVjdHVyZRoJc3RydWN0dXJlGgpza3lzY3JhcGVyGgZzdGF0dWUaB3RhbGxlc3QylgEvZ290bz91cmw9Q0FFU1pRSEVJa1hYZ2diX0JQZ2VKdkUzU1RPQmxJUU9wNTQwU18wQ2hWcU8wNWktemJUUkVnTzhjaHV1YzFrVFZqMkMxSlJ0UDVTTVVjeGtLRk5BUVVuLTE3UkYzQ1F4c0FPYjU5aHJyTlZrMHVqQ183OTVqTkhYekpzaXFpd2RnRWQ3VndtM3JTclA6SjUgPGI-RWlmZmVsIFRvd2VyPC9iPiBTZWNyZXRzIFRoYXQgV2lsbCBNYWtlIFlvdSBTZWUgUGFyaXMmIzM5OyBJY29uaWMgLi4uQpUBMi4gVGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gd2FzIG9uY2UgdGhlIHdvcmxkJiMzOTtzIHRhbGxlc3QgbWFuLW1hZGUgc3RydWN0dXJlIHVudGlsIHRoZSBDaHJ5c2xlciBCdWlsZGluZyBpbiBOZXcgWW9yayBDaXR5IHdhcyBjb21wbGV0ZWQgaW4gMTkzMC4gMy4iAhABSABYAGgA"
+   },
+   {
+    "position": 3,
+    "title": "The Eiffel Tower was built to celebrate 100 years since ...",
+    "link": "https://www.instagram.com/reel/DbjRWLfO8w_/",
+    "displayed_link": "www.instagram.com \u203a reel",
+    "thumbnail": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/3AW2UogiHRxSgXpbupzAbY4rr5ToQ1NUDwdNVD-zILY.jpg",
+    "snippet": "journeyofabraid. The Eiffel Tower was built to celebrate 100 years since the French Revolution. It marked a world where power was no. longer ...",
+    "duration": "0:48",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "Aug 2, 2026"
+      },
+      "extensions": [
+       "Instagram",
+       "Danie Gomez Ortigoza",
+       "Aug 2, 2026"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "journeyofabraid. The Eiffel Tower was built to celebrate 100 years since the French Revolution. It marked a world where power was no. longer ...",
+      "icon": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/3AW2UogiHRxSgXpbupzAbSr0Na2hoe3dMYZfXJKnVQ42lhKL7AtqjqBrcIDHmQty.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWDg4YkV6cElpbkdPeUpjb3pIS1FibEFPVGxPRXZhbFZHek5vLU5EYUJVWFlka3ozQ2hrLTk3dUtaRkl2MDVnQUZfLWlhZVpCNTF0bTdaWF8zOG9xcWNuajEyWWQ0WFF0TGItX3A3VmVsNEc5SG1rUVdERkZFbmx0YkM5UjZLS21McmFiTBIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqSBRICCAAaACIAKgAyBggDEgJ1czoAQgQIARAASgBaEQgBEg1pbnN0YWdyYW0uY29tcgB6AIJA2wQIABAAGAAgACpGCgZlaWZmZWwVYC9rQBoLZWlmZmVsdG93ZXIaC2l2O3A7ZWlmZmVsGgtlaWZmZWx0b3dlchoJd2lraXBlZGlhGgVwYXJpcyqCAQoFdG93ZXIVYC9rQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50GglidWlsZGluZ3MaDGFyY2hpdGVjdHVyZRoJc3RydWN0dXJlGgpza3lzY3JhcGVyGgZzdGF0dWUaB3RhbGxlc3QymgEvZ290bz91cmw9Q0FFU2FBSEVJa1hYODhiRXpwSWluR095SmNvekhLUWJsQU9UbE9FdmFsVkd6Tm8tTkRhQlVYWWRrejNDaGstOTd1S1pGSXYwNWdBRl8taWFlWkI1MXRtN1pYXzM4b3FxY25qMTJZZDRYUXRMYi1fcDdWZWw0RzlIbWtRV0RGRkVubHRiQzlSNktLbUxyYWJMOkhUaGUgPGI-RWlmZmVsIFRvd2VyPC9iPiB3YXMgYnVpbHQgdG8gY2VsZWJyYXRlIDEwMCB5ZWFycyAuLi4gLSBJbnN0YWdyYW1CnAFqb3VybmV5b2ZhYnJhaWQuIFRoZSA8Yj5FaWZmZWwgVG93ZXI8L2I-IHdhcyBidWlsdCB0byBjZWxlYnJhdGUgMTAwIHllYXJzIHNpbmNlIHRoZSBGcmVuY2ggUmV2b2x1dGlvbi4gSXQgbWFya2VkIGEgd29ybGQgd2hlcmUgcG93ZXIgd2FzIG5vLiBsb25nZXImbmJzcDsuLi4iAhABSABYAGgA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWDg4YkV6cElpbkdPeUpjb3pIS1FibEFPVGxPRXZhbFZHek5vLU5EYUJVWFlka3ozQ2hrLTk3dUtaRkl2MDVnQUZfLWlhZVpCNTF0bTdaWF8zOG9xcWNuajEyWWQ0WFF0TGItX3A3VmVsNEc5SG1rUVdERkZFbmx0YkM5UjZLS21McmFiTBIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqSBRICCAAaACIAKgAyBggDEgJ1czoAQgQIARAASgBaEQgBEg1pbnN0YWdyYW0uY29tcgB6AIJA2wQIABAAGAAgACpGCgZlaWZmZWwVYC9rQBoLZWlmZmVsdG93ZXIaC2l2O3A7ZWlmZmVsGgtlaWZmZWx0b3dlchoJd2lraXBlZGlhGgVwYXJpcyqCAQoFdG93ZXIVYC9rQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50GglidWlsZGluZ3MaDGFyY2hpdGVjdHVyZRoJc3RydWN0dXJlGgpza3lzY3JhcGVyGgZzdGF0dWUaB3RhbGxlc3QymgEvZ290bz91cmw9Q0FFU2FBSEVJa1hYODhiRXpwSWluR095SmNvekhLUWJsQU9UbE9FdmFsVkd6Tm8tTkRhQlVYWWRrejNDaGstOTd1S1pGSXYwNWdBRl8taWFlWkI1MXRtN1pYXzM4b3FxY25qMTJZZDRYUXRMYi1fcDdWZWw0RzlIbWtRV0RGRkVubHRiQzlSNktLbUxyYWJMOkhUaGUgPGI-RWlmZmVsIFRvd2VyPC9iPiB3YXMgYnVpbHQgdG8gY2VsZWJyYXRlIDEwMCB5ZWFycyAuLi4gLSBJbnN0YWdyYW1CnAFqb3VybmV5b2ZhYnJhaWQuIFRoZSA8Yj5FaWZmZWwgVG93ZXI8L2I-IHdhcyBidWlsdCB0byBjZWxlYnJhdGUgMTAwIHllYXJzIHNpbmNlIHRoZSBGcmVuY2ggUmV2b2x1dGlvbi4gSXQgbWFya2VkIGEgd29ybGQgd2hlcmUgcG93ZXIgd2FzIG5vLiBsb25nZXImbmJzcDsuLi4iAhABSABYAGgA"
+   },
+   {
+    "position": 4,
+    "title": "The Eiffel Tower, named for Gustave Eiffel, the engineer who ...",
+    "link": "https://www.google.com/goto?url=CAESaAHEIkXX7Xm6WaUlEsxZwEBrARsBqdvKDaREk8YZ_7XZx9NBRzCzXJxLOuANStDE-svKCioh1U2NsMDnrfz_ifMGJoOqIfPgNQJQSAkj3SO_dlN74UcBTlsVwTnkr1MRfqYF0jwtbGKW&gsessionid=EIhy5syIy7oAERktgePuY92pu6jmZxKXlYvouFsEyqnDw_tygOS2RQ",
+    "displayed_link": "www.instagram.com \u203a reel",
+    "thumbnail": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/N-6tq2g3IbqbfRhhQ_GDNaGWi1KTXydjtwdV8_WY0Ug.jpg",
+    "snippet": "The Eiffel Tower \u2014 Paris's iron icon. Built for the 1889 World's Fair, this iron lattice tower became the symbol of Paris itself. At golden ...",
+    "duration": "0:21",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "May 16, 2025"
+      },
+      "extensions": [
+       "Instagram",
+       "Mike Eliason",
+       "May 16, 2025"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "The Eiffel Tower \u2014 Paris's iron icon. Built for the 1889 World's Fair, this iron lattice tower became the symbol of Paris itself. At golden ...",
+      "icon": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/N-6tq2g3IbqbfRhhQ_GDNbkRpZn-XDVPoR4eLOQjtFw5qqrpGGdXy-h-Q5KRrC46.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWDdYbTZXYVVsRXN4WndFQnJBUnNCcWR2S0RhUkVrOFlaXzdYWng5TkJSekN6WEp4TE91QU5TdERFLXN2S0Npb2gxVTJOc01EbnJmel9pZk1HSm9PcUlmUGdOUUpRU0FrajNTT19kbE43NFVjQlRsc1Z3VG5rcjFNUmZxWUYwand0YkdLVxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqYBRIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWhEIARINaW5zdGFncmFtLmNvbXIAegCCQOMECAAQABgAIAAqRgoGZWlmZmVsFWbfmkAaC2VpZmZlbHRvd2VyGgtpdjtwO2VpZmZlbBoLZWlmZmVsdG93ZXIaCXdpa2lwZWRpYRoFcGFyaXMqggEKBXRvd2VyFQ3lqEAaBnRvd2VycxoLZWlmZmVsdG93ZXIaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJYnVpbGRpbmdzGgxhcmNoaXRlY3R1cmUaCXN0cnVjdHVyZRoKc2t5c2NyYXBlchoGc3RhdHVlGgd0YWxsZXN0MpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWDdYbTZXYVVsRXN4WndFQnJBUnNCcWR2S0RhUkVrOFlaXzdYWng5TkJSekN6WEp4TE91QU5TdERFLXN2S0Npb2gxVTJOc01EbnJmel9pZk1HSm9PcUlmUGdOUUpRU0FrajNTT19kbE43NFVjQlRsc1Z3VG5rcjFNUmZxWUYwand0YkdLVzpHVGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4sIG5hbWVkIGZvciBHdXN0YXZlIEVpZmZlbCwgdGhlIGVuZ2luZWVyIHdobyAuLi5CpQFUaGUgPGI-RWlmZmVsIFRvd2VyPC9iPiDigJQgUGFyaXMmIzM5O3MgaXJvbiBpY29uLiBCdWlsdCBmb3IgdGhlIDE4ODkgV29ybGQmIzM5O3MgRmFpciwgdGhpcyBpcm9uIGxhdHRpY2UgdG93ZXIgYmVjYW1lIHRoZSBzeW1ib2wgb2YgUGFyaXMgaXRzZWxmLiBBdCBnb2xkZW4mbmJzcDsuLi4iAhABSABYAGgA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWDdYbTZXYVVsRXN4WndFQnJBUnNCcWR2S0RhUkVrOFlaXzdYWng5TkJSekN6WEp4TE91QU5TdERFLXN2S0Npb2gxVTJOc01EbnJmel9pZk1HSm9PcUlmUGdOUUpRU0FrajNTT19kbE43NFVjQlRsc1Z3VG5rcjFNUmZxWUYwand0YkdLVxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqYBRIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWhEIARINaW5zdGFncmFtLmNvbXIAegCCQOMECAAQABgAIAAqRgoGZWlmZmVsFWbfmkAaC2VpZmZlbHRvd2VyGgtpdjtwO2VpZmZlbBoLZWlmZmVsdG93ZXIaCXdpa2lwZWRpYRoFcGFyaXMqggEKBXRvd2VyFQ3lqEAaBnRvd2VycxoLZWlmZmVsdG93ZXIaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJYnVpbGRpbmdzGgxhcmNoaXRlY3R1cmUaCXN0cnVjdHVyZRoKc2t5c2NyYXBlchoGc3RhdHVlGgd0YWxsZXN0MpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWDdYbTZXYVVsRXN4WndFQnJBUnNCcWR2S0RhUkVrOFlaXzdYWng5TkJSekN6WEp4TE91QU5TdERFLXN2S0Npb2gxVTJOc01EbnJmel9pZk1HSm9PcUlmUGdOUUpRU0FrajNTT19kbE43NFVjQlRsc1Z3VG5rcjFNUmZxWUYwand0YkdLVzpHVGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4sIG5hbWVkIGZvciBHdXN0YXZlIEVpZmZlbCwgdGhlIGVuZ2luZWVyIHdobyAuLi5CpQFUaGUgPGI-RWlmZmVsIFRvd2VyPC9iPiDigJQgUGFyaXMmIzM5O3MgaXJvbiBpY29uLiBCdWlsdCBmb3IgdGhlIDE4ODkgV29ybGQmIzM5O3MgRmFpciwgdGhpcyBpcm9uIGxhdHRpY2UgdG93ZXIgYmVjYW1lIHRoZSBzeW1ib2wgb2YgUGFyaXMgaXRzZWxmLiBBdCBnb2xkZW4mbmJzcDsuLi4iAhABSABYAGgA"
+   },
+   {
+    "position": 5,
+    "title": "How To Visit The Eiffel Tower: Day & Night Travel Guide ...",
+    "link": "https://www.instagram.com/reel/DGOL94UOLQ1/",
+    "displayed_link": "www.instagram.com \u203a reel",
+    "thumbnail": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/IJBhJyUqfTEzx4mkYuVJ6LNGpsmvbdzWvvZfjuJO3V4.jpg",
+    "snippet": "The 2nd floor offers the clearest, most detailed views of Parisian rooftops. 2. Summit Tickets Sell Out Months Ahead: Waiting to buy tickets on- ...",
+    "duration": "0:59",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "Feb 18, 2025"
+      },
+      "extensions": [
+       "Instagram",
+       "Andrew Stajfer",
+       "Feb 18, 2025"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "The 2nd floor offers the clearest, most detailed views of Parisian rooftops. 2. Summit Tickets Sell Out Months Ahead: Waiting to buy tickets on- ...",
+      "icon": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/IJBhJyUqfTEzx4mkYuVJ6C1oC6drzvn8FNYhVh3jq2xZxHFVQSRsg6A3i8h7p5--.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWFhUeXo3RTk3bEYtaTZfdmgwWlV2VlliOFlxcE1DamZScFViSGRhRUlhbWdvdkNITDI5cjBTYkVvXzZzeTNIMDNwSG1FcnFrOVVTV0F3MzA5VXIwSDB0d0pNd1pFclczLTNkOGpMUUwyUUYwRTBpTU1kY2J6WG8zQ180TE42NU5tUGxIYhIWChAKBAgwSAIKBAhISAIKAgg_GgIIABr3BBICCAAaACIAKgAyBggDEgJ1czoAQgQIARAASgBaEQgBEg1pbnN0YWdyYW0uY29tcgB6AIJAwAQIABAAGAAgACpGCgZlaWZmZWwV1biZQBoLZWlmZmVsdG93ZXIaC2l2O3A7ZWlmZmVsGgtlaWZmZWx0b3dlchoJd2lraXBlZGlhGgVwYXJpcyqCAQoFdG93ZXIVjteaQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50GglidWlsZGluZ3MaDGFyY2hpdGVjdHVyZRoJc3RydWN0dXJlGgpza3lzY3JhcGVyGgZzdGF0dWUaB3RhbGxlc3QymgEvZ290bz91cmw9Q0FFU2FBSEVJa1hYWFR5ejdFOTdsRi1pNl92aDBaVXZWWWI4WXFwTUNqZlJwVWJIZGFFSWFtZ292Q0hMMjlyMFNiRW9fNnN5M0gwM3BIbUVycWs5VVNXQXczMDlVcjBIMHR3Sk13WkVyVzMtM2Q4akxRTDJRRjBFMGlNTWRjYnpYbzNDXzRMTjY1Tm1QbEhiOjBIb3cgVG8gVmlzaXQgVGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gLSBJbnN0YWdyYW1CmQFUaGUgMm5kIGZsb29yIG9mZmVycyB0aGUgY2xlYXJlc3QsIG1vc3QgZGV0YWlsZWQgdmlld3Mgb2YgUGFyaXNpYW4gcm9vZnRvcHMuIDIuIFN1bW1pdCBUaWNrZXRzIFNlbGwgT3V0IE1vbnRocyBBaGVhZDogV2FpdGluZyB0byBidXkgdGlja2V0cyBvbi0mbmJzcDsuLi4iAhABSABYAGgA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWFhUeXo3RTk3bEYtaTZfdmgwWlV2VlliOFlxcE1DamZScFViSGRhRUlhbWdvdkNITDI5cjBTYkVvXzZzeTNIMDNwSG1FcnFrOVVTV0F3MzA5VXIwSDB0d0pNd1pFclczLTNkOGpMUUwyUUYwRTBpTU1kY2J6WG8zQ180TE42NU5tUGxIYhIWChAKBAgwSAIKBAhISAIKAgg_GgIIABr3BBICCAAaACIAKgAyBggDEgJ1czoAQgQIARAASgBaEQgBEg1pbnN0YWdyYW0uY29tcgB6AIJAwAQIABAAGAAgACpGCgZlaWZmZWwV1biZQBoLZWlmZmVsdG93ZXIaC2l2O3A7ZWlmZmVsGgtlaWZmZWx0b3dlchoJd2lraXBlZGlhGgVwYXJpcyqCAQoFdG93ZXIVjteaQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50GglidWlsZGluZ3MaDGFyY2hpdGVjdHVyZRoJc3RydWN0dXJlGgpza3lzY3JhcGVyGgZzdGF0dWUaB3RhbGxlc3QymgEvZ290bz91cmw9Q0FFU2FBSEVJa1hYWFR5ejdFOTdsRi1pNl92aDBaVXZWWWI4WXFwTUNqZlJwVWJIZGFFSWFtZ292Q0hMMjlyMFNiRW9fNnN5M0gwM3BIbUVycWs5VVNXQXczMDlVcjBIMHR3Sk13WkVyVzMtM2Q4akxRTDJRRjBFMGlNTWRjYnpYbzNDXzRMTjY1Tm1QbEhiOjBIb3cgVG8gVmlzaXQgVGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gLSBJbnN0YWdyYW1CmQFUaGUgMm5kIGZsb29yIG9mZmVycyB0aGUgY2xlYXJlc3QsIG1vc3QgZGV0YWlsZWQgdmlld3Mgb2YgUGFyaXNpYW4gcm9vZnRvcHMuIDIuIFN1bW1pdCBUaWNrZXRzIFNlbGwgT3V0IE1vbnRocyBBaGVhZDogV2FpdGluZyB0byBidXkgdGlja2V0cyBvbi0mbmJzcDsuLi4iAhABSABYAGgA"
+   },
+   {
+    "position": 6,
+    "title": "Is it worth going up the Eiffel Tower in Paris? Let's talk about it! ...",
+    "link": "https://www.instagram.com/reel/DYZj1dTR9xL/",
+    "displayed_link": "www.instagram.com \u203a reel",
+    "thumbnail": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/kGZCqyoOOUBRSe2QOLsruOQRdi_4KXGhmMpO27YcOB8.jpg",
+    "snippet": "Climbing to the top of the Eiffel Tower is on everyone's Paris bucket list, but here is the hard truth: it's actually the worst skyline view in ...",
+    "duration": "1:34",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "May 16, 2026"
+      },
+      "extensions": [
+       "Instagram",
+       "Kat - France Travel & Beyond \ud83c\uddeb\ud83c\uddf7\ud83c\udf0e",
+       "May 16, 2026"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "Climbing to the top of the Eiffel Tower is on everyone's Paris bucket list, but here is the hard truth: it's actually the worst skyline view in ...",
+      "icon": "https://serpapi.com/searches/6af6a735d0dfd70dc7066eea/images/kGZCqyoOOUBRSe2QOLsruB62AHGDcfv8cESYhwAbRd2lFoN2pt-KOkUeXwT8h0Zu.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWGZsR25mYlFDY003V2tpZ1ZhMFpPNHk0eXc0S3RzMDBiMWdGR0NQSldJdS1TNXNPRWt3Y3ZwcTZwazNremhRMUdseEhhY2YzYkdxQXF0OXB2S1pINzZWVEt1NVl3VEFaVDVPT1RKeEVtRUFuMEppck52cW4tUU9FU0ctdEhzNGZ6YVcxaxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqlBRIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWhEIARINaW5zdGFncmFtLmNvbXIAegCCQPAECAAQABgAIAAqRgoGZWlmZmVsFdxlmUAaC2VpZmZlbHRvd2VyGgtpdjtwO2VpZmZlbBoLZWlmZmVsdG93ZXIaCXdpa2lwZWRpYRoFcGFyaXMqggEKBXRvd2VyFXBnm0AaBnRvd2VycxoLZWlmZmVsdG93ZXIaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJYnVpbGRpbmdzGgxhcmNoaXRlY3R1cmUaCXN0cnVjdHVyZRoKc2t5c2NyYXBlchoGc3RhdHVlGgd0YWxsZXN0MpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWGZsR25mYlFDY003V2tpZ1ZhMFpPNHk0eXc0S3RzMDBiMWdGR0NQSldJdS1TNXNPRWt3Y3ZwcTZwazNremhRMUdseEhhY2YzYkdxQXF0OXB2S1pINzZWVEt1NVl3VEFaVDVPT1RKeEVtRUFuMEppck52cW4tUU9FU0ctdEhzNGZ6YVcxazpSSXMgaXQgd29ydGggZ29pbmcgdXAgdGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gaW4gUGFyaXM_IExldCYjMzk7cyB0YWxrIGFib3V0IGl0IC4uLkKnAUNsaW1iaW5nIHRvIHRoZSB0b3Agb2YgdGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gaXMgb24gZXZlcnlvbmUmIzM5O3MgUGFyaXMgYnVja2V0IGxpc3QsIGJ1dCBoZXJlIGlzIHRoZSBoYXJkIHRydXRoOiBpdCYjMzk7cyBhY3R1YWxseSB0aGUgd29yc3Qgc2t5bGluZSB2aWV3IGluJm5ic3A7Li4uIgIQAUgAWABoAA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWGZsR25mYlFDY003V2tpZ1ZhMFpPNHk0eXc0S3RzMDBiMWdGR0NQSldJdS1TNXNPRWt3Y3ZwcTZwazNremhRMUdseEhhY2YzYkdxQXF0OXB2S1pINzZWVEt1NVl3VEFaVDVPT1RKeEVtRUFuMEppck52cW4tUU9FU0ctdEhzNGZ6YVcxaxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqlBRIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWhEIARINaW5zdGFncmFtLmNvbXIAegCCQPAECAAQABgAIAAqRgoGZWlmZmVsFdxlmUAaC2VpZmZlbHRvd2VyGgtpdjtwO2VpZmZlbBoLZWlmZmVsdG93ZXIaCXdpa2lwZWRpYRoFcGFyaXMqggEKBXRvd2VyFXBnm0AaBnRvd2VycxoLZWlmZmVsdG93ZXIaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJYnVpbGRpbmdzGgxhcmNoaXRlY3R1cmUaCXN0cnVjdHVyZRoKc2t5c2NyYXBlchoGc3RhdHVlGgd0YWxsZXN0MpoBL2dvdG8_dXJsPUNBRVNhQUhFSWtYWGZsR25mYlFDY003V2tpZ1ZhMFpPNHk0eXc0S3RzMDBiMWdGR0NQSldJdS1TNXNPRWt3Y3ZwcTZwazNremhRMUdseEhhY2YzYkdxQXF0OXB2S1pINzZWVEt1NVl3VEFaVDVPT1RKeEVtRUFuMEppck52cW4tUU9FU0ctdEhzNGZ6YVcxazpSSXMgaXQgd29ydGggZ29pbmcgdXAgdGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gaW4gUGFyaXM_IExldCYjMzk7cyB0YWxrIGFib3V0IGl0IC4uLkKnAUNsaW1iaW5nIHRvIHRoZSB0b3Agb2YgdGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gaXMgb24gZXZlcnlvbmUmIzM5O3MgUGFyaXMgYnVja2V0IGxpc3QsIGJ1dCBoZXJlIGlzIHRoZSBoYXJkIHRydXRoOiBpdCYjMzk7cyBhY3R1YWxseSB0aGUgd29yc3Qgc2t5bGluZSB2aWV3IGluJm5ic3A7Li4uIgIQAUgAWABoAA"
+   }
+  ]
+ },
+ "google_videos_tiktok": {
+  "video_results": [
+   {
+    "position": 1,
+    "title": "Visiting the Eiffel Tower Paris: Levels, Views & Tips",
+    "link": "https://www.tiktok.com/@ricksteveseurope/video/7625696392077446414",
+    "displayed_link": "www.tiktok.com \u203a video",
+    "thumbnail": "https://serpapi.com/searches/6af6a7903eba3d52742c3503/images/z9X36PweYOG0-cqHdH4JIzPzO7e6tapEpJcdGQo5tgw.jpg",
+    "snippet": "3769 Likes, 48 Comments. TikTok video from Rick Steves' Europe (@ricksteveseurope): \u201cHow to visit the Eiffel Tower in Paris, what to see on ...",
+    "duration": "1:35",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "Apr 6, 2026"
+      },
+      "extensions": [
+       "TikTok",
+       "ricksteveseurope",
+       "Apr 6, 2026"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "3769 Likes, 48 Comments. TikTok video from Rick Steves' Europe (@ricksteveseurope): \u201cHow to visit the Eiffel Tower in Paris, what to see on ...",
+      "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y-mAAAAw1BMVEUAAAAAAAAFT1IAQUNBub6u5eexxcpyQ0wIAABaxsv5____9_nGj5oyAAD____84eeEYmvm4uN4f4A5P0MAFBXx-vu019khAAD60tr37vDlmqpXAAsALzAKc3gpo6hjpqr_6O3idYqcbHTSrLP6iJ9rABOc5Ofi-vvJYnXLbn8_AAI9HyWWIDhRz9TH9PffY3oDAAC99vjhSGe7KEenACiF4-f_1961PVaB09bFkZswjJGwuLr__f7xqbYYHh_9tsTiL1Yh8R0_AAAAAXRSTlP-GuMHfQAAANJJREFUeAG90kUCg1AMBNDiPtTd3d2V-5-quMOS2b6vSXI5IjnZIElSyUgzLMcnoSBKspKMUPMpiEKxVE5EVKr5WgTLBkr1BtBsBbHd6fZKOvYHw1F9PAkgSU9njXlNx8Vyxa2XfmxvtoC0M1GH_d6P3QPU8fFkY_Ar7Q0ag3ONIOKQvOB60i0WqSnUG6FnI6rzMJbvkB76zo5-wk0JIf8EGq9ndzN7f9bRrlQBcTYTcT22iAh-X9Ib7_dPm8Q1u5Zvfpq7c4uIQ56otVrLjEYzJX-4mxcG80U-CwAAAABJRU5ErkJggg.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CrkBL2dvdG8_dXJsPUNBRVNmd0hFSWtYWG5tTGNUQmQzLVBXazFCbmc1MEw4RVRmaEdoVk5TbXFXZUZ6TGlPSElNNUZCTTJPaXNsR1k2ZlFyWEEtY0xNaDZMR2RFSkg1VGNjS1pCbEFIbGxFT3h5WERkR0FzZThkcFNxVWV3Qi1pTktORDlJY2I4OFhTSWttcW1RY2lVUTFuTEVwcVJYcm5JQmV6bngzSHRmYXNTa1d1TGZIQW9UUHhzLWcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAanwYSABoAIgAqADIGCAMSAnVzOgBCBAgBEABKAFoOCAESCnRpa3Rvay5jb21yAHoAgkDtBQgAEAAYACAAKjkKBmVpZmZlbBUsM4VAGgtlaWZmZWx0b3dlchoQZWlmZmVsdG93ZXJwYXJpcxoLaXY7cDtlaWZmZWwqhwEKBXRvd2VyFQDrh0AaBnRvd2VycxoLZWlmZmVsdG93ZXIaEGVpZmZlbHRvd2VycGFyaXMaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJbW9udW1lbnRzGgthdHRyYWN0aW9ucxoEdG91choGc3RhdHVlGgxhcmNoaXRlY3R1cmUqbAoFcGFyaXMVOX13QBoIcGFyaXNpYW4aEGVpZmZlbHRvd2VycGFyaXMaFGdlbzs0N2U2MTAwMDAwMDAwMDAwGhRnZW87NDdlNjcwMDAwMDAwMDAwMBoGZnJhbmNlGgZmcmVuY2gaBnBhcsOtczK5AS9nb3RvP3VybD1DQUVTZndIRUlrWFhubUxjVEJkMy1QV2sxQm5nNTBMOEVUZmhHaFZOU21xV2VGekxpT0hJTTVGQk0yT2lzbEdZNmZRclhBLWNMTWg2TEdkRUpINVRjY0taQmxBSGxsRU94eVhEZEdBc2U4ZHBTcVVld0ItaU5LTkQ5SWNiODhYU0lrbXFtUWNpVVExbkxFcHFSWHJuSUJlem54M0h0ZmFzU2tXdUxmSEFvVFB4cy1nOklWaXNpdGluZyB0aGUgPGI-RWlmZmVsIFRvd2VyIFBhcmlzPC9iPjogTGV2ZWxzLCBWaWV3cyAmYW1wOyBUaXBzIHwgVGlrVG9rQqgBMzc2OSBMaWtlcywgNDggQ29tbWVudHMuIFRpa1RvayB2aWRlbyBmcm9tIFJpY2sgU3RldmVzJiMzOTsgRXVyb3BlIChAcmlja3N0ZXZlc2V1cm9wZSk6IOKAnEhvdyB0byB2aXNpdCB0aGUgPGI-RWlmZmVsIFRvd2VyPC9iPiBpbiA8Yj5QYXJpczwvYj4sIHdoYXQgdG8gc2VlIG9uJm5ic3A7Li4uIgIQAUgAWABoAA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CrkBL2dvdG8_dXJsPUNBRVNmd0hFSWtYWG5tTGNUQmQzLVBXazFCbmc1MEw4RVRmaEdoVk5TbXFXZUZ6TGlPSElNNUZCTTJPaXNsR1k2ZlFyWEEtY0xNaDZMR2RFSkg1VGNjS1pCbEFIbGxFT3h5WERkR0FzZThkcFNxVWV3Qi1pTktORDlJY2I4OFhTSWttcW1RY2lVUTFuTEVwcVJYcm5JQmV6bngzSHRmYXNTa1d1TGZIQW9UUHhzLWcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAanwYSABoAIgAqADIGCAMSAnVzOgBCBAgBEABKAFoOCAESCnRpa3Rvay5jb21yAHoAgkDtBQgAEAAYACAAKjkKBmVpZmZlbBUsM4VAGgtlaWZmZWx0b3dlchoQZWlmZmVsdG93ZXJwYXJpcxoLaXY7cDtlaWZmZWwqhwEKBXRvd2VyFQDrh0AaBnRvd2VycxoLZWlmZmVsdG93ZXIaEGVpZmZlbHRvd2VycGFyaXMaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJbW9udW1lbnRzGgthdHRyYWN0aW9ucxoEdG91choGc3RhdHVlGgxhcmNoaXRlY3R1cmUqbAoFcGFyaXMVOX13QBoIcGFyaXNpYW4aEGVpZmZlbHRvd2VycGFyaXMaFGdlbzs0N2U2MTAwMDAwMDAwMDAwGhRnZW87NDdlNjcwMDAwMDAwMDAwMBoGZnJhbmNlGgZmcmVuY2gaBnBhcsOtczK5AS9nb3RvP3VybD1DQUVTZndIRUlrWFhubUxjVEJkMy1QV2sxQm5nNTBMOEVUZmhHaFZOU21xV2VGekxpT0hJTTVGQk0yT2lzbEdZNmZRclhBLWNMTWg2TEdkRUpINVRjY0taQmxBSGxsRU94eVhEZEdBc2U4ZHBTcVVld0ItaU5LTkQ5SWNiODhYU0lrbXFtUWNpVVExbkxFcHFSWHJuSUJlem54M0h0ZmFzU2tXdUxmSEFvVFB4cy1nOklWaXNpdGluZyB0aGUgPGI-RWlmZmVsIFRvd2VyIFBhcmlzPC9iPjogTGV2ZWxzLCBWaWV3cyAmYW1wOyBUaXBzIHwgVGlrVG9rQqgBMzc2OSBMaWtlcywgNDggQ29tbWVudHMuIFRpa1RvayB2aWRlbyBmcm9tIFJpY2sgU3RldmVzJiMzOTsgRXVyb3BlIChAcmlja3N0ZXZlc2V1cm9wZSk6IOKAnEhvdyB0byB2aXNpdCB0aGUgPGI-RWlmZmVsIFRvd2VyPC9iPiBpbiA8Yj5QYXJpczwvYj4sIHdoYXQgdG8gc2VlIG9uJm5ic3A7Li4uIgIQAUgAWABoAA"
+   },
+   {
+    "position": 2,
+    "title": "Eiffel Tower Paris travel guide \u2014 What to see and do",
+    "link": "https://www.tiktok.com/@champagneroddd/video/7693259064603594015",
+    "displayed_link": "www.tiktok.com \u203a video",
+    "thumbnail": "https://serpapi.com/searches/6af6a7903eba3d52742c3503/images/UZD65maLP7-_YkY44vCCaOl2I8fKwLm6M_yx__4mYUg.jpg",
+    "snippet": "What to expect at the Eiffel Tower The Eiffel Tower is the iconic Paris landmark rising over the Champ de Mars. Visitors come for the views, ...",
+    "duration": "0:05",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "month_ago": 1
+      },
+      "extensions": [
+       "TikTok",
+       "champagneroddd",
+       "1 month ago"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "What to expect at the Eiffel Tower The Eiffel Tower is the iconic Paris landmark rising over the Champ de Mars. Visitors come for the views, ...",
+      "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y-mAAAAw1BMVEUAAAAAAAAFT1IAQUNBub6u5eexxcpyQ0wIAABaxsv5____9_nGj5oyAAD____84eeEYmvm4uN4f4A5P0MAFBXx-vu019khAAD60tr37vDlmqpXAAsALzAKc3gpo6hjpqr_6O3idYqcbHTSrLP6iJ9rABOc5Ofi-vvJYnXLbn8_AAI9HyWWIDhRz9TH9PffY3oDAAC99vjhSGe7KEenACiF4-f_1961PVaB09bFkZswjJGwuLr__f7xqbYYHh_9tsTiL1Yh8R0_AAAAAXRSTlP-GuMHfQAAANJJREFUeAG90kUCg1AMBNDiPtTd3d2V-5-quMOS2b6vSXI5IjnZIElSyUgzLMcnoSBKspKMUPMpiEKxVE5EVKr5WgTLBkr1BtBsBbHd6fZKOvYHw1F9PAkgSU9njXlNx8Vyxa2XfmxvtoC0M1GH_d6P3QPU8fFkY_Ar7Q0ag3ONIOKQvOB60i0WqSnUG6FnI6rzMJbvkB76zo5-wk0JIf8EGq9ndzN7f9bRrlQBcTYTcT22iAh-X9Ib7_dPm8Q1u5Zvfpq7c4uIQ56otVrLjEYzJX-4mxcG80U-CwAAAABJRU5ErkJggg.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CrYBL2dvdG8_dXJsPUNBRVNmUUhFSWtYWEtQOWRvTnVzSllUaTlhYktpWlFyYjFSMHZCazZYWnUxNkwwUXRLaXBOaE1kQ0l0M1hJMTRPS3hVdU9QbzJTS2trOHhia2l2aG9ienUyVGRxZHp6dHdwSnIyUGViLUFpdkZvaFNPc3lXQWFsbEVqUU55YTNGNTNVRGwtLXJ0QjBBd0wwY0JtX3M3ZGVWdmY4SEM2eHNpY3U3dUI2RW9LUkgSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAamwYSABoAIgAqADIGCAMSAnVzOgBCBAgBEABKAFoOCAESCnRpa3Rvay5jb21yAHoAgkDpBQgAEAAYACAAKjkKBmVpZmZlbBVHQadAGgtlaWZmZWx0b3dlchoQZWlmZmVsdG93ZXJwYXJpcxoLaXY7cDtlaWZmZWwqhwEKBXRvd2VyFWxdqUAaBnRvd2VycxoLZWlmZmVsdG93ZXIaEGVpZmZlbHRvd2VycGFyaXMaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJbW9udW1lbnRzGgthdHRyYWN0aW9ucxoEdG91choGc3RhdHVlGgxhcmNoaXRlY3R1cmUqbAoFcGFyaXMVfv-lQBoIcGFyaXNpYW4aEGVpZmZlbHRvd2VycGFyaXMaFGdlbzs0N2U2MTAwMDAwMDAwMDAwGhRnZW87NDdlNjcwMDAwMDAwMDAwMBoGZnJhbmNlGgZmcmVuY2gaBnBhcsOtczK2AS9nb3RvP3VybD1DQUVTZlFIRUlrWFhLUDlkb051c0pZVGk5YWJLaVpRcmIxUjB2Qms2WFp1MTZMMFF0S2lwTmhNZENJdDNYSTE0T0t4VXVPUG8yU0trazh4YmtpdmhvYnp1MlRkcWR6enR3cEpyMlBlYi1BaXZGb2hTT3N5V0FhbGxFalFOeWEzRjUzVURsLS1ydEIwQXdMMGNCbV9zN2RlVnZmOEhDNnhzaWN1N3VCNkVvS1JIOkY8Yj5FaWZmZWwgVG93ZXIgUGFyaXM8L2I-IHRyYXZlbCBndWlkZSDigJQgV2hhdCB0byBzZWUgYW5kIGRvIHwgVGlrVG9rQqoBV2hhdCB0byBleHBlY3QgYXQgdGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gVGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gaXMgdGhlIGljb25pYyA8Yj5QYXJpczwvYj4gbGFuZG1hcmsgcmlzaW5nIG92ZXIgdGhlIENoYW1wIGRlIE1hcnMuIFZpc2l0b3JzIGNvbWUgZm9yIHRoZSB2aWV3cywmbmJzcDsuLi4iAhABSABYAGgA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CrYBL2dvdG8_dXJsPUNBRVNmUUhFSWtYWEtQOWRvTnVzSllUaTlhYktpWlFyYjFSMHZCazZYWnUxNkwwUXRLaXBOaE1kQ0l0M1hJMTRPS3hVdU9QbzJTS2trOHhia2l2aG9ienUyVGRxZHp6dHdwSnIyUGViLUFpdkZvaFNPc3lXQWFsbEVqUU55YTNGNTNVRGwtLXJ0QjBBd0wwY0JtX3M3ZGVWdmY4SEM2eHNpY3U3dUI2RW9LUkgSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAamwYSABoAIgAqADIGCAMSAnVzOgBCBAgBEABKAFoOCAESCnRpa3Rvay5jb21yAHoAgkDpBQgAEAAYACAAKjkKBmVpZmZlbBVHQadAGgtlaWZmZWx0b3dlchoQZWlmZmVsdG93ZXJwYXJpcxoLaXY7cDtlaWZmZWwqhwEKBXRvd2VyFWxdqUAaBnRvd2VycxoLZWlmZmVsdG93ZXIaEGVpZmZlbHRvd2VycGFyaXMaCml2O3A7dG93ZXIaCGJ1aWxkaW5nGghtb251bWVudBoJbW9udW1lbnRzGgthdHRyYWN0aW9ucxoEdG91choGc3RhdHVlGgxhcmNoaXRlY3R1cmUqbAoFcGFyaXMVfv-lQBoIcGFyaXNpYW4aEGVpZmZlbHRvd2VycGFyaXMaFGdlbzs0N2U2MTAwMDAwMDAwMDAwGhRnZW87NDdlNjcwMDAwMDAwMDAwMBoGZnJhbmNlGgZmcmVuY2gaBnBhcsOtczK2AS9nb3RvP3VybD1DQUVTZlFIRUlrWFhLUDlkb051c0pZVGk5YWJLaVpRcmIxUjB2Qms2WFp1MTZMMFF0S2lwTmhNZENJdDNYSTE0T0t4VXVPUG8yU0trazh4YmtpdmhvYnp1MlRkcWR6enR3cEpyMlBlYi1BaXZGb2hTT3N5V0FhbGxFalFOeWEzRjUzVURsLS1ydEIwQXdMMGNCbV9zN2RlVnZmOEhDNnhzaWN1N3VCNkVvS1JIOkY8Yj5FaWZmZWwgVG93ZXIgUGFyaXM8L2I-IHRyYXZlbCBndWlkZSDigJQgV2hhdCB0byBzZWUgYW5kIGRvIHwgVGlrVG9rQqoBV2hhdCB0byBleHBlY3QgYXQgdGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gVGhlIDxiPkVpZmZlbCBUb3dlcjwvYj4gaXMgdGhlIGljb25pYyA8Yj5QYXJpczwvYj4gbGFuZG1hcmsgcmlzaW5nIG92ZXIgdGhlIENoYW1wIGRlIE1hcnMuIFZpc2l0b3JzIGNvbWUgZm9yIHRoZSB2aWV3cywmbmJzcDsuLi4iAhABSABYAGgA"
+   },
+   {
+    "position": 3,
+    "title": "Eiffel Tower Paris travel guide and tips",
+    "link": "https://www.tiktok.com/@kennedy_nicolle/video/7660290076626128142",
+    "displayed_link": "www.tiktok.com \u203a video",
+    "thumbnail": "https://serpapi.com/searches/6af6a7903eba3d52742c3503/images/3mgcR4fJQHC3YIpmZFNsOL-_l0eFcQpPwMtwI-qB7Ks.jpg",
+    "snippet": "Personal Paris reaction and practical tips for visiting the Eiffel Tower \u2014 what to expect,. @ken \u00b7 Paris.",
+    "duration": "0:07",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "Jul 8, 2026"
+      },
+      "extensions": [
+       "TikTok",
+       "kennedy_nicolle",
+       "Jul 8, 2026"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "Personal Paris reaction and practical tips for visiting the Eiffel Tower \u2014 what to expect,. @ken \u00b7 Paris.",
+      "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y-mAAAAw1BMVEUAAAAAAAAFT1IAQUNBub6u5eexxcpyQ0wIAABaxsv5____9_nGj5oyAAD____84eeEYmvm4uN4f4A5P0MAFBXx-vu019khAAD60tr37vDlmqpXAAsALzAKc3gpo6hjpqr_6O3idYqcbHTSrLP6iJ9rABOc5Ofi-vvJYnXLbn8_AAI9HyWWIDhRz9TH9PffY3oDAAC99vjhSGe7KEenACiF4-f_1961PVaB09bFkZswjJGwuLr__f7xqbYYHh_9tsTiL1Yh8R0_AAAAAXRSTlP-GuMHfQAAANJJREFUeAG90kUCg1AMBNDiPtTd3d2V-5-quMOS2b6vSXI5IjnZIElSyUgzLMcnoSBKspKMUPMpiEKxVE5EVKr5WgTLBkr1BtBsBbHd6fZKOvYHw1F9PAkgSU9njXlNx8Vyxa2XfmxvtoC0M1GH_d6P3QPU8fFkY_Ar7Q0ag3ONIOKQvOB60i0WqSnUG6FnI6rzMJbvkB76zo5-wk0JIf8EGq9ndzN7f9bRrlQBcTYTcT22iAh-X9Ib7_dPm8Q1u5Zvfpq7c4uIQ56otVrLjEYzJX-4mxcG80U-CwAAAABJRU5ErkJggg.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CrgBL2dvdG8_dXJsPUNBRVNmZ0hFSWtYWENMNlFVZVIzZnF6cW5Lc3FJX2pCLURoZDdBdGRVempQSU84MW9tTTk1RDEtVmkxMzAzbTJNVlNWOWk3elE2TmktbzhpSTU4cHRrRXp1YWZCa29nTWo0VXB1RV9vcTB2Sk9WTkZQVDQ3R1daMEVSMVFNWEhieVp1VUpLbzU5UDV2WGloZG9Fclkwb2VBTWw5NC1xenR2RUFTeHgtMEJzRTJoZxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABrsBRIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWg4IARIKdGlrdG9rLmNvbXIAegCCQLoFCAAQABgAIAAqOQoGZWlmZmVsFcZFp0AaC2VpZmZlbHRvd2VyGhBlaWZmZWx0b3dlcnBhcmlzGgtpdjtwO2VpZmZlbCqHAQoFdG93ZXIVoL6kQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoQZWlmZmVsdG93ZXJwYXJpcxoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50Ggltb251bWVudHMaC2F0dHJhY3Rpb25zGgR0b3VyGgZzdGF0dWUaDGFyY2hpdGVjdHVyZSpsCgVwYXJpcxWC7KdAGghwYXJpc2lhbhoQZWlmZmVsdG93ZXJwYXJpcxoUZ2VvOzQ3ZTYxMDAwMDAwMDAwMDAaFGdlbzs0N2U2NzAwMDAwMDAwMDAwGgZmcmFuY2UaBmZyZW5jaBoGcGFyw61zMrgBL2dvdG8_dXJsPUNBRVNmZ0hFSWtYWENMNlFVZVIzZnF6cW5Lc3FJX2pCLURoZDdBdGRVempQSU84MW9tTTk1RDEtVmkxMzAzbTJNVlNWOWk3elE2TmktbzhpSTU4cHRrRXp1YWZCa29nTWo0VXB1RV9vcTB2Sk9WTkZQVDQ3R1daMEVSMVFNWEhieVp1VUpLbzU5UDV2WGloZG9Fclkwb2VBTWw5NC1xenR2RUFTeHgtMEJzRTJoZzo4PGI-RWlmZmVsIFRvd2VyIFBhcmlzPC9iPiB0cmF2ZWwgZ3VpZGUgYW5kIHRpcHMgfCBUaWtUb2tChwFQZXJzb25hbCA8Yj5QYXJpczwvYj4gcmVhY3Rpb24gYW5kIHByYWN0aWNhbCB0aXBzIGZvciB2aXNpdGluZyB0aGUgPGI-RWlmZmVsIFRvd2VyPC9iPiDigJQgd2hhdCB0byBleHBlY3QsLiBAa2VuICZtaWRkb3Q7IDxiPlBhcmlzPC9iPi4iAhABSABYAGgA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CrgBL2dvdG8_dXJsPUNBRVNmZ0hFSWtYWENMNlFVZVIzZnF6cW5Lc3FJX2pCLURoZDdBdGRVempQSU84MW9tTTk1RDEtVmkxMzAzbTJNVlNWOWk3elE2TmktbzhpSTU4cHRrRXp1YWZCa29nTWo0VXB1RV9vcTB2Sk9WTkZQVDQ3R1daMEVSMVFNWEhieVp1VUpLbzU5UDV2WGloZG9Fclkwb2VBTWw5NC1xenR2RUFTeHgtMEJzRTJoZxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABrsBRIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWg4IARIKdGlrdG9rLmNvbXIAegCCQLoFCAAQABgAIAAqOQoGZWlmZmVsFcZFp0AaC2VpZmZlbHRvd2VyGhBlaWZmZWx0b3dlcnBhcmlzGgtpdjtwO2VpZmZlbCqHAQoFdG93ZXIVoL6kQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoQZWlmZmVsdG93ZXJwYXJpcxoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50Ggltb251bWVudHMaC2F0dHJhY3Rpb25zGgR0b3VyGgZzdGF0dWUaDGFyY2hpdGVjdHVyZSpsCgVwYXJpcxWC7KdAGghwYXJpc2lhbhoQZWlmZmVsdG93ZXJwYXJpcxoUZ2VvOzQ3ZTYxMDAwMDAwMDAwMDAaFGdlbzs0N2U2NzAwMDAwMDAwMDAwGgZmcmFuY2UaBmZyZW5jaBoGcGFyw61zMrgBL2dvdG8_dXJsPUNBRVNmZ0hFSWtYWENMNlFVZVIzZnF6cW5Lc3FJX2pCLURoZDdBdGRVempQSU84MW9tTTk1RDEtVmkxMzAzbTJNVlNWOWk3elE2TmktbzhpSTU4cHRrRXp1YWZCa29nTWo0VXB1RV9vcTB2Sk9WTkZQVDQ3R1daMEVSMVFNWEhieVp1VUpLbzU5UDV2WGloZG9Fclkwb2VBTWw5NC1xenR2RUFTeHgtMEJzRTJoZzo4PGI-RWlmZmVsIFRvd2VyIFBhcmlzPC9iPiB0cmF2ZWwgZ3VpZGUgYW5kIHRpcHMgfCBUaWtUb2tChwFQZXJzb25hbCA8Yj5QYXJpczwvYj4gcmVhY3Rpb24gYW5kIHByYWN0aWNhbCB0aXBzIGZvciB2aXNpdGluZyB0aGUgPGI-RWlmZmVsIFRvd2VyPC9iPiDigJQgd2hhdCB0byBleHBlY3QsLiBAa2VuICZtaWRkb3Q7IDxiPlBhcmlzPC9iPi4iAhABSABYAGgA"
+   },
+   {
+    "position": 4,
+    "title": "Eiffel Tower: The Iconic Landmark of Paris",
+    "link": "https://www.tiktok.com/@paris_showw/video/7695518428014185750",
+    "displayed_link": "www.tiktok.com \u203a @paris_showw \u203a video",
+    "thumbnail": "https://serpapi.com/searches/6af6a7903eba3d52742c3503/images/uXn0w4YoRL6tn3HxivSw8MwKx1CU-ZzIEThm3jFm-dY.jpg",
+    "snippet": "Beyond its role as a tourist destination, the tower is deeply woven into the fabric of Parisian culture. It serves as a stunning setting for ...",
+    "duration": "0:19",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "month_ago": 1
+      },
+      "extensions": [
+       "TikTok",
+       "paris_showw",
+       "1 month ago"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "Beyond its role as a tourist destination, the tower is deeply woven into the fabric of Parisian culture. It serves as a stunning setting for ...",
+      "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y-mAAAAw1BMVEUAAAAAAAAFT1IAQUNBub6u5eexxcpyQ0wIAABaxsv5____9_nGj5oyAAD____84eeEYmvm4uN4f4A5P0MAFBXx-vu019khAAD60tr37vDlmqpXAAsALzAKc3gpo6hjpqr_6O3idYqcbHTSrLP6iJ9rABOc5Ofi-vvJYnXLbn8_AAI9HyWWIDhRz9TH9PffY3oDAAC99vjhSGe7KEenACiF4-f_1961PVaB09bFkZswjJGwuLr__f7xqbYYHh_9tsTiL1Yh8R0_AAAAAXRSTlP-GuMHfQAAANJJREFUeAG90kUCg1AMBNDiPtTd3d2V-5-quMOS2b6vSXI5IjnZIElSyUgzLMcnoSBKspKMUPMpiEKxVE5EVKr5WgTLBkr1BtBsBbHd6fZKOvYHw1F9PAkgSU9njXlNx8Vyxa2XfmxvtoC0M1GH_d6P3QPU8fFkY_Ar7Q0ag3ONIOKQvOB60i0WqSnUG6FnI6rzMJbvkB76zo5-wk0JIf8EGq9ndzN7f9bRrlQBcTYTcT22iAh-X9Ib7_dPm8Q1u5Zvfpq7c4uIQ56otVrLjEYzJX-4mxcG80U-CwAAAABJRU5ErkJggg.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=CrIBL2dvdG8_dXJsPUNBRVNlZ0hFSWtYWENvaXc0SUJDMlBXRGcwTlkxTy0tMXFaVGFjb240R0lzbjZDVGVUZ1I1c2k3UEtvVTV5RUxMMm1uMGZWZ182QjJMSlMzRTB2UE5VRkhYT19BRFVRWDRUV1QxWm9qSlBwejFUX3NGNGRWQm5CbXpYVkJYQ1VHSXJjRjRjZkZsQmEwZnJuTXc1QW5vYjN0WFR2WUlDMUlwcVVHazJqdxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqLBhIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWg4IARIKdGlrdG9rLmNvbXIAegCCQNkFCAAQABgAIAAqOQoGZWlmZmVsFQparEAaC2VpZmZlbHRvd2VyGhBlaWZmZWx0b3dlcnBhcmlzGgtpdjtwO2VpZmZlbCqHAQoFdG93ZXIV59uVQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoQZWlmZmVsdG93ZXJwYXJpcxoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50Ggltb251bWVudHMaC2F0dHJhY3Rpb25zGgR0b3VyGgZzdGF0dWUaDGFyY2hpdGVjdHVyZSpsCgVwYXJpcxXA0bpAGghwYXJpc2lhbhoQZWlmZmVsdG93ZXJwYXJpcxoUZ2VvOzQ3ZTYxMDAwMDAwMDAwMDAaFGdlbzs0N2U2NzAwMDAwMDAwMDAwGgZmcmFuY2UaBmZyZW5jaBoGcGFyw61zMrIBL2dvdG8_dXJsPUNBRVNlZ0hFSWtYWENvaXc0SUJDMlBXRGcwTlkxTy0tMXFaVGFjb240R0lzbjZDVGVUZ1I1c2k3UEtvVTV5RUxMMm1uMGZWZ182QjJMSlMzRTB2UE5VRkhYT19BRFVRWDRUV1QxWm9qSlBwejFUX3NGNGRWQm5CbXpYVkJYQ1VHSXJjRjRjZkZsQmEwZnJuTXc1QW5vYjN0WFR2WUlDMUlwcVVHazJqdzpBPGI-RWlmZmVsIFRvd2VyPC9iPjogVGhlIEljb25pYyBMYW5kbWFyayBvZiA8Yj5QYXJpczwvYj4gLSBUaWtUb2tCowFCZXlvbmQgaXRzIHJvbGUgYXMgYSB0b3VyaXN0IGRlc3RpbmF0aW9uLCB0aGUgPGI-dG93ZXI8L2I-IGlzIGRlZXBseSB3b3ZlbiBpbnRvIHRoZSBmYWJyaWMgb2YgPGI-UGFyaXNpYW48L2I-IGN1bHR1cmUuIEl0IHNlcnZlcyBhcyBhIHN0dW5uaW5nIHNldHRpbmcgZm9yJm5ic3A7Li4uIgIQAUgAWABoAA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=CrIBL2dvdG8_dXJsPUNBRVNlZ0hFSWtYWENvaXc0SUJDMlBXRGcwTlkxTy0tMXFaVGFjb240R0lzbjZDVGVUZ1I1c2k3UEtvVTV5RUxMMm1uMGZWZ182QjJMSlMzRTB2UE5VRkhYT19BRFVRWDRUV1QxWm9qSlBwejFUX3NGNGRWQm5CbXpYVkJYQ1VHSXJjRjRjZkZsQmEwZnJuTXc1QW5vYjN0WFR2WUlDMUlwcVVHazJqdxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABqLBhIAGgAiACoAMgYIAxICdXM6AEIECAEQAEoAWg4IARIKdGlrdG9rLmNvbXIAegCCQNkFCAAQABgAIAAqOQoGZWlmZmVsFQparEAaC2VpZmZlbHRvd2VyGhBlaWZmZWx0b3dlcnBhcmlzGgtpdjtwO2VpZmZlbCqHAQoFdG93ZXIV59uVQBoGdG93ZXJzGgtlaWZmZWx0b3dlchoQZWlmZmVsdG93ZXJwYXJpcxoKaXY7cDt0b3dlchoIYnVpbGRpbmcaCG1vbnVtZW50Ggltb251bWVudHMaC2F0dHJhY3Rpb25zGgR0b3VyGgZzdGF0dWUaDGFyY2hpdGVjdHVyZSpsCgVwYXJpcxXA0bpAGghwYXJpc2lhbhoQZWlmZmVsdG93ZXJwYXJpcxoUZ2VvOzQ3ZTYxMDAwMDAwMDAwMDAaFGdlbzs0N2U2NzAwMDAwMDAwMDAwGgZmcmFuY2UaBmZyZW5jaBoGcGFyw61zMrIBL2dvdG8_dXJsPUNBRVNlZ0hFSWtYWENvaXc0SUJDMlBXRGcwTlkxTy0tMXFaVGFjb240R0lzbjZDVGVUZ1I1c2k3UEtvVTV5RUxMMm1uMGZWZ182QjJMSlMzRTB2UE5VRkhYT19BRFVRWDRUV1QxWm9qSlBwejFUX3NGNGRWQm5CbXpYVkJYQ1VHSXJjRjRjZkZsQmEwZnJuTXc1QW5vYjN0WFR2WUlDMUlwcVVHazJqdzpBPGI-RWlmZmVsIFRvd2VyPC9iPjogVGhlIEljb25pYyBMYW5kbWFyayBvZiA8Yj5QYXJpczwvYj4gLSBUaWtUb2tCowFCZXlvbmQgaXRzIHJvbGUgYXMgYSB0b3VyaXN0IGRlc3RpbmF0aW9uLCB0aGUgPGI-dG93ZXI8L2I-IGlzIGRlZXBseSB3b3ZlbiBpbnRvIHRoZSBmYWJyaWMgb2YgPGI-UGFyaXNpYW48L2I-IGN1bHR1cmUuIEl0IHNlcnZlcyBhcyBhIHN0dW5uaW5nIHNldHRpbmcgZm9yJm5ic3A7Li4uIgIQAUgAWABoAA"
+   },
+   {
+    "position": 5,
+    "title": "Is it worth going up the Eiffel Tower in Paris? Let's talk about it! [...",
+    "link": "https://www.tiktok.com/@worldwidehoneymoon/video/7642106637951487246",
+    "displayed_link": "www.tiktok.com \u203a video",
+    "thumbnail": "https://serpapi.com/searches/6af6a7903eba3d52742c3503/images/cB5jCN2G2wdP4CNOcb_MlnYraxKUH1hDY8dMY7-GFb4.jpg",
+    "snippet": "[SAVE & FOLLOW for more Paris travel tips!] After 18 visits to Paris, I FINALLY took the elevator to the top of the Eiffel Tower, and here are ...",
+    "duration": "1:34",
+    "rich_snippet": {
+     "top": {
+      "detected_extensions": {
+       "date": "May 20, 2026"
+      },
+      "extensions": [
+       "TikTok",
+       "worldwidehoneymoon",
+       "May 20, 2026"
+      ]
+     }
+    },
+    "about_this_result": {
+     "source": {
+      "description": "[SAVE & FOLLOW for more Paris travel tips!] After 18 visits to Paris, I FINALLY took the elevator to the top of the Eiffel Tower, and here are ...",
+      "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y-mAAAAw1BMVEUAAAAAAAAFT1IAQUNBub6u5eexxcpyQ0wIAABaxsv5____9_nGj5oyAAD____84eeEYmvm4uN4f4A5P0MAFBXx-vu019khAAD60tr37vDlmqpXAAsALzAKc3gpo6hjpqr_6O3idYqcbHTSrLP6iJ9rABOc5Ofi-vvJYnXLbn8_AAI9HyWWIDhRz9TH9PffY3oDAAC99vjhSGe7KEenACiF4-f_1961PVaB09bFkZswjJGwuLr__f7xqbYYHh_9tsTiL1Yh8R0_AAAAAXRSTlP-GuMHfQAAANJJREFUeAG90kUCg1AMBNDiPtTd3d2V-5-quMOS2b6vSXI5IjnZIElSyUgzLMcnoSBKspKMUPMpiEKxVE5EVKr5WgTLBkr1BtBsBbHd6fZKOvYHw1F9PAkgSU9njXlNx8Vyxa2XfmxvtoC0M1GH_d6P3QPU8fFkY_Ar7Q0ag3ONIOKQvOB60i0WqSnUG6FnI6rzMJbvkB76zo5-wk0JIf8EGq9ndzN7f9bRrlQBcTYTcT22iAh-X9Ib7_dPm8Q1u5Zvfpq7c4uIQ56otVrLjEYzJX-4mxcG80U-CwAAAABJRU5ErkJggg.png"
+     }
+    },
+    "about_page_link": "https://www.google.com/search/about-this-result?origin=www.google.com&req=Cr0BL2dvdG8_dXJsPUNBRVNnUUVCeENKRjEyeEVrWU11c3VRYXRHWU9PQTNVOFBXT0xaNjczNHBCS3dpdGxlUnNYWEpMN1YzV2tTVmR4Uk01TlZSV1VZU3J3dXhBTEdOTnlUM09qOWRVWlR3aUNwbGJOaGJVVkVjR3ZvbU1SbDBKV2FBREhja2ZYeVZuOWJrQ0FiOUZfZGpLZDA5QU5OODhwNFBLNkJmV1Z4Q04xem9Xa1VGUmNlMDR5dFR6RTRREhYKEAoECDBIAgoECEhIAgoCCD8aAggAGrsGEgAaACIAKgAyBggDEgJ1czoAQgQIARAASgBaDggBEgp0aWt0b2suY29tcgB6AIJAiQYIABAAGAAgACo5CgZlaWZmZWwV-eiDQBoLZWlmZmVsdG93ZXIaEGVpZmZlbHRvd2VycGFyaXMaC2l2O3A7ZWlmZmVsKocBCgV0b3dlchWy5oBAGgZ0b3dlcnMaC2VpZmZlbHRvd2VyGhBlaWZmZWx0b3dlcnBhcmlzGgppdjtwO3Rvd2VyGghidWlsZGluZxoIbW9udW1lbnQaCW1vbnVtZW50cxoLYXR0cmFjdGlvbnMaBHRvdXIaBnN0YXR1ZRoMYXJjaGl0ZWN0dXJlKmwKBXBhcmlzFSYHrUAaCHBhcmlzaWFuGhBlaWZmZWx0b3dlcnBhcmlzGhRnZW87NDdlNjEwMDAwMDAwMDAwMBoUZ2VvOzQ3ZTY3MDAwMDAwMDAwMDAaBmZyYW5jZRoGZnJlbmNoGgZwYXLDrXMyvQEvZ290bz91cmw9Q0FFU2dRRUJ4Q0pGMTJ4RWtZTXVzdVFhdEdZT09BM1U4UFdPTFo2NzM0cEJLd2l0bGVSc1hYSkw3VjNXa1NWZHhSTTVOVlJXVVlTcnd1eEFMR05OeVQzT2o5ZFVaVHdpQ3BsYk5oYlVWRWNHdm9tTVJsMEpXYUFESGNrZlh5Vm45YmtDQWI5Rl9kaktkMDlBTk44OHA0UEs2QmZXVnhDTjF6b1drVUZSY2UwNHl0VHpFNFE6WUlzIGl0IHdvcnRoIGdvaW5nIHVwIHRoZSA8Yj5FaWZmZWwgVG93ZXI8L2I-IGluIDxiPlBhcmlzPC9iPj8gTGV0JiMzOTtzIHRhbGsgLi4uIC0gVGlrVG9rQrABW1NBVkUgJmFtcDsgRk9MTE9XIGZvciBtb3JlIDxiPlBhcmlzPC9iPiB0cmF2ZWwgdGlwcyFdIEFmdGVyIDE4IHZpc2l0cyB0byA8Yj5QYXJpczwvYj4sIEkgRklOQUxMWSB0b29rIHRoZSBlbGV2YXRvciB0byB0aGUgdG9wIG9mIHRoZSA8Yj5FaWZmZWwgVG93ZXI8L2I-LCBhbmQgaGVyZSBhcmUmbmJzcDsuLi4iAhABSABYAGgA",
+    "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&req_token=Cr0BL2dvdG8_dXJsPUNBRVNnUUVCeENKRjEyeEVrWU11c3VRYXRHWU9PQTNVOFBXT0xaNjczNHBCS3dpdGxlUnNYWEpMN1YzV2tTVmR4Uk01TlZSV1VZU3J3dXhBTEdOTnlUM09qOWRVWlR3aUNwbGJOaGJVVkVjR3ZvbU1SbDBKV2FBREhja2ZYeVZuOWJrQ0FiOUZfZGpLZDA5QU5OODhwNFBLNkJmV1Z4Q04xem9Xa1VGUmNlMDR5dFR6RTRREhYKEAoECDBIAgoECEhIAgoCCD8aAggAGrsGEgAaACIAKgAyBggDEgJ1czoAQgQIARAASgBaDggBEgp0aWt0b2suY29tcgB6AIJAiQYIABAAGAAgACo5CgZlaWZmZWwV-eiDQBoLZWlmZmVsdG93ZXIaEGVpZmZlbHRvd2VycGFyaXMaC2l2O3A7ZWlmZmVsKocBCgV0b3dlchWy5oBAGgZ0b3dlcnMaC2VpZmZlbHRvd2VyGhBlaWZmZWx0b3dlcnBhcmlzGgppdjtwO3Rvd2VyGghidWlsZGluZxoIbW9udW1lbnQaCW1vbnVtZW50cxoLYXR0cmFjdGlvbnMaBHRvdXIaBnN0YXR1ZRoMYXJjaGl0ZWN0dXJlKmwKBXBhcmlzFSYHrUAaCHBhcmlzaWFuGhBlaWZmZWx0b3dlcnBhcmlzGhRnZW87NDdlNjEwMDAwMDAwMDAwMBoUZ2VvOzQ3ZTY3MDAwMDAwMDAwMDAaBmZyYW5jZRoGZnJlbmNoGgZwYXLDrXMyvQEvZ290bz91cmw9Q0FFU2dRRUJ4Q0pGMTJ4RWtZTXVzdVFhdEdZT09BM1U4UFdPTFo2NzM0cEJLd2l0bGVSc1hYSkw3VjNXa1NWZHhSTTVOVlJXVVlTcnd1eEFMR05OeVQzT2o5ZFVaVHdpQ3BsYk5oYlVWRWNHdm9tTVJsMEpXYUFESGNrZlh5Vm45YmtDQWI5Rl9kaktkMDlBTk44OHA0UEs2QmZXVnhDTjF6b1drVUZSY2UwNHl0VHpFNFE6WUlzIGl0IHdvcnRoIGdvaW5nIHVwIHRoZSA8Yj5FaWZmZWwgVG93ZXI8L2I-IGluIDxiPlBhcmlzPC9iPj8gTGV0JiMzOTtzIHRhbGsgLi4uIC0gVGlrVG9rQrABW1NBVkUgJmFtcDsgRk9MTE9XIGZvciBtb3JlIDxiPlBhcmlzPC9iPiB0cmF2ZWwgdGlwcyFdIEFmdGVyIDE4IHZpc2l0cyB0byA8Yj5QYXJpczwvYj4sIEkgRklOQUxMWSB0b29rIHRoZSBlbGV2YXRvciB0byB0aGUgdG9wIG9mIHRoZSA8Yj5FaWZmZWwgVG93ZXI8L2I-LCBhbmQgaGVyZSBhcmUmbmJzcDsuLi4iAhABSABYAGgA"
+   }
+  ]
+ },
+ "tiktok_discover": {
+  "video_results": [
+   {
+    "position": 1,
+    "id": "7699455886401621255",
+    "link": "https://www.tiktok.com/@nyx_alt0/video/7699455886401621255",
+    "description": "The Eiffel Tower burned down\ud83d\ude2d\ud83d\udc94#eiffeltower #burned",
+    "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oAf7LDPQrGGPmVyzFkLIAuG9RZAGNfDQQZe4we~tplv-tiktokx-origin.image?dr=9636&x-expires=1794722400&x-signature=CeDiI2Mxwh65qyb2C5xW5AIOSo0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=0d52deaf&idc=useast8",
+    "duration": 24,
+    "published_date": "2026-10-22T11:41:17Z",
+    "plays": 10700000,
+    "likes": 392200,
+    "comments": 6378,
+    "shares": 46500,
+    "bookmarks": 30133,
+    "hashtags": [
+     {
+      "id": "7223",
+      "name": "eiffeltower",
+      "link": "https://www.tiktok.com/tag/eiffeltower"
+     },
+     {
+      "id": "108204",
+      "name": "burned",
+      "link": "https://www.tiktok.com/tag/burned"
+     }
+    ],
+    "author": {
+     "id": "7602173544358036501",
+     "username": "nyx_alt0",
+     "name": "\u039d\u13bd\u0425=NAO butsaad nao bolnoo\ud83d\udc79",
+     "link": "https://www.tiktok.com/@nyx_alt0",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/3103d67cbebda5ef4b72d32831bcf1b0~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=87841cdb&x-expires=1794722400&x-signature=X4Qtmtue0Zi%2FK6w9Z1xnfiO9LLk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "followers": 2472,
+     "following": 51,
+     "likes": 393000,
+     "videos": 13
+    },
+    "music": {
+     "id": "7699455920165686023",
+     "title": "original sound",
+     "author": "\u039d\u13bd\u0425=NAO butsaad nao bolnoo\ud83d\udc79",
+     "link": "https://www.tiktok.com/music/original-sound-7699455920165686023",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/3103d67cbebda5ef4b72d32831bcf1b0~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=87841cdb&x-expires=1794722400&x-signature=X4Qtmtue0Zi%2FK6w9Z1xnfiO9LLk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "duration": 24
+    }
+   },
+   {
+    "position": 2,
+    "id": "7644454832157281558",
+    "link": "https://www.tiktok.com/@xyzaun.000/video/7644454832157281558",
+    "description": "\ud83c\uddeb\ud83c\uddf7\u2764\ufe0f #france #eiffeltower #fyp #viral #dlaciebie",
+    "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/os4LM8eFIQeIQnH64BUAWDotIBjRAnNeQLRyg1~tplv-tiktokx-origin.image?dr=9636&x-expires=1794722400&x-signature=jTCcVrooT66FO%2BwdJvSn19XGi6k%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=0d52deaf&idc=useast8",
+    "duration": 10,
+    "published_date": "2026-05-27T06:29:15Z",
+    "plays": 39400,
+    "likes": 205,
+    "comments": 1,
+    "shares": 9,
+    "bookmarks": 24,
+    "categories": [
+     "Travel",
+     "Lifestyle"
+    ],
+    "hashtags": [
+     {
+      "id": "5599",
+      "name": "france",
+      "link": "https://www.tiktok.com/tag/france"
+     },
+     {
+      "id": "7223",
+      "name": "eiffeltower",
+      "link": "https://www.tiktok.com/tag/eiffeltower"
+     },
+     {
+      "id": "229207",
+      "name": "fyp",
+      "link": "https://www.tiktok.com/tag/fyp"
+     },
+     {
+      "id": "20884",
+      "name": "viral",
+      "link": "https://www.tiktok.com/tag/viral"
+     },
+     {
+      "id": "10638098",
+      "name": "dlaciebie",
+      "link": "https://www.tiktok.com/tag/dlaciebie"
+     }
+    ],
+    "author": {
+     "id": "7284895330188968992",
+     "username": "xyzaun.000",
+     "name": "\ud83d\udc51",
+     "link": "https://www.tiktok.com/@xyzaun.000",
+     "thumbnail": "https://p19-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/a2ce08356fb5f0b9489609b8e2561689~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=dc058ab1&x-expires=1794722400&x-signature=o1MKYINH7k7bqM%2F0UO%2BxMrM7DcQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "followers": 1052,
+     "following": 293,
+     "likes": 14200,
+     "videos": 17
+    },
+    "music": {
+     "id": "7400460275994495777",
+     "title": "original sound",
+     "author": "ex7stences",
+     "link": "https://www.tiktok.com/music/original-sound-7400460275994495777",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/f05c219576fb263f8288d3af2a47ee82~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=a3ca41e5&x-expires=1794722400&x-signature=7cVwLwjPVrGH0TiJ8pafvfuJ%2FjU%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "duration": 18
+    }
+   },
+   {
+    "position": 3,
+    "id": "7706858083649260822",
+    "link": "https://www.tiktok.com/@user5414976600038/video/7706858083649260822",
+    "description": "Evolution of the Eiffel Tower (2026-1887) #thenvsnow #edit",
+    "thumbnail": "https://p19-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oAfqDfVDC3D9t0uE0QFJdEAlFuAiIgC0E5AkFA~tplv-tiktokx-origin.image?dr=9636&x-expires=1794722400&x-signature=TLeahQ6EmAaNlPd%2BzBFXl4UeSKI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=0d52deaf&idc=useast8",
+    "duration": 30,
+    "published_date": "2026-11-11T10:26:10Z",
+    "plays": 8083,
+    "likes": 108,
+    "comments": 3,
+    "shares": 1,
+    "bookmarks": 19,
+    "categories": [
+     "Humanities",
+     "Education",
+     "Culture & Education & Technology"
+    ],
+    "hashtags": [
+     {
+      "id": "136789",
+      "name": "thenvsnow",
+      "link": "https://www.tiktok.com/tag/thenvsnow"
+     },
+     {
+      "id": "1518",
+      "name": "edit",
+      "link": "https://www.tiktok.com/tag/edit"
+     }
+    ],
+    "author": {
+     "id": "7679903224401036310",
+     "username": "user5414976600038",
+     "name": "user5414976600038",
+     "link": "https://www.tiktok.com/@user5414976600038",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/musically-maliva-obj/1594805258216454~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=70eab47a&x-expires=1794722400&x-signature=j8Z7k3mdnO96G7ApaPwcw5NAgds%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "followers": 177,
+     "following": 0,
+     "likes": 8442,
+     "videos": 183
+    },
+    "music": {
+     "id": "7635593534557734928",
+     "title": "Gentle Dawn Guitar Sleep",
+     "author": "Alexander Lindgren",
+     "album": "Gentle Dawn Guitar Sleep",
+     "link": "https://www.tiktok.com/music/gentle-dawn-guitar-sleep-7635593534557734928",
+     "thumbnail": "https://p16-common.tiktokcdn-us.com/tos-alisg-v-2774/ow4BAvBfD39piBCzEpIoZF9BgiYtQNAjMBeQEA~tplv-tiktokx-cropcenter:720:720.jpeg?dr=9584&t=4d5b0474&ps=933b5bde&shp=08d74b56&shcp=81f88b70&idc=useast8",
+     "duration": 57
+    }
+   },
+   {
+    "position": 4,
+    "id": "7699067642270829827",
+    "link": "https://www.tiktok.com/@leadstories/video/7699067642270829827",
+    "description": "Fact Check: Eiffel Tower Did NOT Burn, Fall Down During October 2026 Protests In Paris -- Videos Are AI-Generated #CheckTok #EiffelTower #Paris #FactCheck #AIGenerated aris.html?utm_medium=minivideo",
+    "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-no1a-p-0037-no/oUDECABcEFAfr2AgIVvDk6WPJVlAU4qYPFzfCT~tplv-tiktokx-origin.image?dr=9636&x-expires=1794722400&x-signature=b07J5h1tKRYMVS9pezvwodVGxew%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=0d52deaf&idc=useast8",
+    "duration": 23,
+    "published_date": "2026-10-21T10:34:41Z",
+    "plays": 246400,
+    "likes": 956,
+    "comments": 23,
+    "shares": 289,
+    "bookmarks": 86,
+    "author": {
+     "id": "7232223218592138267",
+     "username": "leadstories",
+     "name": "LeadStories",
+     "link": "https://www.tiktok.com/@leadstories",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-avt-0068-giso/0f6dd1a25c6c114444a7f9ace8e27c53~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=a84c3518&x-expires=1794722400&x-signature=tSC4Kqo7bbEpS3gyxaiq29wsFUM%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "verified": true,
+     "followers": 6857,
+     "following": 333,
+     "likes": 106600,
+     "videos": 2686
+    },
+    "music": {
+     "id": "7699067664462891798",
+     "title": "original sound - LeadStories",
+     "author": "LeadStories",
+     "link": "https://www.tiktok.com/music/original-sound-leadstories-7699067664462891798",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-avt-0068-giso/0f6dd1a25c6c114444a7f9ace8e27c53~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=a84c3518&x-expires=1794722400&x-signature=tSC4Kqo7bbEpS3gyxaiq29wsFUM%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "duration": 23
+    }
+   },
+   {
+    "position": 5,
+    "id": "7645936482263354631",
+    "link": "https://www.tiktok.com/@arynews.official/video/7645936482263354631",
+    "description": "The #EiffelTower is shrouded in a cloud of smoke following a fire on the banks of the Seine River. Via: x/Luc Auffret #ARYNews",
+    "thumbnail": "https://p19-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/owQAQoS86WII1eErtpNUAAWVeAvMfAADAOSz3E~tplv-tiktokx-origin.image?dr=9636&x-expires=1794722400&x-signature=AeRRmP1OrFEQtoyerxmvyzZS0jo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=0d52deaf&idc=useast8",
+    "duration": 12,
+    "published_date": "2026-05-31T06:18:45Z",
+    "plays": 255500,
+    "likes": 4170,
+    "comments": 44,
+    "shares": 901,
+    "bookmarks": 224,
+    "author": {
+     "id": "6959162361073550338",
+     "username": "arynews.official",
+     "name": "ARY NEWS",
+     "link": "https://www.tiktok.com/@arynews.official",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/6b65d54ec570d8d7e38c39ed0fdd5a41~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=0f3cc0b2&x-expires=1794722400&x-signature=N4mOaSFTej%2Fw1NbVVsBdGDeAcqQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "verified": true,
+     "followers": 14800000,
+     "following": 7,
+     "likes": 1700000000,
+     "videos": 6314
+    },
+    "music": {
+     "id": "7645936553734261524",
+     "title": "original sound - ARY NEWS",
+     "author": "ARY NEWS",
+     "link": "https://www.tiktok.com/music/original-sound-ary-news-7645936553734261524",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/6b65d54ec570d8d7e38c39ed0fdd5a41~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=0f3cc0b2&x-expires=1794722400&x-signature=N4mOaSFTej%2Fw1NbVVsBdGDeAcqQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "duration": 12
+    }
+   },
+   {
+    "position": 6,
+    "id": "7414780027369245970",
+    "link": "https://www.tiktok.com/@iambraylien/video/7414780027369245970",
+    "description": "Replying to @Hasbulla Bro! its not there!??? \ud83d\udc7d\ud83d\udef8\ud83d\udc80 pls explain #alien #aliens #greenalien #zipzipzip #lookingformyspaceship #eiffeltower",
+    "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/d21caeeaf5414fbaaba8a9abccca5d86_1726388014~tplv-tiktokx-origin.image?dr=9636&x-expires=1794722400&x-signature=mOZU023RthL7UnLu9E885HkV%2BLA%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=0d52deaf&idc=useast8",
+    "duration": 13,
+    "published_date": "2024-09-15T08:13:32Z",
+    "plays": 30800,
+    "likes": 886,
+    "comments": 111,
+    "shares": 16,
+    "bookmarks": 134,
+    "hashtags": [
+     {
+      "id": "17968",
+      "name": "alien",
+      "link": "https://www.tiktok.com/tag/alien"
+     },
+     {
+      "id": "6310",
+      "name": "aliens",
+      "link": "https://www.tiktok.com/tag/aliens"
+     },
+     {
+      "id": "11756123",
+      "name": "greenalien",
+      "link": "https://www.tiktok.com/tag/greenalien"
+     },
+     {
+      "id": "9745307",
+      "name": "zipzipzip",
+      "link": "https://www.tiktok.com/tag/zipzipzip"
+     },
+     {
+      "id": "7388804257945747457",
+      "name": "lookingformyspaceship",
+      "link": "https://www.tiktok.com/tag/lookingformyspaceship"
+     },
+     {
+      "id": "7223",
+      "name": "eiffeltower",
+      "link": "https://www.tiktok.com/tag/eiffeltower"
+     }
+    ],
+    "mentions": [
+     {
+      "id": "7400303043743482886",
+      "username": "hasbulla917",
+      "link": "https://www.tiktok.com/@hasbulla917"
+     }
+    ],
+    "author": {
+     "id": "7052903132670379009",
+     "username": "iambraylien",
+     "name": "Braylien\ud83d\udc7d",
+     "link": "https://www.tiktok.com/@iambraylien",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/99ee18004c3cbc0e12d3f3a7a5f0c552~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=01873e70&x-expires=1794722400&x-signature=T%2Bu0lRc7EvXm8aJHGpchV2rhvgA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "followers": 52300,
+     "following": 316,
+     "likes": 962300,
+     "videos": 211
+    },
+    "music": {
+     "id": "7414780080218426129",
+     "title": "original sound",
+     "author": "Braylien\ud83d\udc7d",
+     "link": "https://www.tiktok.com/music/original-sound-7414780080218426129",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/99ee18004c3cbc0e12d3f3a7a5f0c552~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=01873e70&x-expires=1794722400&x-signature=T%2Bu0lRc7EvXm8aJHGpchV2rhvgA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "duration": 13
+    }
+   },
+   {
+    "position": 7,
+    "id": "7598380945586048287",
+    "link": "https://www.tiktok.com/@happilyyeverashley/video/7598380945586048287",
+    "description": "who else misses the leaning eiffel tower on soarin?!\ud83d\ude4b\ud83c\udffb\u200d\u2640\ufe0f #soarin #disney #eiffeltower #disneyrides #disneyworld",
+    "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-useast8-p-0068-tx2/oEN6IqIoLGA03eQy4bLeIjSCZI5AnCN5IGewyI~tplv-tiktokx-origin.image?dr=9636&x-expires=1794722400&x-signature=jnzWlSQtD%2FzQIAsZAaDZJFRWNgc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=0d52deaf&idc=useast8",
+    "duration": 5,
+    "published_date": "2026-01-23T02:39:05Z",
+    "plays": 1100000,
+    "likes": 144600,
+    "comments": 1016,
+    "shares": 5470,
+    "bookmarks": 22265,
+    "categories": [
+     "Travel",
+     "Lifestyle"
+    ],
+    "hashtags": [
+     {
+      "id": "114680",
+      "name": "soarin",
+      "link": "https://www.tiktok.com/tag/soarin"
+     },
+     {
+      "id": "8284",
+      "name": "disney",
+      "link": "https://www.tiktok.com/tag/disney"
+     },
+     {
+      "id": "7223",
+      "name": "eiffeltower",
+      "link": "https://www.tiktok.com/tag/eiffeltower"
+     },
+     {
+      "id": "15669536",
+      "name": "disneyrides",
+      "link": "https://www.tiktok.com/tag/disneyrides"
+     },
+     {
+      "id": "17603",
+      "name": "disneyworld",
+      "link": "https://www.tiktok.com/tag/disneyworld"
+     }
+    ],
+    "author": {
+     "id": "7575260666170328119",
+     "username": "happilyyeverashley",
+     "name": "happilyyeverashley",
+     "link": "https://www.tiktok.com/@happilyyeverashley",
+     "thumbnail": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/b071a5617861f7507be37d254ae301ef~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=5eb8b99a&x-expires=1794722400&x-signature=j%2FUS2UwbrpTuka6PosPBuiOolq0%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "followers": 1123,
+     "following": 111,
+     "likes": 162100,
+     "videos": 12
+    },
+    "music": {
+     "id": "7052547190496954370",
+     "title": "Soarin' Around the World",
+     "author": "Untitled Virtual Ensemble",
+     "album": "Soarin' Around the World",
+     "link": "https://www.tiktok.com/music/soarin-around-the-world-7052547190496954370",
+     "thumbnail": "https://p16-common.tiktokcdn-us.com/tos-alisg-v-2774/oUGaD7BgiEFrfAEUgRWD3eADbAIZfCGDPENzAL~tplv-tiktokx-cropcenter:720:720.jpeg?dr=9584&t=4d5b0474&ps=933b5bde&shp=08d74b56&shcp=81f88b70&idc=useast8",
+     "duration": 60
+    }
+   },
+   {
+    "position": 8,
+    "id": "7707446180296346894",
+    "link": "https://www.tiktok.com/@kalebsloavak/video/7707446180296346894",
+    "description": "Imagine\ud83d\ude02#paris #EiffelTower",
+    "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oEYEUfy2IgIRBM3IBk6iAbBSWDeiEF7EqowW4H~tplv-tiktokx-origin.image?dr=9636&x-expires=1794722400&x-signature=XfHUFOmfHhVaFhPhPsE0C3ZxlZg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=0d52deaf&idc=useast8",
+    "duration": 23,
+    "published_date": "2026-11-13T00:27:46Z",
+    "plays": 320,
+    "likes": 16,
+    "comments": 0,
+    "shares": 1,
+    "bookmarks": 1,
+    "categories": [
+     "Travel",
+     "Lifestyle"
+    ],
+    "hashtags": [
+     {
+      "id": "5600",
+      "name": "paris",
+      "link": "https://www.tiktok.com/tag/paris"
+     },
+     {
+      "id": "7223",
+      "name": "eiffeltower",
+      "link": "https://www.tiktok.com/tag/eiffeltower"
+     }
+    ],
+    "author": {
+     "id": "7519170185376547853",
+     "username": "kalebsloavak",
+     "name": "Kaleb\ud83d\uddff\ud83e\udd78",
+     "link": "https://www.tiktok.com/@kalebsloavak",
+     "thumbnail": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/d521a139bb01f18f16d0fe2be5181436~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=23408ce0&x-expires=1794722400&x-signature=5BccWWIgzogTCXz3YkTBKFm58lg%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "followers": 37,
+     "following": 69,
+     "likes": 669,
+     "videos": 9
+    },
+    "music": {
+     "id": "7435709490109877034",
+     "title": "where you at lullaby",
+     "author": "\u0674",
+     "link": "https://www.tiktok.com/music/where-you-at-lullaby-7435709490109877034",
+     "thumbnail": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/79743f2d8878142cd0e1693ffa62c3c2~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=fb393863&x-expires=1794722400&x-signature=9b02%2BnxRxmCMDCdZooJ53%2BJwzCw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+     "duration": 39
+    }
+   }
+  ]
+ }
+}

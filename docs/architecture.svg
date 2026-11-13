@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1300" width="1700" height="1300" font-family="Amazon Ember, Helvetica, Arial, sans-serif">
+<title>Travel Buddy architecture: public chat and voice (Amazon Nova 2.5 Sonic), Strands agent on Bedrock with Guardrails, AgentCore Gateway, Lambda tools, live Google data via SerpApi and M1 plans</title>
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#232F3E"/></marker>
+  <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7B3FE4"/></marker>
+  <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D13212"/></marker>
+  <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F6FB2"/></marker>
+  <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2E9E5B"/></marker>
+  <style>
+    .t  { font-size: 14px; font-weight: 700; fill: #232F3E; }
+    .s  { font-size: 11.5px; fill: #3B4552; }
+    .xs { font-size: 10.5px; fill: #545B64; }
+    .h  { font-size: 15px; font-weight: 700; }
+    .box { rx: 8; ry: 8; stroke-width: 1.6; }
+    .ln  { fill: none; stroke: #232F3E; stroke-width: 1.6; }
+    .lnP { fill: none; stroke: #7B3FE4; stroke-width: 1.8; }
+    .lnR { fill: none; stroke: #D13212; stroke-width: 1.8; }
+    .lnB { fill: none; stroke: #1F6FB2; stroke-width: 1.8; }
+    .lnG { fill: none; stroke: #2E9E5B; stroke-width: 2.2; }
+    .dash { stroke-dasharray: 6 4; }
+    .badge text { font-size: 11px; font-weight: 700; fill: #fff; text-anchor: middle; }
+    .lbl { font-size: 10.5px; fill: #232F3E; font-style: italic; }
+  </style>
+</defs>
+<rect width="1700" height="1300" fill="#FFFFFF"/>
+<text x="20" y="38" style="font-size:24px;font-weight:700;fill:#232F3E">Travel Buddy: chat + voice trip planner on Amazon Bedrock (Nova 2.5 Sonic, Claude, Guardrails, AgentCore Gateway)</text>
+<text x="20" y="62" class="s" style="font-size:13px">Public on every device · live flights, hotels, cabs, places, reels and price trends via SerpApi · M1 Singapore travel plans · "Pack your bags and follow with Abhi"</text>
+<rect x="250" y="90" width="1085" height="800" rx="10" fill="none" stroke="#FF9900" stroke-width="2" stroke-dasharray="8 5"/>
+<rect x="250" y="90" width="250" height="26" fill="#FF9900"/><text x="262" y="108" style="font-size:13px;font-weight:700;fill:#fff">AWS Cloud · us-east-1</text>
+<rect x="265" y="222" width="485" height="478" rx="10" fill="#FAFAFA" stroke="#879196" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="280" y="244" class="h" style="fill:#545B64">Code Editor instance (Amazon EC2)</text>
+<rect x="1355" y="90" width="330" height="800" rx="10" fill="#F4F8FC" stroke="#1F6FB2" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="1372" y="116" class="h" style="fill:#1F6FB2">External services (internet)</text>
+<text x="20" y="114" class="h" style="fill:#545B64">Users</text>
+<rect class="box" x="20" y="130" width="210" height="112" fill="#F2F3F3" stroke="#879196"/>
+<text class="t" x="34" y="154" style="fill:#232F3E">Traveller</text>
+<text class="s" x="34" y="174">Phone · tablet · laptop</text>
+<text class="s" x="34" y="191">Type, or talk via the mic</text>
+<text class="xs" x="34" y="208">Public link, no login:</text>
+<text class="xs" x="34" y="223">…/ports/8502/</text>
+<text class="xs" x="34" y="238">Status page: …/status</text>
+<rect class="box" x="20" y="262" width="210" height="70" fill="#F2F3F3" stroke="#879196"/>
+<text class="t" x="34" y="286" style="fill:#232F3E">Terminal CLI</text>
+<text class="s" x="34" y="306">agents/travel_agent.py</text>
+<text class="xs" x="34" y="323">-q one-shot · --local · --no-guardrail</text>
+<rect class="box" x="270" y="130" width="225" height="72" fill="#FCEFF7" stroke="#C7317D"/>
+<text class="t" x="284" y="154" style="fill:#232F3E">Amazon CloudFront</text>
+<text class="s" x="284" y="174">All edge locations · no geo-block</text>
+<text class="xs" x="284" y="191">HTTPS + WSS · HTTP/2, HTTP/3, IPv6</text>
+<rect class="box" x="515" y="130" width="225" height="72" fill="#FCEFF7" stroke="#C7317D"/>
+<text class="t" x="529" y="154" style="fill:#232F3E">nginx</text>
+<text class="s" x="529" y="174">/ports/8502/ to localhost:8502</text>
+<text class="xs" x="529" y="191">HTTP + WebSocket upgrade</text>
+<rect class="box" x="285" y="262" width="445" height="108" fill="#FFFFFF" stroke="#7B3FE4"/>
+<text class="t" x="299" y="286" style="fill:#232F3E">Travel Buddy web app (Starlette · systemd)</text>
+<text class="s" x="299" y="306">Spam guard: &gt;5 requests or new chats/min/IP = too fast</text>
+<text class="s" x="299" y="323">Chat UI: cards, OSM maps, charts, reels, M1 plans block</text>
+<text class="xs" x="299" y="340">Mia the beach companion · For-you chips from the interest profile</text>
+<text class="xs" x="299" y="355">Public read-only /status page · restarts on crash or boot</text>
+<rect class="box" x="285" y="392" width="210" height="150" fill="#EAF8EF" stroke="#2E9E5B"/>
+<text class="t" x="299" y="416" style="fill:#1E6E3F">Voice bridge /ws/voice</text>
+<text class="s" x="299" y="436">One Nova Sonic session</text>
+<text class="s" x="299" y="453">per call (max 6, 8 min)</text>
+<text class="xs" x="299" y="470">tools for Nova:</text>
+<text class="xs" x="299" y="485">  travel_buddy(request)</text>
+<text class="xs" x="299" y="500">  ui_action(show, scroll, play…)</text>
+<text class="xs" x="299" y="515">Speech guard: speaks only</text>
+<text class="xs" x="299" y="530">the answer (no narration)</text>
+<rect class="box" x="510" y="392" width="220" height="168" fill="#FFFFFF" stroke="#7B3FE4"/>
+<text class="t" x="524" y="416" style="fill:#232F3E">Travel Buddy agent (Strands)</text>
+<text class="s" x="524" y="436">One per chat (shared by voice)</text>
+<text class="s" x="524" y="453">System prompt: tone, ASEAN,</text>
+<text class="s" x="524" y="470">M1-only plans, booking rules</text>
+<text class="xs" x="524" y="487">remember_traveller_name</text>
+<text class="xs" x="524" y="502">remember_traveller_preferences</text>
+<text class="xs" x="524" y="517">MCPClient to Gateway (JWT)</text>
+<text class="xs" x="524" y="532">ChartDownloadHook: s3:// to file</text>
+<rect class="box" x="285" y="562" width="210" height="120" fill="#F2F3F3" stroke="#879196"/>
+<text class="t" x="299" y="586" style="fill:#232F3E">Deploy tooling</text>
+<text class="s" x="299" y="606">deploy.py · cleanup.py</text>
+<text class="s" x="299" y="623">set_serpapi_key.py</text>
+<text class="xs" x="299" y="640">generate_architecture.py</text>
+<text class="xs" x="299" y="655">config/deployment.json</text>
+<text class="xs" x="299" y="670">(identifiers only, no secrets)</text>
+<rect class="box" x="510" y="580" width="220" height="102" fill="#FFFBF2" stroke="#ED7100"/>
+<text class="t" x="524" y="604" style="fill:#232F3E">output/ trend charts</text>
+<text class="s" x="524" y="624">Interactive HTML reports</text>
+<text class="s" x="524" y="641">Shown inline in the chat</text>
+<text class="xs" x="524" y="658">served at /charts/*</text>
+<rect class="box" x="770" y="130" width="265" height="112" fill="#EAF8EF" stroke="#2E9E5B"/>
+<text class="t" x="784" y="154" style="fill:#1E6E3F">Amazon Nova 2.5 Sonic</text>
+<text class="s" x="784" y="174">amazon.nova-2-5-sonic</text>
+<text class="s" x="784" y="191">Speech to speech, bidirectional</text>
+<text class="s" x="784" y="208">stream · voice tiffany · barge-in</text>
+<text class="xs" x="784" y="225">Hears, speaks, calls tools mid-call</text>
+<rect class="box" x="770" y="262" width="265" height="110" fill="#FDF0F0" stroke="#D13212"/>
+<text class="t" x="784" y="286" style="fill:#D13212">Amazon Bedrock Guardrails</text>
+<text class="s" x="784" y="306">PII: cards, bank, passport, SSN,</text>
+<text class="s" x="784" y="323">NRIC/FIN, PINs, passwords, keys</text>
+<text class="s" x="784" y="340">Harmful content · prompt attacks</text>
+<text class="xs" x="784" y="357">Travel-fraud and security topics · also checks voice</text>
+<rect class="box" x="770" y="392" width="265" height="72" fill="#E9F7F3" stroke="#01A88D"/>
+<text class="t" x="784" y="416" style="fill:#232F3E">Amazon Bedrock · Claude Sonnet</text>
+<text class="s" x="784" y="436">global.anthropic.claude-sonnet-5</text>
+<text class="xs" x="784" y="453">ConverseStream · tool use</text>
+<rect class="box" x="770" y="484" width="265" height="98" fill="#FDF0F0" stroke="#DD344C"/>
+<text class="t" x="784" y="508" style="fill:#232F3E">Amazon Cognito</text>
+<text class="s" x="784" y="528">travel-agent-pool · M2M client</text>
+<text class="s" x="784" y="545">client_credentials · scope invoke</text>
+<text class="xs" x="784" y="562">secret read at runtime, never on disk</text>
+<text class="xs" x="784" y="577">60-min access token, auto-refresh</text>
+<rect class="box" x="1060" y="130" width="255" height="116" fill="#F7F3FE" stroke="#7B3FE4"/>
+<text class="t" x="1074" y="154" style="fill:#232F3E">AgentCore Gateway</text>
+<text class="s" x="1074" y="174">MCP over HTTPS</text>
+<text class="s" x="1074" y="191">CUSTOM_JWT authorizer (Cognito)</text>
+<text class="s" x="1074" y="208">Target FlightTools · 14 tools</text>
+<text class="xs" x="1074" y="225">401 without a valid token</text>
+<rect class="box" x="1060" y="276" width="255" height="306" fill="#FFF4E5" stroke="#ED7100"/>
+<text class="t" x="1074" y="300" style="fill:#232F3E">AWS Lambda</text>
+<text class="s" x="1074" y="320">travel-agent-flight-tools</text>
+<text class="s" x="1074" y="337">Python 3.12 · arm64 · travel_core</text>
+<text class="xs" x="1074" y="354">Flights: search_flights · get_booking_options</text>
+<text class="xs" x="1074" y="369">  check_availability · find_cheapest_dates</text>
+<text class="xs" x="1074" y="384">  get_price_trends · search_airports</text>
+<text class="xs" x="1074" y="399">  book_flight · get_booking · cancel_booking</text>
+<text class="xs" x="1074" y="414">Trip: search_hotels · explore_places</text>
+<text class="xs" x="1074" y="429">  find_ground_transport (routes + cabs)</text>
+<text class="xs" x="1074" y="444">  find_social_videos (Instagram, TikTok)</text>
+<text class="xs" x="1074" y="459">Mobile: get_m1_travel_plans (M1 only)</text>
+<text class="xs" x="1074" y="474"></text>
+<text class="xs" x="1074" y="489">LIVE via SerpApi · no key: simulated (labelled)</text>
+<text class="xs" x="1074" y="504">Gateway invokes via IAM role (this fn only)</text>
+<text class="xs" x="1074" y="519">Metrics as CloudWatch EMF log lines</text>
+<rect class="box" x="270" y="740" width="245" height="112" fill="#E9F7F3" stroke="#3F8624"/>
+<text class="t" x="284" y="764" style="fill:#232F3E">Amazon DynamoDB</text>
+<text class="s" x="284" y="784">travel-agent-bookings</text>
+<text class="xs" x="284" y="801">bookings + atomic seat counters</text>
+<text class="xs" x="284" y="816">live offer cache (GF- id to token)</text>
+<text class="xs" x="284" y="831">transaction with capacity check</text>
+<rect class="box" x="535" y="740" width="245" height="112" fill="#E9F7F3" stroke="#3F8624"/>
+<text class="t" x="549" y="764" style="fill:#232F3E">Amazon S3</text>
+<text class="s" x="549" y="784">Trend-chart bucket</text>
+<text class="xs" x="549" y="801">HTML reports under charts/</text>
+<text class="xs" x="549" y="816">private · TLS-only · 7-day expiry</text>
+<text class="xs" x="549" y="831">Lambda: PutObject only</text>
+<rect class="box" x="800" y="740" width="245" height="112" fill="#FDF0F0" stroke="#DD344C"/>
+<text class="t" x="814" y="764" style="fill:#232F3E">AWS Secrets Manager</text>
+<text class="s" x="814" y="784">travel-agent/serpapi-api-key</text>
+<text class="xs" x="814" y="801">set via set_serpapi_key.py</text>
+<text class="xs" x="814" y="816">Lambda: GetSecretValue (this</text>
+<text class="xs" x="814" y="831">secret only) · cached 5 min</text>
+<rect class="box" x="1065" y="740" width="250" height="130" fill="#FCEFF7" stroke="#C7317D"/>
+<text class="t" x="1079" y="764" style="fill:#232F3E">Amazon CloudWatch</text>
+<text class="s" x="1079" y="784">Dashboard TravelAgent · 7 alarms</text>
+<text class="xs" x="1079" y="801">TravelAgent metrics: agent turns, tokens,</text>
+<text class="xs" x="1079" y="816">guardrail, tools, SerpApi quota, bookings</text>
+<text class="xs" x="1079" y="831">+ native Bedrock, Guardrail, Gateway,</text>
+<text class="xs" x="1079" y="846">Lambda, DynamoDB · logs 30 days</text>
+<rect class="box" x="1375" y="130" width="290" height="112" fill="#FFFFFF" stroke="#1F6FB2"/>
+<text class="t" x="1389" y="154" style="fill:#1F6FB2">SerpApi</text>
+<text class="s" x="1389" y="174">Live Google data (JSON)</text>
+<text class="xs" x="1389" y="191">google_flights · google_hotels</text>
+<text class="xs" x="1389" y="206">google_maps · google_maps_directions</text>
+<text class="xs" x="1389" y="221">google_videos · tiktok_discover</text>
+<text class="xs" x="1389" y="236">Free plan: 250 searches / month</text>
+<rect class="box" x="1375" y="262" width="290" height="82" fill="#FFFFFF" stroke="#1F6FB2"/>
+<text class="t" x="1389" y="286" style="fill:#1F6FB2">Google Flights · Hotels · Maps</text>
+<text class="s" x="1389" y="306">Fares, sellers, price history,</text>
+<text class="s" x="1389" y="323">hotels, places, routes, cab firms</text>
+<rect class="box" x="1375" y="364" width="290" height="82" fill="#FFFFFF" stroke="#1F6FB2"/>
+<text class="t" x="1389" y="388" style="fill:#1F6FB2">Instagram · TikTok</text>
+<text class="s" x="1389" y="408">Reels and videos about places</text>
+<text class="xs" x="1389" y="425">Official embed players, loaded on tap</text>
+<rect class="box" x="1375" y="466" width="290" height="66" fill="#FFFFFF" stroke="#1F6FB2"/>
+<text class="t" x="1389" y="490" style="fill:#1F6FB2">OpenStreetMap</text>
+<text class="s" x="1389" y="510">Map tiles drawn in the browser</text>
+<rect class="box" x="1375" y="552" width="290" height="82" fill="#FFFFFF" stroke="#1F6FB2"/>
+<text class="t" x="1389" y="576" style="fill:#1F6FB2">M1 Singapore (m1.com.sg)</text>
+<text class="s" x="1389" y="596">Roaming, prepaid, tourist SIM plans</text>
+<text class="xs" x="1389" y="613">Dated snapshot + links to buy</text>
+<rect class="box" x="1375" y="654" width="290" height="90" fill="#FFFFFF" stroke="#1F6FB2"/>
+<text class="t" x="1389" y="678" style="fill:#1F6FB2">Airlines &amp; travel agencies</text>
+<text class="s" x="1389" y="698">Aer Lingus · JetBlue · Expedia · …</text>
+<text class="xs" x="1389" y="715">Booking and payment happen on</text>
+<text class="xs" x="1389" y="730">the seller&#x27;s own website</text>
+<path class="ln" d="M230,175 H270" marker-end="url(#arr)"/>
+<g class="badge"><circle cx="250" cy="175" r="10" style="fill:#232F3E"/><text x="250" y="179">1</text></g>
+<path class="ln" d="M495,166 H515" marker-end="url(#arr)"/>
+<path class="ln" d="M627,202 V262" marker-end="url(#arr)"/>
+<text class="lbl" x="634" y="238" text-anchor="start">proxy :8502 (HTTP + WS)</text>
+<path class="ln" d="M620,370 V392" marker-end="url(#arr)"/>
+<g class="badge"><circle cx="602" cy="377" r="10" style="fill:#232F3E"/><text x="602" y="381">2</text></g>
+<path class="ln" d="M230,297 H252 V552 H510" marker-end="url(#arr)"/>
+<path class="lnG" d="M390,370 V392" marker-end="url(#arrG)"/>
+<g class="badge"><circle cx="372" cy="381" r="10" style="fill:#2E9E5B"/><text x="372" y="385">V</text></g>
+<path class="lnG" d="M495,402 V388 H762 V186 H770" marker-end="url(#arrG)"/>
+<text class="lbl" x="775" y="255" text-anchor="start">audio stream, 16 kHz</text>
+<path class="lnG" d="M495,470 H510" marker-end="url(#arrG)"/>
+<path class="lnR dash" d="M495,530 H502 V570 H742 V355 H770" marker-end="url(#arrR)"/>
+<text class="lbl" x="620" y="567" text-anchor="middle">speech check (ApplyGuardrail)</text>
+<g class="badge"><circle cx="742" cy="452" r="10" style="fill:#D13212"/><text x="742" y="456">S</text></g>
+<path class="lnR" d="M730,430 H750 V317 H770" marker-end="url(#arrR)"/>
+<g class="badge"><circle cx="750" cy="372" r="10" style="fill:#D13212"/><text x="750" y="376">3</text></g>
+<path class="lnR" d="M902,372 V392" marker-end="url(#arrR)"/>
+<path class="lnP" d="M730,540 H770" marker-end="url(#arrP)"/>
+<g class="badge"><circle cx="750" cy="540" r="10" style="fill:#7B3FE4"/><text x="750" y="544">4</text></g>
+<text class="lbl" x="735" y="556" text-anchor="start">token</text>
+<path class="lnP" d="M730,505 H754 V474 H1046 V188 H1060" marker-end="url(#arrP)"/>
+<g class="badge"><circle cx="900" cy="474" r="10" style="fill:#7B3FE4"/><text x="900" y="478">5</text></g>
+<path class="lnP dash" d="M1060,232 H1053 V535 H1035" marker-end="url(#arrP)"/>
+<text class="lbl" x="1045" y="600" text-anchor="end">JWT check</text>
+<path class="lnP" d="M1187,246 V276" marker-end="url(#arrP)"/>
+<g class="badge"><circle cx="1206" cy="261" r="10" style="fill:#7B3FE4"/><text x="1206" y="265">6</text></g>
+<path class="lnB" d="M1315,300 H1345 V176 H1375" marker-end="url(#arrB)"/>
+<g class="badge"><circle cx="1345" cy="238" r="10" style="fill:#1F6FB2"/><text x="1345" y="242">7</text></g>
+<path class="lnB" d="M1520,242 V262" marker-end="url(#arrB)"/>
+<path class="lnB dash" d="M1395,344 V364"/>
+<path class="ln dash" d="M1375,593 H1340 V560 H1315" marker-end="url(#arr)"/>
+<text class="lbl" x="1338" y="616" text-anchor="end">plan snapshot</text>
+<path class="ln" d="M1187,582 V722 H392"/>
+<path class="ln" d="M392,722 V740" marker-end="url(#arr)"/>
+<path class="ln" d="M657,722 V740" marker-end="url(#arr)"/>
+<path class="ln" d="M922,722 V740" marker-end="url(#arr)"/>
+<path class="ln" d="M1190,722 V740" marker-end="url(#arr)"/>
+<g class="badge"><circle cx="1187" cy="650" r="10" style="fill:#232F3E"/><text x="1187" y="654">8</text></g>
+<text class="lbl" x="1180" y="714" text-anchor="end">bookings · offers · charts · key · metrics &amp; logs</text>
+<path class="ln dash" d="M600,740 V682" marker-end="url(#arr)"/>
+<g class="badge"><circle cx="582" cy="711" r="10" style="fill:#232F3E"/><text x="582" y="715">9</text></g>
+<text class="lbl" x="608" y="711" text-anchor="start">download</text>
+<path class="lnB" d="M20,205 H10 V912 H1600 V744" marker-end="url(#arrB)"/>
+<g class="badge"><circle cx="10" cy="800" r="10" style="fill:#1F6FB2"/><text x="10" y="804">10</text></g>
+<text class="lbl" x="24" y="905" text-anchor="start">in the browser: booking links open the seller&#x27;s site · reels play via official embeds · OSM map tiles</text>
+<rect x="20" y="935" width="1665" height="345" rx="10" fill="#FBFBFB" stroke="#D5DBDB"/>
+<text x="40" y="962" class="h" style="fill:#232F3E">Request flow</text>
+<text class="s" style="font-size:12.5px" x="40" y="990">1  The traveller opens the public link on any device (no login). CloudFront and nginx reach the web app (rate-limited).</text>
+<text class="s" style="font-size:12.5px" x="40" y="1016">2  Typed chat: the web app runs the chat&#x27;s Travel Buddy agent, which keeps the traveller&#x27;s name and interest profile.</text>
+<text class="s" style="font-size:12.5px" x="40" y="1042">3  Every Claude call goes through the Bedrock Guardrail (PII incl. NRIC, harmful content, prompt attacks, travel-safety topics).</text>
+<text class="s" style="font-size:12.5px" x="40" y="1068">4  The agent gets a Cognito client-credentials token (secret read at runtime, auto-refreshed).</text>
+<text class="s" style="font-size:12.5px" x="40" y="1094">5  Claude picks tools; the agent calls them over MCP on the AgentCore Gateway with the JWT.</text>
+<text class="s" style="font-size:12.5px" x="40" y="1120">6  The Gateway validates the token and invokes the Lambda target with its own IAM role.</text>
+<text class="s" style="font-size:12.5px" x="40" y="1146">7  Lambda gets live Google data via SerpApi (flights, hotels, places, routes, Instagram/TikTok videos); M1 plans: dated catalogue.</text>
+<text class="s" style="font-size:12.5px" x="870" y="990">8  Bookings and offer tokens go to DynamoDB, charts to S3; the key is in Secrets Manager; metrics, logs and alarms are in CloudWatch.</text>
+<text class="s" style="font-size:12.5px" x="870" y="1016">9  The agent hook downloads charts from S3; the UI shows cards, OSM maps, charts, playable reels and the M1 block, and Mia reacts.</text>
+<text class="s" style="font-size:12.5px" x="870" y="1042">V  Voice: mic audio streams over WebSocket to Nova 2.5 Sonic. It calls travel_buddy (the same agent, steps 3 to 9) and ui_action to drive</text>
+<text class="s" style="font-size:12.5px" x="870" y="1068">    the screen (show, scroll, play, click). The speech guard mutes narration, so only the answer is spoken.</text>
+<text class="s" style="font-size:12.5px" x="870" y="1094">10 The traveller follows the seller&#x27;s booking link to book and pay on the airline&#x27;s or agency&#x27;s own website.</text>
+<text class="s" style="font-size:12.5px" x="870" y="1120">S  Safety: more than 5 requests or new chats per minute from one IP get &quot;You&#x27;re too fast, please try again.&quot;</text>
+<text class="s" style="font-size:12.5px" x="870" y="1146">    Spoken requests are checked with ApplyGuardrail (S); if blocked, the Nova reply is silenced.</text>
+<line x1="40" y1="1196" x2="82" y2="1196" class="ln "/>
+<text class="xs" x="90" y="1200">Request / data</text>
+<line x1="196.8" y1="1196" x2="238.8" y2="1196" class="lnR "/>
+<text class="xs" x="246.8" y="1200">Guardrail check (model call / speech)</text>
+<line x1="496.2" y1="1196" x2="538.2" y2="1196" class="lnP "/>
+<text class="xs" x="546.2" y="1200">AgentCore / identity (MCP, JWT)</text>
+<line x1="758.4000000000001" y1="1196" x2="800.4000000000001" y2="1196" class="lnG "/>
+<text class="xs" x="808.4000000000001" y="1200">Voice (Nova Sonic, WebSocket)</text>
+<line x1="1008.2" y1="1196" x2="1050.2" y2="1196" class="lnB "/>
+<text class="xs" x="1058.2" y="1200">Internet: live data, embeds, booking hand-off</text>
+<line x1="1357.2" y1="1196" x2="1399.2" y2="1196" class="ln dash"/>
+<text class="xs" x="1407.2" y="1200">Async / return path</text>
+<text class="xs" x="40" y="1236">Without a SerpApi key the Lambda serves a deterministic simulated flight market (fictional carriers, labelled SIMULATED). Spoken requests are checked with ApplyGuardrail;</text>
+<text class="xs" x="40" y="1252">if blocked, the Nova reply is silenced. Everything Nova passes to Travel Buddy is also guardrail-checked. All AWS resources come from deploy.py and are removed by cleanup.py.</text>
+</svg>

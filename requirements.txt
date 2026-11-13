@@ -1,0 +1,14 @@
+# Travel Buddy - Python 3.12+
+strands-agents>=1.34,<2
+mcp>=1.28,<2
+boto3>=1.35
+httpx>=0.27
+starlette>=0.40
+uvicorn[standard]>=0.30
+websockets>=12
+tzdata
+# Voice mode (Amazon Nova Sonic via Strands bidi). 0.10+ renamed the client and breaks Strands 1.34.
+aws-sdk-bedrock-runtime==0.9.0
+smithy-aws-core>=0.4,<1
+# tests
+pytest>=8

@@ -1,0 +1,11 @@
+output/
+data/bookings.json
+data/*.tmp
+config/deployment.json
+data/web-access-key.txt
+data/*.log
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
